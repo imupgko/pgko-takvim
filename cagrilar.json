@@ -253,5 +253,45 @@
     "baslangic": "2026-11-20",
     "bitis": "2026-11-20",
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
+  },
+  {
+    "id": "tuseb-f995d96f-c2ae-4e6e-9112-03c1eeec92d6",
+    "kurum": "TÜSEB",
+    "baslik": "2026-STENT",
+    "program_adi": "C GRUBU DESTEK PROGRAMI TÜSEB ENDOVASKÜLER STENT, STENT-GREFT VE TAŞIYICI SİSTEMLER GELİŞTİRME PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2026-10-08",
+    "bitis": "2026-12-07",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-c4ff7827-d7f5-419c-9ff0-2f95093c1147",
+    "kurum": "TÜSEB",
+    "baslik": "2026-ROBOTİKCERRAHİ",
+    "program_adi": "TÜSEB ROBOTİK CERRAHİ SİSTEMLERİ GELİŞTİRME, YERLİLEŞTİRME VE TEKNOLOJİ TRANSFERİ ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-10-17",
+    "bitis": "2026-12-16",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-dd4f7c2d-04eb-4ebd-95ab-60a104f0ebef",
+    "kurum": "TÜSEB",
+    "baslik": "2026-INFLUENZA-AŞI",
+    "program_adi": "MEVSİMSEL GRİP (İNFLUENZA) AŞISININ YERLİ ÜRETİMİ VE ÜRETİM ALTYAPISININ KURULMASINA YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-10-16",
+    "bitis": "2026-11-27",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-ea42ab34-bca7-483d-af62-f050c988d9db",
+    "kurum": "TÜSEB",
+    "baslik": "2025-DIŞDESTEK-01",
+    "program_adi": "KATALİZÖR DESTEK PROGRAMI TÜSEB PROJELERİNE DIŞ DESTEK SAĞLAMAYA YÖNELİK STRATEJİK PROJE ORTAĞI İŞ BİRLİĞİ ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2025-12-09",
+    "bitis": "2026-12-28",
+    "url": "https://tbys.tuseb.gov.tr/"
   }
 ]

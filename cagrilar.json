@@ -1,182 +1,257 @@
 [
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000mt-0",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
-  },
-  {
-    "id": "ab-52951142TOPICSmt-1",
+    "id": "ab-HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
     "kurum": "AB",
     "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
     "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
     "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
+    "bitis": "2027-09-16",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000es-2",
+    "id": "ab-HORIZON-BRIDGING-2027-06-02",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-BRIDGING-2027-06-02",
+    "program_adi": "Valorising Horizon project results via innovation ecosystems",
+    "baslangic": "2026-10-20",
+    "bitis": "2027-02-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-06-02"
   },
   {
-    "id": "ab-52951142TOPICSes-3",
+    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
+    "program_adi": "Horizon scanning and foresight in future enabling digital technologies (CSA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-10"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000ga-4",
+    "id": "ab-HORIZON-CL4-2027-01-MAT-PROD-49",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-CL4-2027-01-MAT-PROD-49",
+    "program_adi": "‘Proof of market’ to improve valorisation and commercialisation of Horizon generated R&I results (IA)",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-02-02",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-01-mat-prod-49"
   },
   {
-    "id": "ab-52951142TOPICSga-5",
+    "id": "ab-ERC-2027-POC",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "ERC-2027-POC",
+    "program_adi": "Proof of Concept Grant",
+    "baslangic": "2026-11-12",
+    "bitis": "2027-09-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erc-2027-poc"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000pl-6",
+    "id": "ab-HORIZON-EIC-2027-STEP",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-EIC-2027-STEP",
+    "program_adi": "EIC STEP Scale Up",
+    "baslangic": "2026-11-18",
+    "bitis": "2027-11-24",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-step"
   },
   {
-    "id": "ab-52951142TOPICSpl-7",
+    "id": "ab-HORIZON-NATURE-2027-03-01",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-NATURE-2027-03-01",
+    "program_adi": "Advancing interdisciplinary, data-driven research at the biodiversity- health interface under a One Health approach",
+    "baslangic": "2027-06-03",
+    "bitis": "2027-09-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-03-01"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000sl-8",
+    "id": "ab-HORIZON-RAISE-2027-01-02",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-RAISE-2027-01-02",
+    "program_adi": "Automated Scientific Discovery – Food (RAISE pilot)",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-02-02",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-02"
   },
   {
-    "id": "ab-52951142TOPICSsl-9",
+    "id": "ab-HORIZON-RAISE-2027-01-01",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-RAISE-2027-01-01",
+    "program_adi": "Automated Scientific Discovery - Materials Science (RAISE pilot) (RIA)",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-02-02",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-01"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000hr-10",
+    "id": "ab-HORIZON-BRIDGING-2027-05-01",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-BRIDGING-2027-05-01",
+    "program_adi": "Skills for innovative SMEs",
+    "baslangic": "2026-12-01",
+    "bitis": "2027-03-03",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-05-01"
   },
   {
-    "id": "ab-52951142TOPICShr-11",
+    "id": "ab-HORIZON-RAISE-2027-01-04",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-RAISE-2027-01-04",
+    "program_adi": "Developing a model for a Data Lab for Science linking with EOSC and RAISE (RAISE pilot) (CSA)",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-02-02",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-04"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000bg-12",
+    "id": "ab-HORIZON-CID-2027-01-02",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-CID-2027-01-02",
+    "program_adi": "R&I in Support of the Clean Industrial Deal: Clean Technologies for Climate Action",
+    "baslangic": "2027-01-12",
+    "bitis": "2027-09-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-02"
   },
   {
-    "id": "ab-52951142TOPICSbg-13",
+    "id": "ab-HORIZON-CID-2027-01-01",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-CID-2027-01-01",
+    "program_adi": "R&I in Support of the Clean Industrial Deal: Decarbonisation of energy intensive industries (IA) (Processes4Planet and Clean Steel partnerships)",
+    "baslangic": "2027-01-12",
+    "bitis": "2027-09-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-01"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000sk-14",
+    "id": "ab-HORIZON-BRIDGING-2027-03-07",
     "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "baslik": "HORIZON-BRIDGING-2027-03-07",
+    "program_adi": "Europe’s world class research and technology infrastructures as strategic assets for talent to Choose Europe",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-07"
   },
   {
-    "id": "ab-52951142TOPICSsk-15",
+    "id": "ab-HORIZON-NATURE-2027-01-02",
     "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-NATURE-2027-01-02",
+    "program_adi": "Better understanding, anticipating and addressing the biodiversity benefits and impacts of the clean and digital industries",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-01-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-01-02"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000pt-16",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "id": "tubitak-11801",
+    "kurum": "TÜBİTAK",
+    "baslik": "1002-A HIZLI DESTEK MODÜLÜ - KKTC",
+    "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
   },
   {
-    "id": "ab-52951142TOPICSpt-17",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "id": "tubitak-11802",
+    "kurum": "TÜBİTAK",
+    "baslik": "1002-A HIZLI DESTEK MODÜLÜ",
+    "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
   },
   {
-    "id": "ab-47172802HORIZONRecognitionPrize1719446400000it-18",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize",
-    "program_adi": "Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
-    "baslangic": "2024-06-27",
-    "bitis": "2024-09-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+    "id": "tubitak-11803",
+    "kurum": "TÜBİTAK",
+    "baslik": "1002-B ACİL DESTEK MODÜLÜ",
+    "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-b-acil-destek-modulu"
   },
   {
-    "id": "ab-52951142TOPICSit-19",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-02-25",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "id": "tubitak-13212",
+    "kurum": "TÜBİTAK",
+    "baslik": "KKTC 1005 ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
+    "program_adi": "1005 - ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1005-ulusal-yeni-fikirler-ve-urunler-arastirma-destek-programi"
+  },
+  {
+    "id": "tubitak-13213",
+    "kurum": "TÜBİTAK",
+    "baslik": "ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
+    "program_adi": "1005 - ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1005-ulusal-yeni-fikirler-ve-urunler-arastirma-destek-programi"
+  },
+  {
+    "id": "tubitak-13272",
+    "kurum": "TÜBİTAK",
+    "baslik": "3005-A POLİTİKA GELİŞTİRME MODÜLÜ",
+    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://ardeb-pbs.tubitak.gov.tr/"
+  },
+  {
+    "id": "tubitak-13273",
+    "kurum": "TÜBİTAK",
+    "baslik": "3005-B TEKNOLOJİK İLERLEMELERİN TOPLUMSAL ETKİLERİ MODÜLÜ",
+    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://ardeb-pbs.tubitak.gov.tr/"
+  },
+  {
+    "id": "tubitak-13274",
+    "kurum": "TÜBİTAK",
+    "baslik": "KKTC 3005-A POLİTİKA GELİŞTİRME MODÜLÜ",
+    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://ardeb-pbs.tubitak.gov.tr/"
+  },
+  {
+    "id": "tubitak-13275",
+    "kurum": "TÜBİTAK",
+    "baslik": "KKTC 3005-B TEKNOLOJİK İLERLEMELERİN TOPLUMSAL ETKİLERİ MODÜLÜ",
+    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://ardeb-pbs.tubitak.gov.tr/"
+  },
+  {
+    "id": "tubitak-11852",
+    "kurum": "TÜBİTAK",
+    "baslik": "KKTC 3501 KARİYER GELİŞTİRME PROGRAMI",
+    "program_adi": "3501 - KARİYER GELİŞTİRME PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/3501-kariyer-gelistirme-programi"
+  },
+  {
+    "id": "tubitak-11853",
+    "kurum": "TÜBİTAK",
+    "baslik": "KARİYER GELİŞTİRME PROGRAMI",
+    "program_adi": "3501 - KARİYER GELİŞTİRME PROGRAMI",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/3501-kariyer-gelistirme-programi"
+  },
+  {
+    "id": "tubitak-11008",
+    "kurum": "TÜBİTAK",
+    "baslik": "1004 Platformları İle İş Birliği Çağrısı",
+    "program_adi": "BİLİMSEL VE TEKNOLOJİK ARAŞTIRMA PROJELERİ - ÖZEL ÇAĞRILAR",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
   }
 ]

@@ -55,22 +55,7 @@ AWARD_SOURCES = [
     {"kurum": "Diğer", "ad": "IEEE Türkiye Duyurular", "url": "https://www.ieee.org.tr/", "hub": True, "keywords": ["ödül", "odul"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "Kadir Has Ödülleri", "url": "https://www.khas.edu.tr/kadir-has-odulleri/", "hub": True, "keywords": ["başvuru", "basvuru", "aday", "ödül", "odul", "takvim"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "Kadir Has Ödülleri Portalı", "url": "https://odul.khas.edu.tr/"},
-    {
-        "kurum": "Diğer",
-        "ad": "AMS Matematik Ödülleri",
-        "url": "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc",
-        "hub": True,
-        "keywords": ["paview", "pabrowse", "prize", "award"],
-        "allow_domain": True,
-        "exclude_keywords": [
-            "u.s. citizen",
-            "us citizen",
-            "citizens of the united states",
-            "united states citizen",
-            "residents of the united states",
-            "u.s. residents",
-        ],
-    },
+    {"kurum": "Diğer", "ad": "AMS Matematik Ödülleri", "url": "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc"},
 ]
 
 
@@ -251,7 +236,7 @@ def fetch_hub_awards(source):
     seen = {hub_url}
     for a in soup.find_all("a", href=True):
         text = " ".join(a.get_text(" ", strip=True).split())
-        full_url = urljoin(base_prefix, a["href"]).rstrip("/")
+        full_url = urljoin(base_prefix, a["href"]).split("#")[0].rstrip("/")
 
         if keywords and not any(k in f"{text} {full_url}".lower() for k in keywords):
             continue

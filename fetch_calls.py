@@ -257,7 +257,7 @@ def fetch_tuseb_calls():
     return calls
 
 def fetch_istka_calls():
-    """istka.org.tr/acik-destek-programlari sayfasından aktif çağrıları tarar."""
+    """istka.org.tr/acik-destek-programlari sayfasından menüleri eleyerek aktif çağrıları tarar."""
     base_url = "https://www.istka.org.tr"
     target_url = "https://www.istka.org.tr/acik-destek-programlari"
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
@@ -268,13 +268,16 @@ def fetch_istka_calls():
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
+        # Üst menü, navigasyon ve alt bilgiyi (footer) temizle ki "Devlet Destekleri" gibi linkler gelmesin
+        for tag in soup.find_all(["header", "nav", "footer"]):
+            tag.decompose()
+
         seen_links = set()
         for a_tag in soup.find_all("a", href=True):
             text = " ".join(a_tag.get_text(" ", strip=True).split())
             href = a_tag["href"]
 
-            # Program/destek/çağrı içeren bağlantıları filtrele
-            if len(text) < 15 or not any(k in text.lower() for k in ["destek", "program", "çağrı", "mali", "fizibilite", "teknik"]):
+            if len(text) < 15 or not any(k in text.lower() for k in ["destek", "program", "çağrı", "mali", "fizibilite", "teknik", "güdümlü"]):
                 continue
 
             full_url = urljoin(base_url, href)
@@ -282,14 +285,19 @@ def fetch_istka_calls():
                 continue
             seen_links.add(full_url)
 
-            # Kart veya kapsayıcı metninden tarih ara
             container = a_tag.find_parent(["article", "div", "li", "tr"])
             container_text = container.get_text(" ", strip=True) if container else text
             dates = parse_tr_dates(container_text)
 
             is_always_open = len(dates) == 0
-            start_date = dates[0] if len(dates) >= 1 else today_str
-            end_date = dates[-1] if len(dates) >= 2 else (dates[0] if len(dates) == 1 else today_str)
+            if len(dates) >= 2:
+                start_date, end_date = dates[0], dates[-1]
+            elif len(dates) == 1:
+                # Sadece bitiş tarihi varsa ince çizgi olmaması için bugünden bitişe kadar çubuk çiz
+                end_date = dates[0]
+                start_date = today_str if today_str < end_date else end_date
+            else:
+                start_date, end_date = today_str, today_str
 
             slug = re.sub(r"[^a-zA-Z0-9]+", "-", href.strip("/"))[-40:]
             calls.append({
@@ -310,6 +318,7 @@ def fetch_istka_calls():
 
     print(f"İSTKA: {len(calls)} çağrı çekildi.")
     return calls
+
 
 def load_manual_calls():
     if not os.path.exists(MANUAL_FILE):

@@ -2,8 +2,8 @@
   {
     "id": "odul-tüba-uba-akademi-odulleri-basvurusu",
     "kurum": "TÜBA",
-    "baslik": "TÜBA Akademi Ödülleri (2026 Uluslararası TÜBA Akademi)",
-    "program_adi": "TÜBA Akademi Ödülleri - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
+    "baslik": "Detaylı bilgi için tıklayınız (2026 Uluslararası TÜBA Akademi)",
+    "program_adi": "Detaylı bilgi için tıklayınız - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
     "surekli_acik": false,
     "baslangic": "2026-06-05",
     "bitis": "2026-06-05",
@@ -18,5 +18,95 @@
     "baslangic": "2026-07-01",
     "bitis": "2026-10-31",
     "url": "https://bilimakademisi.org/bagep-2026-odul-sahibi-sahin-hanaliogluna-tusebden-iki-odul/"
+  },
+  {
+    "id": "odul-tübi̇tak-4001-ulusal-ve-uluslararas-yar-ma-e",
+    "kurum": "TÜBİTAK",
+    "baslik": "4001 - Ulusal ve Uluslararası Yarışma/Etkinlik Katılım Desteği",
+    "program_adi": "4001 - Ulusal ve Uluslararası Yarışma/Etkinlik Katılım Desteği",
+    "surekli_acik": false,
+    "baslangic": "2026-06-30",
+    "bitis": "2026-08-14",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/4001-ulusal-ve-uluslararasi-yarismaetkinlik-katilim-destegi"
+  },
+  {
+    "id": "odul-tübi̇tak-4004-do-a-e-itimi-ve-bilim-okullar-",
+    "kurum": "TÜBİTAK",
+    "baslik": "4004 - Doğa Eğitimi ve Bilim Okulları Destekleme Programı",
+    "program_adi": "4004 - Doğa Eğitimi ve Bilim Okulları Destekleme Programı",
+    "surekli_acik": false,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-12-14",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/4004-doga-egitimi-ve-bilim-okullari-destekleme-programi"
+  },
+  {
+    "id": "odul-tübi̇tak-4005-yenilik-i-e-itim-uygulamalar-d",
+    "kurum": "TÜBİTAK",
+    "baslik": "4005 - Yenilikçi Eğitim Uygulamaları Destekleme Programı",
+    "program_adi": "4005 - Yenilikçi Eğitim Uygulamaları Destekleme Programı",
+    "surekli_acik": false,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-12-14",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/4005-yenilikci-egitim-uygulamalari-destekleme-programi"
+  },
+  {
+    "id": "odul-tübi̇tak-ilim-Fuarlari-Festivali-v3-pdf",
+    "kurum": "TÜBİTAK",
+    "baslik": "4006-C Bilim Fuarları Festivali Desteği (4006-C Çağrı Metni (2026))",
+    "program_adi": "4006-C Bilim Fuarları Festivali Desteği - 4006-C Çağrı Metni (2026)",
+    "surekli_acik": false,
+    "baslangic": "2026-04-17",
+    "bitis": "2026-06-26",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-04/2_Cagri_Metni_Bilim_Fuarlari_Festivali_v3.pdf"
+  },
+  {
+    "id": "odul-tübi̇tak-4006-t-bi-tak-bilim-fuarlar-destekl",
+    "kurum": "TÜBİTAK",
+    "baslik": "4006 - TÜBİTAK Bilim Fuarları Destekleme Programı",
+    "program_adi": "4006 - TÜBİTAK Bilim Fuarları Destekleme Programı",
+    "surekli_acik": false,
+    "baslangic": "2026-11-13",
+    "bitis": "2026-11-30",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/4006-tubitak-bilim-fuarlari-destekleme-programi"
+  },
+  {
+    "id": "odul-tübi̇tak-4008-zel-gereksinimli-bireylere-y-n",
+    "kurum": "TÜBİTAK",
+    "baslik": "4008 - Özel Gereksinimli Bireylere Yönelik Kapsayıcı Toplum Uygulamaları Destekleme Programı",
+    "program_adi": "4008 - Özel Gereksinimli Bireylere Yönelik Kapsayıcı Toplum Uygulamaları Destekleme Programı",
+    "surekli_acik": false,
+    "baslangic": "2026-01-05",
+    "bitis": "2026-01-05",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/4008-ozel-gereksinimli-bireylere-yonelik-kapsayici-toplum-uygulamalari-destekleme-programi"
+  },
+  {
+    "id": "odul-tübi̇tak-bilim-ve-toplum-destek-programlar-p",
+    "kurum": "TÜBİTAK",
+    "baslik": "Bilim ve Toplum Destek Programları Proje Teşvik Ödülleri",
+    "program_adi": "Bilim ve Toplum Destek Programları Proje Teşvik Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-09-29",
+    "bitis": "2026-10-15",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/bilim-ve-toplum-destek-programlari-proje-tesvik-odulleri"
+  },
+  {
+    "id": "odul-tübi̇tak-I-ATOLYELERI-CAGRI-METNI-0-pdf",
+    "kurum": "TÜBİTAK",
+    "baslik": "Milli Teknoloji Atölyeleri Proje Desteği (4003-T_MILLI_TEKNOLOJI_ATOLYEL)",
+    "program_adi": "Milli Teknoloji Atölyeleri Proje Desteği - 4003-T_MILLI_TEKNOLOJI_ATOLYELERI_CAGRI_METNI.pdf",
+    "surekli_acik": false,
+    "baslangic": "2026-11-06",
+    "bitis": "2026-11-06",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-11/4003-T_MILLI_TEKNOLOJI_ATOLYELERI_CAGRI_METNI_0.pdf"
+  },
+  {
+    "id": "odul-tübi̇tak-milli-teknoloji-kul-pler-birli-i",
+    "kurum": "TÜBİTAK",
+    "baslik": "Milli Teknoloji Kulüpler Birliği",
+    "program_adi": "Milli Teknoloji Kulüpler Birliği",
+    "surekli_acik": false,
+    "baslangic": "2026-09-14",
+    "bitis": "2026-09-14",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-kulupler-birligi"
   }
 ]

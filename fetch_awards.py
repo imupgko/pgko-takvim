@@ -5,7 +5,7 @@ import json
 import os
 import re
 from datetime import datetime
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 import requests
 import urllib3
 from bs4 import BeautifulSoup
@@ -19,10 +19,13 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-TR_MONTHS = {
+MONTHS_MAP = {
     "ocak": "01", "şubat": "02", "mart": "03", "nisan": "04",
     "mayıs": "05", "haziran": "06", "temmuz": "07", "ağustos": "08",
     "eylül": "09", "ekim": "10", "kasım": "11", "aralık": "12",
+    "january": "01", "february": "02", "march": "03", "april": "04",
+    "may": "05", "june": "06", "july": "07", "august": "08",
+    "september": "09", "october": "10", "november": "11", "december": "12",
 }
 
 # Takip edilecek tüm akademik ödül kaynakları
@@ -33,37 +36,45 @@ AWARD_SOURCES = [
     {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Kurumsal Ödüller", "url": "https://tubitak.gov.tr/tr/kurumsal/oduller", "hub": True},
     {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim ve Toplum Ödülleri", "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum", "hub": True, "keywords": ["ödül", "odul"]},
     # YÖK
-    {"kurum": "YÖK", "ad": "YÖK Üstün Başarı Ödülleri", "url": "https://odul.yok.gov.tr/"},
-    # TÜSEB
-    {"kurum": "TÜSEB", "ad": "TÜSEB Aziz Sancar Bilim, Hizmet ve Teşvik Ödülleri", "url": "https://www.tuseb.gov.tr/tuseb-odulleri"},
+    {"kurum": "YÖK", "ad": "YÖK Üstün Başarı Ödülleri", "url": "https://proje.yok.gov.tr/tr/page/621"},
+    
     # BAGEP
     {"kurum": "BAGEP", "ad": "Bilim Akademisi BAGEP Ödülleri", "url": "https://bilimakademisi.org/bagep/"},
     # Diğer Vakıf ve Kurum Ödülleri
-    {"kurum": "Diğer", "ad": "L'Oréal-UNESCO Bilim Kadınları İçin", "url": "https://www.forwomeninscience.com/challenge/show/105"},
-    {"kurum": "Diğer", "ad": "ODTÜ Parlar Vakfı Ödülleri", "url": "https://parlar.org.tr/oduller/"},
-    {"kurum": "Diğer", "ad": "Rahmi M. Koç Bilim Madalyası", "url": "https://www.ku.edu.tr/arastirma/rahmi-m-koc-bilim-madalyasi/"},
-    {"kurum": "Diğer", "ad": "İlim Yayma Ödülleri", "url": "https://www.ilimyaymaodulleri.org/"},
+    {"kurum": "Diğer", "ad": "L'Oréal-UNESCO Türkiye Ulusal Programı", "url": "https://www.forwomeninscience.com/authority/turkey---national-program", "hub": True, "keywords": ["discover", "know more", "challenge", "apply"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "L'Oréal-UNESCO Uluslararası Ödülleri", "url": "https://www.forwomeninscience.com/authority/international-awards", "hub": True, "keywords": ["discover", "know more", "challenge", "apply"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "ODTÜ Parlar Vakfı Ödülleri", "url": "https://parlar.org.tr/sayfa-odul-basvurulari-10"},
+    {"kurum": "Diğer", "ad": "ODTÜ Parlar Duyurular", "url": "https://parlar.org.tr/duyurular", "hub": True, "keywords": ["ödül", "odul", "başvuru", "basvuru"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "Rahmi M. Koç Bilim Madalyası", "url": "https://bilimmadalyasi.ku.edu.tr/", "hub": True, "keywords": ["başvuru", "basvuru", "aday", "nomination", "apply", "takvim", "calendar"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "İlim Yayma Ödülleri", "url": "https://www.ilimyaymaodulleri.org/", "hub": True, "keywords": ["başvuru", "basvuru", "takvim", "duyuru"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "Elginkan Vakfı Ödülleri", "url": "https://www.elginkanvakfi.org.tr/"},
 ]
 
 
 def parse_tr_dates(text):
-    """Metin içindeki GG.AA.YYYY ve '15 Mayıs 2026' formatındaki tarihleri YYYY-AA-GG listesi olarak döner."""
+    """GG.AA.YYYY, '15 Mayıs 2026', '15 May 2026' ve 'May 15, 2026' tarihlerini YYYY-AA-GG listesi döner."""
     found = set()
 
     for d, m, y in re.findall(r"\b(\d{1,2})[./](\d{1,2})[./](20\d{2})\b", text):
         try:
-            dt = datetime(int(y), int(m), int(d))
-            found.add(dt.strftime("%Y-%m-%d"))
+            found.add(datetime(int(y), int(m), int(d)).strftime("%Y-%m-%d"))
         except ValueError:
             continue
 
     lower_text = text.lower()
-    month_pattern = "|".join(TR_MONTHS.keys())
+    month_pattern = "|".join(MONTHS_MAP.keys())
+
+    # "15 Mayıs 2026" veya "15 May 2026"
     for d, m_name, y in re.findall(rf"\b(\d{{1,2}})\s+({month_pattern})\s+(20\d{{2}})\b", lower_text):
         try:
-            dt = datetime(int(y), int(TR_MONTHS[m_name]), int(d))
-            found.add(dt.strftime("%Y-%m-%d"))
+            found.add(datetime(int(y), int(MONTHS_MAP[m_name]), int(d)).strftime("%Y-%m-%d"))
+        except ValueError:
+            continue
+
+    # "May 15, 2026"
+    for m_name, d, y in re.findall(rf"\b({month_pattern})\s+(\d{{1,2}}),?\s+(20\d{{2}})\b", lower_text):
+        try:
+            found.add(datetime(int(y), int(MONTHS_MAP[m_name]), int(d)).strftime("%Y-%m-%d"))
         except ValueError:
             continue
 
@@ -203,6 +214,8 @@ def fetch_hub_awards(source):
         base_prefix = hub_url + "/"
 
     # 1. Katman: Alt ödül/program sayfalarını keşfet
+    allow_domain = source.get("allow_domain", False)
+    hub_domain = urlparse(hub_url).netloc
     keywords = source.get("keywords")
     sub_pages = []
     seen = {hub_url}
@@ -213,9 +226,10 @@ def fetch_hub_awards(source):
         if keywords and not any(k in f"{text} {full_url}".lower() for k in keywords):
             continue
 
-        if full_url.startswith(base_prefix) and full_url not in seen and len(text) >= 4:
+        valid_path = (urlparse(full_url).netloc == hub_domain) if allow_domain else full_url.startswith(base_prefix)
+        if valid_path and full_url not in seen and len(text) >= 4:
             seen.add(full_url)
-            sub_pages.append({"kurum": kurum, "ad": text, "url": full_url})
+            sub_pages.append({"kurum": kurum, "ad": f"{source['ad']} - {text[:25]}", "url": full_url})
 
     print(f"{source['ad']} (Merkez): {len(sub_pages)} alt sayfa keşfedildi.")
 
@@ -296,6 +310,66 @@ def fetch_tubitak_odul_portal():
     print(f"TÜBİTAK Ödül Portalı: {len(results)} aktif çağrı bulundu.")
     return results
 
+def fetch_tuseb_awards():
+    """TÜSEB TBYS API'sinden adında 'ödül' veya 'Aziz Sancar' geçen aktif/geçmiş ödül çağrılarını çeker."""
+    endpoints = [
+        "https://tbysbff.tuseb.gov.tr/api/Cagri/AktifCagrilar",
+        "https://tbysbff.tuseb.gov.tr/api/Cagri/GecmisCagrilar",
+    ]
+    portal_url = "https://tbys.tuseb.gov.tr/"
+    today_str = datetime.utcnow().strftime("%Y-%m-%d")
+    results = []
+    seen_ids = set()
+
+    headers = {
+        **HEADERS,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://tbys.tuseb.gov.tr",
+        "Referer": "https://tbys.tuseb.gov.tr/",
+    }
+
+    for api_url in endpoints:
+        try:
+            resp = requests.post(api_url, headers=headers, json={}, timeout=25, verify=False)
+            resp.raise_for_status()
+            items = (resp.json().get("value") or {}).get("data") or []
+
+            for item in items:
+                kodu = (item.get("kodu") or "").strip()
+                konu = (item.get("konu") or "").strip()
+                combined = f"{kodu} {konu}".lower()
+
+                # Sadece ödül çağrılarını filtrele
+                if not any(k in combined for k in ["ödül", "odul", "aziz sancar"]):
+                    continue
+
+                uid = f"odul-tuseb-{item.get('id') or kodu}"
+                if uid in seen_ids:
+                    continue
+
+                start_date = (item.get("baslangicTarihi") or "")[:10]
+                end_date = (item.get("bitisTarihi") or "")[:10]
+                if not end_date or end_date < "2025-01-01":
+                    continue
+
+                seen_ids.add(uid)
+                results.append({
+                    "id": uid,
+                    "kurum": "TÜSEB",
+                    "baslik": kodu if kodu else (konu[:60] + ("..." if len(konu) > 60 else "")),
+                    "program_adi": konu,
+                    "surekli_acik": False,
+                    "baslangic": start_date or today_str,
+                    "bitis": end_date,
+                    "url": portal_url,
+                })
+        except Exception as e:
+            print(f"TÜSEB Ödül API hatası ({api_url}): {e}")
+
+    print(f"TÜSEB Ödülleri (TBYS): {len(results)} kayıt bulundu.")
+    return results
+
 def load_manual_awards():
     if not os.path.exists(MANUAL_FILE):
         return []
@@ -321,7 +395,7 @@ def load_archived_awards():
 
 def main():
     archived = load_archived_awards()
-    fetched = fetch_tubitak_odul_portal()
+    fetched = fetch_tubitak_odul_portal() + fetch_tuseb_awards()
     for source in AWARD_SOURCES:
         if source.get("hub"):
             fetched.extend(fetch_hub_awards(source))

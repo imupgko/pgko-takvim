@@ -4,7 +4,11 @@ import re
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 import requests
+import urllib3
 from bs4 import BeautifulSoup
+
+# Kamu sitelerindeki eksik SSL zinciri uyarılarını gizle
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 OUTPUT_FILE = "cagrilar.json"
 MANUAL_FILE = "manuel_cagrilar.json"
@@ -36,6 +40,19 @@ def parse_tr_dates(text):
     return sorted(set(dates))
 
 
+def parse_single_date(date_str):
+    """GG.AA.YYYY veya YYYY-MM-DD formatındaki tek bir tarihi YYYY-MM-DD'ye çevirir."""
+    if not date_str or date_str.strip() == "-":
+        return None
+    dates = parse_tr_dates(date_str)
+    if dates:
+        return dates[0]
+    m = re.search(r"\b(\d{4})-(\d{2})-(\d{2})\b", date_str)
+    if m:
+        return m.group(0)
+    return None
+
+
 def fetch_eu_calls(limit=20):
     """AB Funding & Tenders (SEDIA) API'sinden açık ve yaklaşan Horizon Europe çağrılarını çeker."""
     url = "https://api.tech.ec.europa.eu/search-api/prod/rest/search"
@@ -65,10 +82,11 @@ def fetch_eu_calls(limit=20):
         response.raise_for_status()
         data = response.json()
 
-        for item in data.get("results", []):
+        for idx, item in enumerate(data.get("results", [])):
             meta = item.get("metadata", {})
-            identifier = (meta.get("identifier") or [""])[0]
-            title = (meta.get("title") or [identifier])[0]
+            identifier = (meta.get("identifier") or [""])[0].strip()
+            ref_id = item.get("reference") or identifier or f"item-{idx}"
+            title = (meta.get("title") or [identifier or ref_id])[0]
             start_date = format_eu_date((meta.get("startDate") or [None])[0])
             deadline = format_eu_date((meta.get("deadlineDate") or [None])[0])
 
@@ -76,13 +94,13 @@ def fetch_eu_calls(limit=20):
                 continue
 
             calls.append({
-                "id": f"ab-{identifier}",
+                "id": f"ab-{ref_id}-{idx}",
                 "kurum": "AB",
-                "baslik": identifier,
+                "baslik": identifier if identifier else title[:45],
                 "program_adi": title,
                 "baslangic": start_date,
                 "bitis": deadline,
-                "url": f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}",
+                "url": f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}" if identifier else "https://ec.europa.eu/info/funding-tenders/",
             })
     except Exception as e:
         print(f"AB API hatası: {e}")
@@ -91,32 +109,19 @@ def fetch_eu_calls(limit=20):
     return calls
 
 
-def parse_single_date(date_str):
-    """GG.AA.YYYY veya YYYY-MM-DD formatındaki tek bir tarihi YYYY-MM-DD'ye çevirir."""
-    if not date_str or date_str.strip() == "-":
-        return None
-    # Önce GG.AA.YYYY veya GG/AA/YYYY ara
-    dates = parse_tr_dates(date_str)
-    if dates:
-        return dates[0]
-    # Alternatif olarak YYYY-MM-DD ara
-    m = re.search(r"\b(\d{4})-(\d{2})-(\d{2})\b", date_str)
-    if m:
-        return m.group(0)
-    return None
-
-
 def fetch_tubitak_calls():
     """ardeb-pbs.tubitak.gov.tr tablosundaki data-* etiketlerinden aktif çağrıları çeker."""
     target_url = "https://ardeb-pbs.tubitak.gov.tr/"
     calls = []
 
     try:
-        resp = requests.get(target_url, headers=HEADERS, timeout=25)
+        resp = requests.get(target_url, headers=HEADERS, timeout=25, verify=False)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
         rows = soup.find_all("tr", attrs={"data-program-cagri-id": True})
+        print(f"TÜBİTAK teşhis: Tabloda {len(rows)} satır bulundu.")
+
         for row in rows:
             cagri_id = row.get("data-program-cagri-id", "").strip()
             program_adi = row.get("data-program-adi", "").strip()
@@ -125,14 +130,16 @@ def fetch_tubitak_calls():
             bitis_raw = row.get("data-bitis", "").strip()
             detay_url = row.get("data-bilgi-notu-url", "").strip() or target_url
 
+            # İlk birkaç satırın ham tarihini logda görelim
+            if baslangic_raw != "-" and len(calls) < 3:
+                print(f"  Örnek satır -> başlangıç: '{baslangic_raw}', bitiş: '{bitis_raw}'")
+
             start_date = parse_single_date(baslangic_raw)
             end_date = parse_single_date(bitis_raw)
 
-            # Sürekli açık ("-") veya tarihi olmayan çağrıları şeride ekleme
             if not start_date or not end_date:
                 continue
 
-            # Çubukta görünecek kısa başlık (çağrı adı boşsa program adını kullan)
             baslik = cagri_adi if cagri_adi and cagri_adi != "-" else program_adi
 
             calls.append({
@@ -152,13 +159,13 @@ def fetch_tubitak_calls():
 
 
 def fetch_tuseb_calls():
-    """TÜSEB proje çağrıları/duyurular sayfasından tarih içeren çağrıları tarar."""
+    """TÜSEB duyurular sayfasından tarih içeren çağrıları tarar."""
     base_url = "https://www.tuseb.gov.tr"
     target_url = "https://www.tuseb.gov.tr/duyurular"
     calls = []
 
     try:
-        resp = requests.get(target_url, headers=HEADERS, timeout=25)
+        resp = requests.get(target_url, headers=HEADERS, timeout=25, verify=False)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -207,7 +214,6 @@ def fetch_tuseb_calls():
 
 
 def load_manual_calls():
-    """manuel_cagrilar.json dosyasındaki elle girilen çağrıları okur."""
     if not os.path.exists(MANUAL_FILE):
         return []
     try:
@@ -224,7 +230,6 @@ def main():
     tuseb_calls = fetch_tuseb_calls()
     manual_calls = load_manual_calls()
 
-    # Manuel kayıtlar en sona eklendiği için aynı ID varsa manuel olan öncelikli olur
     merged = {}
     for call in eu_calls + tubitak_calls + tuseb_calls + manual_calls:
         merged[call["id"]] = call

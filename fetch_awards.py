@@ -28,11 +28,10 @@ TR_MONTHS = {
 # Takip edilecek tüm akademik ödül kaynakları
 AWARD_SOURCES = [
     # TÜBA
-    {"kurum": "TÜBA", "ad": "TÜBA Akademi Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/uluslararasi-tuba-akademi-odulleri"},
-    {"kurum": "TÜBA", "ad": "TÜBA-GEBİP Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/tuba-gebip-odulleri"},
-    {"kurum": "TÜBA", "ad": "TÜBA-TESEP Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/tuba-tesep-odulleri"},
+    {"kurum": "TÜBA", "ad": "TÜBA Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri", "hub": True},
     # TÜBİTAK
-    {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim, Özel, Hizmet ve Teşvik Ödülleri", "url": "https://tubitak.gov.tr/tr/oduller/tubitak-odulleri"},
+    {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Kurumsal Ödüller", "url": "https://tubitak.gov.tr/tr/kurumsal/oduller", "hub": True},
+    {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim ve Toplum", "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum", "hub": True},
     # YÖK
     {"kurum": "YÖK", "ad": "YÖK Üstün Başarı Ödülleri", "url": "https://odul.yok.gov.tr/"},
     # TÜSEB
@@ -183,6 +182,115 @@ def fetch_award_source(source):
     print(f"{ad}: {len(results)} kayıt bulundu.")
     return results
 
+def fetch_hub_awards(source):
+    """Ana ödül sayfasını ve altındaki tüm ödül/program linklerini (3 katmanlı) tarar."""
+    hub_url = source["url"].rstrip("/")
+    kurum = source["kurum"]
+    results = []
+
+    resp = fetch_url_with_retry(hub_url)
+    if resp is None:
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for tag in soup.find_all(["header", "nav", "footer"]):
+        tag.decompose()
+
+    # Eğer URL .htm/.html ile bitiyorsa klasör yolunu baz al (örn. .../odulBasvurulari/)
+    if hub_url.lower().endswith((".htm", ".html")):
+        base_prefix = hub_url.rsplit("/", 1)[0] + "/"
+    else:
+        base_prefix = hub_url + "/"
+
+    # 1. Katman: Alt ödül/program sayfalarını keşfet
+    sub_pages = []
+    seen = {hub_url}
+    for a in soup.find_all("a", href=True):
+        text = " ".join(a.get_text(" ", strip=True).split())
+        full_url = urljoin(base_prefix, a["href"]).rstrip("/")
+
+        if full_url.startswith(base_prefix) and full_url not in seen and len(text) >= 4:
+            seen.add(full_url)
+            sub_pages.append({"kurum": kurum, "ad": text, "url": full_url})
+
+    print(f"{source['ad']} (Merkez): {len(sub_pages)} alt sayfa keşfedildi.")
+
+    # 2. ve 3. Katman: Keşfedilen alt sayfaları tara
+    for sub in sub_pages[:20]:
+        results.extend(fetch_award_source(sub))
+
+    # Eğer alt sayfalardan kayıt çıkmadıysa ana sayfanın kendi içindeki tarihleri de kontrol et
+    if not results:
+        results.extend(fetch_award_source(source))
+
+    return results
+
+def fetch_tubitak_odul_portal():
+    """oduller.tubitak.gov.tr portalındaki aktif ödül tablosunu okur (ARDEB-PBS ile aynı şablon)."""
+    portal_url = "https://oduller.tubitak.gov.tr/odulBasvurulari/odulBasvurulari.htm"
+    today_str = datetime.utcnow().strftime("%Y-%m-%d")
+    results = []
+
+    resp = fetch_url_with_retry(portal_url)
+    if resp is None:
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    panel = soup.find("div", class_="index-portal-panel-body-table")
+    if not panel:
+        print("TÜBİTAK Ödül Portalı: Tablo alanı bulunamadı.")
+        return []
+
+    # 1. Durum: ARDEB-PBS tarzı data-* satırları varsa
+    rows = panel.find_all("tr", attrs={"data-program-cagri-id": True})
+    if rows:
+        for row in rows:
+            cagri_id = row.get("data-program-cagri-id", "").strip()
+            program_adi = row.get("data-program-adi", "").strip()
+            cagri_adi = row.get("data-cagri-adi", "").strip()
+            baslangic = parse_tr_dates(row.get("data-baslangic", ""))
+            bitis = parse_tr_dates(row.get("data-bitis", ""))
+            detay_url = row.get("data-bilgi-notu-url", "").strip() or portal_url
+
+            if not bitis:
+                continue
+
+            results.append({
+                "id": f"odul-tubitak-portal-{cagri_id}",
+                "kurum": "TÜBİTAK",
+                "baslik": cagri_adi if cagri_adi and cagri_adi != "-" else program_adi,
+                "program_adi": program_adi,
+                "surekli_acik": False,
+                "baslangic": baslangic[0] if baslangic else today_str,
+                "bitis": bitis[-1],
+                "url": detay_url,
+            })
+    else:
+        # 2. Durum: Standart <table> satırları varsa
+        for idx, tr in enumerate(panel.select("table tbody tr")):
+            cols = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
+            row_text = " ".join(cols)
+            dates = parse_tr_dates(row_text)
+            if not dates or not cols:
+                continue
+
+            end_date = dates[-1]
+            start_date = dates[0] if len(dates) >= 2 else (today_str if today_str < end_date else end_date)
+            title = cols[0] if len(cols[0]) > 5 else row_text[:60]
+
+            results.append({
+                "id": f"odul-tubitak-portal-row-{idx}",
+                "kurum": "TÜBİTAK",
+                "baslik": title,
+                "program_adi": title,
+                "surekli_acik": False,
+                "baslangic": start_date,
+                "bitis": end_date,
+                "url": portal_url,
+            })
+
+    print(f"TÜBİTAK Ödül Portalı: {len(results)} aktif çağrı bulundu.")
+    return results
 
 def load_manual_awards():
     if not os.path.exists(MANUAL_FILE):
@@ -209,9 +317,13 @@ def load_archived_awards():
 
 def main():
     archived = load_archived_awards()
-    fetched = []
+    fetched = fetch_tubitak_odul_portal()
     for source in AWARD_SOURCES:
-        fetched.extend(fetch_award_source(source))
+        if source.get("hub"):
+            fetched.extend(fetch_hub_awards(source))
+        else:
+            fetched.extend(fetch_award_source(source))
+
     manual = load_manual_awards()
 
     merged = {}

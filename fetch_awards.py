@@ -47,7 +47,30 @@ AWARD_SOURCES = [
     {"kurum": "Diğer", "ad": "ODTÜ Parlar Duyurular", "url": "https://parlar.org.tr/duyurular", "hub": True, "keywords": ["ödül", "odul", "başvuru", "basvuru"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "Rahmi M. Koç Bilim Madalyası", "url": "https://bilimmadalyasi.ku.edu.tr/", "hub": True, "keywords": ["başvuru", "basvuru", "aday", "nomination", "apply", "takvim", "calendar"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "İlim Yayma Ödülleri", "url": "https://www.ilimyaymaodulleri.org/", "hub": True, "keywords": ["başvuru", "basvuru", "takvim", "duyuru"], "allow_domain": True},
-    {"kurum": "Diğer", "ad": "Elginkan Vakfı Ödülleri", "url": "https://www.elginkanvakfi.org.tr/"},
+    {"kurum": "Diğer", "ad": "Elginkan Vakfı Ödülleri", "url": "https://www.elginkanvakfi.org.tr/", "hub": True, "keywords": ["ödül", "odul", "teknoloji", "başvuru", "basvuru"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "TGC Sedat Simavi Ödülleri", "url": "https://www.tgc.org.tr/oduller/sedat-simavi-odulleri.html", "hub": True, "keywords": ["simavi"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "EIC & EIT European Prize for Women Innovators", "url": "https://eic.ec.europa.eu/eic-prizes/european-prize-women-innovators-powered-eic-eit_en", "hub": True, "keywords": ["women-innovators", "apply", "rules", "contest", "edition"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "TÜRKPATENT ISIF Uluslararası Buluş Ödülleri", "url": "https://isif.turkpatent.gov.tr/", "hub": True, "keywords": ["apply", "başvuru", "basvuru"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "IEEE Türkiye Bilim Ödülleri", "url": "https://www.ieee.org.tr/ieee-turkiye-bilim-odulleri/", "hub": True, "keywords": ["ödül", "odul", "başvuru", "basvuru"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "IEEE Türkiye Duyurular", "url": "https://www.ieee.org.tr/", "hub": True, "keywords": ["ödül", "odul"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "Kadir Has Ödülleri", "url": "https://www.khas.edu.tr/kadir-has-odulleri/", "hub": True, "keywords": ["başvuru", "basvuru", "aday", "ödül", "odul", "takvim"], "allow_domain": True},
+    {"kurum": "Diğer", "ad": "Kadir Has Ödülleri Portalı", "url": "https://odul.khas.edu.tr/"},
+    {
+        "kurum": "Diğer",
+        "ad": "AMS Matematik Ödülleri",
+        "url": "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc",
+        "hub": True,
+        "keywords": ["paview", "pabrowse", "prize", "award"],
+        "allow_domain": True,
+        "exclude_keywords": [
+            "u.s. citizen",
+            "us citizen",
+            "citizens of the united states",
+            "united states citizen",
+            "residents of the united states",
+            "u.s. residents",
+        ],
+    },
 ]
 
 
@@ -140,6 +163,13 @@ def fetch_award_source(source):
                 seen_urls.add(full_url)
                 yearly_links.append((text or ad, full_url))
 
+    # --- YENİ: Hariç tutma (exclude_keywords) kontrolü ---
+    exclude_keywords = source.get("exclude_keywords")
+    main_text = soup.get_text(" ", strip=True)
+    if exclude_keywords and any(k in main_text.lower() for k in exclude_keywords):
+        print(f"{ad}: Uluslararası başvuruya kapalı (filtreyle elendi).")
+        return []
+    
     # 2. Aşama: Alt link varsa içlerinden tarih çek
     for link_text, detail_url in yearly_links[:4]:
         if detail_url.lower().endswith(".pdf"):
@@ -229,7 +259,12 @@ def fetch_hub_awards(source):
         valid_path = (urlparse(full_url).netloc == hub_domain) if allow_domain else full_url.startswith(base_prefix)
         if valid_path and full_url not in seen and len(text) >= 4:
             seen.add(full_url)
-            sub_pages.append({"kurum": kurum, "ad": f"{source['ad']} - {text[:25]}", "url": full_url})
+            sub_pages.append({
+                "kurum": kurum,
+                "ad": f"{source['ad']} - {text[:25]}",
+                "url": full_url,
+                "exclude_keywords": source.get("exclude_keywords"),
+            })
 
     print(f"{source['ad']} (Merkez): {len(sub_pages)} alt sayfa keşfedildi.")
 

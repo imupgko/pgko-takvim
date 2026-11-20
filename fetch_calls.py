@@ -60,7 +60,8 @@ def fetch_eu_calls(limit=25):
             calls.append({
                 "id": f"ab-{identifier}",
                 "kurum": "AB",
-                "baslik": f"{identifier} - {title[:80]}",
+                "baslik": identifier,
+                "program_adi": title,
                 "baslangic": start_date,
                 "bitis": deadline,
                 "url": f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}",

@@ -54,8 +54,7 @@ AWARD_SOURCES = [
     {"kurum": "Diğer", "ad": "IEEE Türkiye Bilim Ödülleri", "url": "https://www.ieee.org.tr/ieee-turkiye-bilim-odulleri/", "hub": True, "keywords": ["ödül", "odul", "başvuru", "basvuru"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "IEEE Türkiye Duyurular", "url": "https://www.ieee.org.tr/", "hub": True, "keywords": ["ödül", "odul"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "Kadir Has Ödülleri", "url": "https://www.khas.edu.tr/kadir-has-odulleri/", "hub": True, "keywords": ["başvuru", "basvuru", "aday", "ödül", "odul", "takvim"], "allow_domain": True},
-    {"kurum": "Diğer", "ad": "Kadir Has Ödülleri Portalı", "url": "https://odul.khas.edu.tr/"},
-    {"kurum": "Diğer", "ad": "AMS Matematik Ödülleri", "url": "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc"},
+    {"kurum": "Diğer", "ad": "Kadir Has Ödülleri Portalı", "url": "https://odul.khas.edu.tr/"},    
 ]
 
 
@@ -390,6 +389,76 @@ def fetch_tuseb_awards():
     print(f"TÜSEB Ödülleri (TBYS): {len(results)} kayıt bulundu.")
     return results
 
+def fetch_ams_awards():
+    url = "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc"
+    resp = fetch_url_with_retry(url, timeout=15)
+    if not resp:
+        print("AMS Matematik Ödülleri: Sayfa çekilemedi.")
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    today = datetime.now()
+    today_str = today.strftime("%Y-%m-%d")
+    target_years = {str(today.year), str(today.year + 1)}
+
+    exclude_keywords = [
+        "u.s. citizen",
+        "us citizen",
+        "citizens of the united states",
+        "united states citizen",
+        "u.s. resident",
+        "residents of the united states",
+    ]
+
+    results = []
+    seen = set()
+
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        if "paview.cgi" not in href and "pabrowse.cgi" not in href:
+            continue
+
+        title = a.get_text(" ", strip=True)
+        if not title or len(title) < 4:
+            continue
+
+        full_url = urljoin(url, href).split("#")[0]
+        if full_url in seen:
+            continue
+
+        # Ödülün bulunduğu satır/paragraf bloğundaki metni al
+        container = a.find_parent(["li", "tr", "p", "div"])
+        block_text = container.get_text(" ", strip=True) if container else title
+        if len(block_text) <= len(title) + 10 and container and container.parent:
+            block_text = container.parent.get_text(" ", strip=True)
+
+        # ABD vatandaşı/ikamet şartı varsa atla
+        if any(k in block_text.lower() for k in exclude_keywords):
+            continue
+
+        dates = [d for d in parse_tr_dates(block_text) if d[:4] in target_years]
+        if not dates:
+            continue
+
+        seen.add(full_url)
+        end_date = dates[-1]
+        start_date = dates[0] if len(dates) >= 2 else (today_str if today_str < end_date else end_date)
+        slug = re.sub(r"[^a-zA-Z0-9]+", "-", title.lower()).strip("-")[:35]
+
+        results.append({
+            "id": f"odul-ams-{slug}",
+            "kurum": "Diğer",
+            "baslik": f"AMS - {title}",
+            "program_adi": title,
+            "surekli_acik": False,
+            "baslangic": start_date,
+            "bitis": end_date,
+            "url": full_url,
+        })
+
+    print(f"AMS Matematik Ödülleri: {len(results)} ayrı ödül çekildi.")
+    return results
+
 def load_manual_awards():
     if not os.path.exists(MANUAL_FILE):
         return []
@@ -415,7 +484,7 @@ def load_archived_awards():
 
 def main():
     archived = load_archived_awards()
-    fetched = fetch_tubitak_odul_portal() + fetch_tuseb_awards()
+    fetched = fetch_tubitak_odul_portal() + fetch_tuseb_awards() + fetch_ams_awards()
     for source in AWARD_SOURCES:
         if source.get("hub"):
             fetched.extend(fetch_hub_awards(source))

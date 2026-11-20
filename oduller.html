@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PGKO Akademik Ödüller Tarih Şeridi</title>
+
+  <link href="https://unpkg.com/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1f2937;
+      --border-color: #e5e7eb;
+      --tubitak-color: #1d4ed8;
+      --tuba-color: #0f766e;
+      --yok-color: #7c3aed;
+      --tuseb-color: #b91c1c;
+      --bagep-color: #d97706;
+      --diger-color: #15803d;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .filter-group, .action-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 7px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: #f9fafb;
+      color: var(--text-color);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover { background: #f3f4f6; }
+    .btn.active { background: #111827; color: #ffffff; border-color: #111827; }
+
+    .btn-tubitak.active { background: var(--tubitak-color); border-color: var(--tubitak-color); }
+    .btn-tuba.active    { background: var(--tuba-color); border-color: var(--tuba-color); }
+    .btn-yok.active     { background: var(--yok-color); border-color: var(--yok-color); }
+    .btn-tuseb.active   { background: var(--tuseb-color); border-color: var(--tuseb-color); }
+    .btn-bagep.active   { background: var(--bagep-color); border-color: var(--bagep-color); }
+    .btn-diger.active   { background: var(--diger-color); border-color: var(--diger-color); }
+
+    .toggle-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      user-select: none;
+      margin-right: 8px;
+    }
+
+    #timeline {
+      width: 100%;
+      min-height: 360px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .vis-item {
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-width: 1px;
+    }
+
+    .vis-item.item-tubitak { background-color: #dbeafe; border-color: var(--tubitak-color); color: #1e3a8a; }
+    .vis-item.item-tuba    { background-color: #ccfbf1; border-color: var(--tuba-color); color: #115e59; }
+    .vis-item.item-yok     { background-color: #f3e8ff; border-color: var(--yok-color); color: #5b21b6; }
+    .vis-item.item-tuseb   { background-color: #fee2e2; border-color: var(--tuseb-color); color: #7f1d1d; }
+    .vis-item.item-bagep   { background-color: #fef3c7; border-color: var(--bagep-color); color: #78350f; }
+    .vis-item.item-diger   { background-color: #dcfce7; border-color: var(--diger-color); color: #166534; }
+
+    .vis-item:hover { filter: brightness(0.95); }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="filter-group" id="kurumFiltreleri">
+      <button class="btn active" data-kurum="ALL">Tümü</button>
+      <button class="btn btn-tubitak" data-kurum="TÜBİTAK">TÜBİTAK</button>
+      <button class="btn btn-tuba" data-kurum="TÜBA">TÜBA</button>
+      <button class="btn btn-yok" data-kurum="YÖK">YÖK</button>
+      <button class="btn btn-tuseb" data-kurum="TÜSEB">TÜSEB</button>
+      <button class="btn btn-bagep" data-kurum="BAGEP">BAGEP</button>
+      <button class="btn btn-diger" data-kurum="Diğer">Diğer Ödüller</button>
+    </div>
+
+    <div class="action-group">
+      <label class="toggle-label">
+        <input type="checkbox" id="sadeceAcik" checked />
+        Sadece Açık Çağrılar
+      </label>
+      <button class="btn" id="btnBugun">Bugün</button>
+      <button class="btn" id="btnYil">Yıllık Görünüm</button>
+    </div>
+  </div>
+
+  <div id="timeline"></div>
+  <div class="hint">Ödül başvuru detaylarına gitmek için ilgili zaman çubuğuna tıklayabilirsiniz.</div>
+
+  <script>
+    let allAwards = [];
+    let selectedKurum = "ALL";
+    let timeline = null;
+    const itemsDataSet = new vis.DataSet();
+
+    const groups = new vis.DataSet([
+      { id: "TÜBİTAK", content: "<strong>TÜBİTAK</strong>" },
+      { id: "TÜBA", content: "<strong>TÜBA</strong>" },
+      { id: "YÖK", content: "<strong>YÖK</strong>" },
+      { id: "TÜSEB", content: "<strong>TÜSEB</strong>" },
+      { id: "BAGEP", content: "<strong>BAGEP</strong>" },
+      { id: "Diğer", content: "<strong>Diğer Ödüller</strong>" }
+    ]);
+
+    function getClassName(kurum) {
+      if (kurum === "TÜBİTAK") return "item-tubitak";
+      if (kurum === "TÜBA") return "item-tuba";
+      if (kurum === "YÖK") return "item-yok";
+      if (kurum === "TÜSEB") return "item-tuseb";
+      if (kurum === "BAGEP") return "item-bagep";
+      if (kurum === "Diğer") return "item-diger";
+      return "";
+    }
+
+    function formatDateTR(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString("tr-TR", { day: "2-digit", month: "long", year: "numeric" });
+    }
+
+    function renderFilteredData() {
+      const onlyOpen = document.getElementById("sadeceAcik").checked;
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const filtered = allAwards.filter(item => {
+        const matchKurum = selectedKurum === "ALL" || item.kurum === selectedKurum;
+        const endDate = new Date(item.bitis);
+        const matchStatus = !onlyOpen || endDate >= today;
+        return matchKurum && matchStatus;
+      });
+
+      const visItems = filtered.map(item => ({
+        id: item.id,
+        group: item.kurum,
+        content: item.baslik,
+        start: item.baslangic,
+        end: item.bitis,
+        className: getClassName(item.kurum),
+        url: item.url,
+        title: `<strong>${item.kurum}</strong><br>${item.baslik}${item.program_adi ? `<br><em>${item.program_adi}</em>` : ""}<br>Başlangıç: ${formatDateTR(item.baslangic)}<br>Bitiş: ${formatDateTR(item.bitis)}`
+      }));
+
+      itemsDataSet.clear();
+      itemsDataSet.add(visItems);
+
+      if (timeline && visItems.length > 0) {
+        timeline.fit({ animation: false });
+      }
+    }
+
+    async function initTimeline() {
+      const container = document.getElementById("timeline");
+      const options = {
+        locale: "tr",
+        moment: function (date) { return moment(date).locale("tr"); },
+        stack: true,
+        verticalScroll: true,
+        horizontalScroll: false,
+        zoomKey: "ctrlKey",
+        maxHeight: "550px",
+        margin: { item: 10, axis: 5 },
+        tooltip: { followMouse: true, overflowMethod: "cap" }
+      };
+
+      timeline = new vis.Timeline(container, itemsDataSet, groups, options);
+
+      timeline.on("select", function (props) {
+        if (props.items.length > 0) {
+          const item = itemsDataSet.get(props.items[0]);
+          if (item && item.url) window.open(item.url, "_blank", "noopener,noreferrer");
+        }
+      });
+
+      try {
+        const response = await fetch("./oduller.json?t=" + Date.now());
+        if (!response.ok) throw new Error("JSON yüklenemedi");
+        allAwards = await response.json();
+        renderFilteredData();
+      } catch (err) {
+        container.innerHTML = "<p style='padding:16px;color:#b91c1c;'>Ödül veri dosyası (oduller.json) yüklenirken hata oluştu.</p>";
+        console.error(err);
+      }
+    }
+
+    document.querySelectorAll("#kurumFiltreleri .btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#kurumFiltreleri .btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        selectedKurum = btn.dataset.kurum;
+        renderFilteredData();
+      });
+    });
+
+    document.getElementById("sadeceAcik").addEventListener("change", renderFilteredData);
+
+    document.getElementById("btnBugun").addEventListener("click", () => {
+      if (timeline) timeline.moveTo(new Date(), { animation: true });
+    });
+
+    document.getElementById("btnYil").addEventListener("click", () => {
+      if (!timeline) return;
+      const now = new Date();
+      timeline.setWindow(new Date(now.getFullYear(), now.getMonth() - 1, 1), new Date(now.getFullYear(), now.getMonth() + 11, 1), { animation: true });
+    });
+
+    initTimeline();
+  </script>
+</body>
+</html>

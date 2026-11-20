@@ -1,0 +1,229 @@
+from io import BytesIO
+from pypdf import PdfReader
+import time
+import json
+import os
+import re
+from datetime import datetime
+from urllib.parse import urljoin
+import requests
+import urllib3
+from bs4 import BeautifulSoup
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+OUTPUT_FILE = "oduller.json"
+MANUAL_FILE = "manuel_oduller.json"
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+TR_MONTHS = {
+    "ocak": "01", "şubat": "02", "mart": "03", "nisan": "04",
+    "mayıs": "05", "haziran": "06", "temmuz": "07", "ağustos": "08",
+    "eylül": "09", "ekim": "10", "kasım": "11", "aralık": "12",
+}
+
+# Takip edilecek tüm akademik ödül kaynakları
+AWARD_SOURCES = [
+    # TÜBA
+    {"kurum": "TÜBA", "ad": "TÜBA Akademi Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/uluslararasi-tuba-akademi-odulleri"},
+    {"kurum": "TÜBA", "ad": "TÜBA-GEBİP Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/tuba-gebip-odulleri"},
+    {"kurum": "TÜBA", "ad": "TÜBA-TESEP Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/tuba-tesep-odulleri"},
+    # TÜBİTAK
+    {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim, Özel, Hizmet ve Teşvik Ödülleri", "url": "https://tubitak.gov.tr/tr/oduller/tubitak-odulleri"},
+    # YÖK
+    {"kurum": "YÖK", "ad": "YÖK Üstün Başarı Ödülleri", "url": "https://odul.yok.gov.tr/"},
+    # TÜSEB
+    {"kurum": "TÜSEB", "ad": "TÜSEB Aziz Sancar Bilim, Hizmet ve Teşvik Ödülleri", "url": "https://www.tuseb.gov.tr/tuseb-odulleri"},
+    # BAGEP
+    {"kurum": "BAGEP", "ad": "Bilim Akademisi BAGEP Ödülleri", "url": "https://bilimakademisi.org/bagep/"},
+    # Diğer Vakıf ve Kurum Ödülleri
+    {"kurum": "Diğer", "ad": "L'Oréal-UNESCO Bilim Kadınları İçin", "url": "https://www.forwomeninscience.com/challenge/show/105"},
+    {"kurum": "Diğer", "ad": "ODTÜ Parlar Vakfı Ödülleri", "url": "https://parlar.org.tr/oduller/"},
+    {"kurum": "Diğer", "ad": "Rahmi M. Koç Bilim Madalyası", "url": "https://www.ku.edu.tr/arastirma/rahmi-m-koc-bilim-madalyasi/"},
+    {"kurum": "Diğer", "ad": "İlim Yayma Ödülleri", "url": "https://www.ilimyaymaodulleri.org/"},
+    {"kurum": "Diğer", "ad": "Elginkan Vakfı Ödülleri", "url": "https://www.elginkanvakfi.org.tr/"},
+]
+
+
+def parse_tr_dates(text):
+    """Metin içindeki GG.AA.YYYY ve '15 Mayıs 2026' formatındaki tarihleri YYYY-AA-GG listesi olarak döner."""
+    found = set()
+
+    for d, m, y in re.findall(r"\b(\d{1,2})[./](\d{1,2})[./](20\d{2})\b", text):
+        try:
+            dt = datetime(int(y), int(m), int(d))
+            found.add(dt.strftime("%Y-%m-%d"))
+        except ValueError:
+            continue
+
+    lower_text = text.lower()
+    month_pattern = "|".join(TR_MONTHS.keys())
+    for d, m_name, y in re.findall(rf"\b(\d{{1,2}})\s+({month_pattern})\s+(20\d{{2}})\b", lower_text):
+        try:
+            dt = datetime(int(y), int(TR_MONTHS[m_name]), int(d))
+            found.add(dt.strftime("%Y-%m-%d"))
+        except ValueError:
+            continue
+
+    return sorted(found)
+
+
+def extract_dates_from_pdf(pdf_url):
+    try:
+        resp = requests.get(pdf_url, headers=HEADERS, timeout=25, verify=False)
+        resp.raise_for_status()
+        reader = PdfReader(BytesIO(resp.content))
+        text = " ".join((page.extract_text() or "") for page in reader.pages[:2])
+        return parse_tr_dates(text)
+    except Exception as e:
+        print(f"PDF okuma hatası ({pdf_url}): {e}")
+        return []
+
+
+def fetch_url_with_retry(url, timeout=30):
+    for attempt in range(2):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=timeout, verify=False)
+            resp.raise_for_status()
+            return resp
+        except Exception as e:
+            if attempt == 0:
+                time.sleep(2)
+            else:
+                print(f"Bağlantı hatası ({url}): {e}")
+    return None
+
+
+def fetch_award_source(source):
+    """Ana sayfayı ve varsa güncel/gelecek yıl alt linklerini tarayıp ödül çağrılarını çıkarır."""
+    kurum = source["kurum"]
+    ad = source["ad"]
+    page_url = source["url"]
+
+    current_year = datetime.utcnow().year
+    target_years = [str(current_year), str(current_year + 1)]
+    today_str = datetime.utcnow().strftime("%Y-%m-%d")
+    results = []
+
+    resp = fetch_url_with_retry(page_url)
+    if resp is None:
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for tag in soup.find_all(["header", "nav", "footer"]):
+        tag.decompose()
+
+    # 1. Aşama: Sayfa içinde güncel/gelecek yıl içeren alt linkleri keşfet
+    yearly_links = []
+    seen_urls = set()
+    for a in soup.find_all("a", href=True):
+        text = " ".join(a.get_text(" ", strip=True).split())
+        href = a["href"]
+        combined = f"{text} {href}".lower()
+
+        if any(y in combined for y in target_years):
+            full_url = urljoin(page_url, href)
+            if full_url not in seen_urls and full_url.rstrip("/") != page_url.rstrip("/"):
+                seen_urls.add(full_url)
+                yearly_links.append((text or ad, full_url))
+
+    # 2. Aşama: Alt link varsa içlerinden tarih çek
+    for link_text, detail_url in yearly_links[:4]:
+        if detail_url.lower().endswith(".pdf"):
+            dates = extract_dates_from_pdf(detail_url)
+        else:
+            d_resp = fetch_url_with_retry(detail_url, timeout=20)
+            if not d_resp:
+                continue
+            d_soup = BeautifulSoup(d_resp.text, "html.parser")
+            for tag in d_soup.find_all(["header", "nav", "footer"]):
+                tag.decompose()
+            dates = parse_tr_dates(d_soup.get_text(" ", strip=True))
+
+        dates = [d for d in dates if d[:4] in target_years]
+        if not dates:
+            continue
+
+        end_date = dates[-1]
+        start_date = dates[0] if len(dates) >= 2 else (today_str if today_str < end_date else end_date)
+        slug = re.sub(r"[^a-zA-Z0-9]+", "-", detail_url.strip("/"))[-30:]
+
+        results.append({
+            "id": f"odul-{kurum.lower()}-{slug}",
+            "kurum": kurum,
+            "baslik": ad if len(link_text) < 8 else f"{ad} ({link_text[:30]})",
+            "program_adi": f"{ad} - {link_text}",
+            "surekli_acik": False,
+            "baslangic": start_date,
+            "bitis": end_date,
+            "url": detail_url,
+        })
+
+    # 3. Aşama: Alt linkten tarih çıkmadıysa doğrudan ana sayfanın kendi metnindeki tarihleri kontrol et
+    if not results:
+        main_dates = [d for d in parse_tr_dates(soup.get_text(" ", strip=True)) if d[:4] in target_years]
+        if main_dates:
+            end_date = main_dates[-1]
+            start_date = main_dates[0] if len(main_dates) >= 2 else (today_str if today_str < end_date else end_date)
+            slug = re.sub(r"[^a-zA-Z0-9]+", "-", ad.lower())[:35]
+            results.append({
+                "id": f"odul-{kurum.lower()}-{slug}",
+                "kurum": kurum,
+                "baslik": ad,
+                "program_adi": ad,
+                "surekli_acik": False,
+                "baslangic": start_date,
+                "bitis": end_date,
+                "url": page_url,
+            })
+
+    print(f"{ad}: {len(results)} kayıt bulundu.")
+    return results
+
+
+def load_manual_awards():
+    if not os.path.exists(MANUAL_FILE):
+        return []
+    try:
+        with open(MANUAL_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Manuel ödül okuma hatası: {e}")
+        return []
+
+
+def load_archived_awards():
+    """Mevcut oduller.json içindeki 2025 sonrası kayıtları arşiv/yedek olarak korur."""
+    if not os.path.exists(OUTPUT_FILE):
+        return []
+    try:
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+        return [a for a in existing if (a.get("bitis") or "") >= "2025-01-01"]
+    except Exception:
+        return []
+
+
+def main():
+    archived = load_archived_awards()
+    fetched = []
+    for source in AWARD_SOURCES:
+        fetched.extend(fetch_award_source(source))
+    manual = load_manual_awards()
+
+    merged = {}
+    for item in archived + fetched + manual:
+        merged[item["id"]] = item
+
+    final_list = list(merged.values())
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(final_list, f, ensure_ascii=False, indent=2)
+
+    print(f"Toplam {len(final_list)} akademik ödül {OUTPUT_FILE} dosyasına kaydedildi.")
+
+
+if __name__ == "__main__":
+    main()

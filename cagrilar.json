@@ -144,126 +144,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-industry-2025-01-human-60"
   },
   {
-    "id": "tubitak-11801",
-    "kurum": "TÜBİTAK",
-    "baslik": "1002-A HIZLI DESTEK MODÜLÜ - KKTC",
-    "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
-  },
-  {
-    "id": "tubitak-11802",
-    "kurum": "TÜBİTAK",
-    "baslik": "1002-A HIZLI DESTEK MODÜLÜ",
-    "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
-  },
-  {
-    "id": "tubitak-11803",
-    "kurum": "TÜBİTAK",
-    "baslik": "1002-B ACİL DESTEK MODÜLÜ",
-    "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-b-acil-destek-modulu"
-  },
-  {
-    "id": "tubitak-13212",
-    "kurum": "TÜBİTAK",
-    "baslik": "KKTC 1005 ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
-    "program_adi": "1005 - ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1005-ulusal-yeni-fikirler-ve-urunler-arastirma-destek-programi"
-  },
-  {
-    "id": "tubitak-13213",
-    "kurum": "TÜBİTAK",
-    "baslik": "ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
-    "program_adi": "1005 - ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1005-ulusal-yeni-fikirler-ve-urunler-arastirma-destek-programi"
-  },
-  {
-    "id": "tubitak-13272",
-    "kurum": "TÜBİTAK",
-    "baslik": "3005-A POLİTİKA GELİŞTİRME MODÜLÜ",
-    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://ardeb-pbs.tubitak.gov.tr/"
-  },
-  {
-    "id": "tubitak-13273",
-    "kurum": "TÜBİTAK",
-    "baslik": "3005-B TEKNOLOJİK İLERLEMELERİN TOPLUMSAL ETKİLERİ MODÜLÜ",
-    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://ardeb-pbs.tubitak.gov.tr/"
-  },
-  {
-    "id": "tubitak-13274",
-    "kurum": "TÜBİTAK",
-    "baslik": "KKTC 3005-A POLİTİKA GELİŞTİRME MODÜLÜ",
-    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://ardeb-pbs.tubitak.gov.tr/"
-  },
-  {
-    "id": "tubitak-13275",
-    "kurum": "TÜBİTAK",
-    "baslik": "KKTC 3005-B TEKNOLOJİK İLERLEMELERİN TOPLUMSAL ETKİLERİ MODÜLÜ",
-    "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://ardeb-pbs.tubitak.gov.tr/"
-  },
-  {
-    "id": "tubitak-11852",
-    "kurum": "TÜBİTAK",
-    "baslik": "KKTC 3501 KARİYER GELİŞTİRME PROGRAMI",
-    "program_adi": "3501 - KARİYER GELİŞTİRME PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/3501-kariyer-gelistirme-programi"
-  },
-  {
-    "id": "tubitak-11853",
-    "kurum": "TÜBİTAK",
-    "baslik": "KARİYER GELİŞTİRME PROGRAMI",
-    "program_adi": "3501 - KARİYER GELİŞTİRME PROGRAMI",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/3501-kariyer-gelistirme-programi"
-  },
-  {
-    "id": "tubitak-11008",
-    "kurum": "TÜBİTAK",
-    "baslik": "1004 Platformları İle İş Birliği Çağrısı",
-    "program_adi": "BİLİMSEL VE TEKNOLOJİK ARAŞTIRMA PROJELERİ - ÖZEL ÇAĞRILAR",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
-  },
-  {
     "id": "tuseb-f995d96f-c2ae-4e6e-9112-03c1eeec92d6",
     "kurum": "TÜSEB",
     "baslik": "2026-STENT",
@@ -402,5 +282,25 @@
     "baslangic": "2026-02-25",
     "bitis": "2026-03-25",
     "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "istka-https-www-istka-org-tr-devlet-destekleri",
+    "kurum": "İSTKA",
+    "baslik": "Devlet Destekleri",
+    "program_adi": "Devlet Destekleri",
+    "surekli_acik": true,
+    "baslangic": "2026-11-20",
+    "bitis": "2026-11-20",
+    "url": "https://www.istka.org.tr/devlet-destekleri"
+  },
+  {
+    "id": "istka-5ed3f36892a6e109b6c26e22e6a9f767d35d-pdf",
+    "kurum": "İSTKA",
+    "baslik": "YARATICI EKONOMİNİN GÜÇLENDİRİLMESİ MALİ DESTEK PROGRAMI.pdf",
+    "program_adi": "YARATICI EKONOMİNİN GÜÇLENDİRİLMESİ MALİ DESTEK PROGRAMI.pdf",
+    "surekli_acik": false,
+    "baslangic": "2026-12-04",
+    "bitis": "2026-12-04",
+    "url": "https://istka.org.tr/Archive/Content/f77c5ed3f36892a6e109b6c26e22e6a9f767d35d.pdf"
   }
 ]

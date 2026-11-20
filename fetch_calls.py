@@ -62,7 +62,7 @@ def fetch_eu_calls(limit=50):
         "bool": {
             "must": [
                 {"terms": {"type": ["1", "2"]}},
-                {"terms": {"status": ["31094501", "31094502"]}},
+                {"terms": {"status": ["31094501", "31094502", "31094503"]}},
                 {"terms": {"language": ["en"]}},
             ]
         }
@@ -99,7 +99,7 @@ def fetch_eu_calls(limit=50):
             deadline = max(deadlines)
 
             # Süresi geçmiş çağrıları atla
-            if deadline < today_str:
+            if deadline < "2025-01-01":
                 continue
 
             seen_ids.add(identifier)
@@ -177,11 +177,15 @@ def fetch_tubitak_calls():
 
 
 def fetch_tuseb_calls():
-    """TÜSEB TBYS BFF API'sinden (AktifCagrilar) doğrudan aktif çağrıları çeker."""
-    api_url = "https://tbysbff.tuseb.gov.tr/api/Cagri/AktifCagrilar"
+    """TÜSEB TBYS API'sinden hem aktif hem de 2025 sonrası geçmiş çağrıları çeker."""
+    endpoints = [
+        "https://tbysbff.tuseb.gov.tr/api/Cagri/AktifCagrilar",
+        "https://tbysbff.tuseb.gov.tr/api/Cagri/GecmisCagrilar",
+    ]
     portal_url = "https://tbys.tuseb.gov.tr/"
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     calls = []
+    seen_ids = set()
 
     headers = {
         **HEADERS,
@@ -191,39 +195,45 @@ def fetch_tuseb_calls():
         "Referer": "https://tbys.tuseb.gov.tr/",
     }
 
-    try:
-        resp = requests.post(api_url, headers=headers, json={}, timeout=25, verify=False)
-        resp.raise_for_status()
-        payload = resp.json()
+    for api_url in endpoints:
+        try:
+            resp = requests.post(api_url, headers=headers, json={}, timeout=25, verify=False)
+            resp.raise_for_status()
+            payload = resp.json()
+            items = (payload.get("value") or {}).get("data") or []
 
-        items = (payload.get("value") or {}).get("data") or []
-        print(f"TÜSEB API teşhis: {len(items)} aktif çağrı döndü.")
+            for item in items:
+                cagri_id = item.get("id") or ""
+                kodu = (item.get("kodu") or "").strip()
+                uid = f"tuseb-{cagri_id or kodu}"
+                if uid in seen_ids:
+                    continue
 
-        for item in items:
-            cagri_id = item.get("id") or ""
-            kodu = (item.get("kodu") or "").strip()
-            konu = (item.get("konu") or "").strip()
-            start_raw = item.get("baslangicTarihi")
-            end_raw = item.get("bitisTarihi")
+                konu = (item.get("konu") or "").strip()
+                start_date = format_eu_date(item.get("baslangicTarihi"))
+                end_date = format_eu_date(item.get("bitisTarihi"))
 
-            start_date = format_eu_date(start_raw)
-            end_date = format_eu_date(end_raw)
-            is_always_open = not bool(end_date)
+                # 2025 öncesi çok eski geçmiş çağrıları atla
+                if end_date and end_date < "2025-01-01":
+                    continue
 
-            calls.append({
-                "id": f"tuseb-{cagri_id or kodu}",
-                "kurum": "TÜSEB",
-                "baslik": kodu if kodu else (konu[:60] + ("..." if len(konu) > 60 else "")),
-                "program_adi": konu,
-                "surekli_acik": is_always_open,
-                "baslangic": start_date or today_str,
-                "bitis": end_date or today_str,
-                "url": portal_url,
-            })
-    except Exception as e:
-        print(f"TÜSEB API hatası: {e}")
+                seen_ids.add(uid)
+                is_always_open = not bool(end_date)
 
-    print(f"TÜSEB: {len(calls)} çağrı çekildi.")
+                calls.append({
+                    "id": uid,
+                    "kurum": "TÜSEB",
+                    "baslik": kodu if kodu else (konu[:60] + ("..." if len(konu) > 60 else "")),
+                    "program_adi": konu,
+                    "surekli_acik": is_always_open,
+                    "baslangic": start_date or today_str,
+                    "bitis": end_date or today_str,
+                    "url": portal_url,
+                })
+        except Exception as e:
+            print(f"TÜSEB API hatası ({api_url}): {e}")
+
+    print(f"TÜSEB: {len(calls)} çağrı (aktif + geçmiş) çekildi.")
     return calls
 
 
@@ -238,14 +248,36 @@ def load_manual_calls():
         return []
 
 
+def load_archived_tubitak_calls():
+    """Mevcut cagrilar.json içindeki 2025 sonrası dönemlik TÜBİTAK çağrılarını arşiv olarak korur."""
+    if not os.path.exists(OUTPUT_FILE):
+        return []
+    try:
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+        archived = [
+            call for call in existing
+            if call.get("kurum") == "TÜBİTAK"
+            and not call.get("surekli_acik", False)
+            and (call.get("bitis") or "") >= "2025-01-01"
+        ]
+        print(f"TÜBİTAK arşiv: {len(archived)} geçmiş dönemlik çağrı korundu.")
+        return archived
+    except Exception as e:
+        print(f"TÜBİTAK arşiv okuma hatası: {e}")
+        return []
+
+
 def main():
+    archived_tubitak = load_archived_tubitak_calls()
     eu_calls = fetch_eu_calls(limit=50)
     tubitak_calls = fetch_tubitak_calls()
     tuseb_calls = fetch_tuseb_calls()
     manual_calls = load_manual_calls()
 
+    # Öncelik sırası: Arşiv < Güncel çekilenler < Manuel kayıtlar
     merged = {}
-    for call in eu_calls + tubitak_calls + tuseb_calls + manual_calls:
+    for call in archived_tubitak + eu_calls + tubitak_calls + tuseb_calls + manual_calls:
         merged[call["id"]] = call
 
     final_list = list(merged.values())

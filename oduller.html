@@ -19,6 +19,7 @@
       --yok-color: #7c3aed;
       --tuseb-color: #b91c1c;
       --bagep-color: #d97706;
+      --ams-color: #0284c7;
       --diger-color: #15803d;
     }
 
@@ -72,6 +73,7 @@
     .btn-yok.active     { background: var(--yok-color); border-color: var(--yok-color); }
     .btn-tuseb.active   { background: var(--tuseb-color); border-color: var(--tuseb-color); }
     .btn-bagep.active   { background: var(--bagep-color); border-color: var(--bagep-color); }
+    .btn-ams.active     { background: var(--ams-color); border-color: var(--ams-color); }
     .btn-diger.active   { background: var(--diger-color); border-color: var(--diger-color); }
 
     .toggle-label {
@@ -105,6 +107,7 @@
     .vis-item.item-yok     { background-color: #f3e8ff; border-color: var(--yok-color); color: #5b21b6; }
     .vis-item.item-tuseb   { background-color: #fee2e2; border-color: var(--tuseb-color); color: #7f1d1d; }
     .vis-item.item-bagep   { background-color: #fef3c7; border-color: var(--bagep-color); color: #78350f; }
+    .vis-item.item-ams     { background-color: #e0f2fe; border-color: var(--ams-color); color: #075985; }
     .vis-item.item-diger   { background-color: #dcfce7; border-color: var(--diger-color); color: #166534; }
 
     .vis-item:hover { filter: brightness(0.95); }
@@ -126,6 +129,7 @@
       <button class="btn btn-yok" data-kurum="YÖK">YÖK</button>
       <button class="btn btn-tuseb" data-kurum="TÜSEB">TÜSEB</button>
       <button class="btn btn-bagep" data-kurum="BAGEP">BAGEP</button>
+      <button class="btn btn-ams" data-kurum="AMS">AMS</button>
       <button class="btn btn-diger" data-kurum="Diğer">Diğer Ödüller</button>
     </div>
 
@@ -147,6 +151,7 @@
     let selectedKurum = "ALL";
     let timeline = null;
     const itemsDataSet = new vis.DataSet();
+    const MAIN_KURUMLAR = ["TÜBİTAK", "TÜBA", "YÖK", "TÜSEB", "BAGEP", "AMS"];
 
     const groups = new vis.DataSet([
       { id: "TÜBİTAK", content: "<strong>TÜBİTAK</strong>" },
@@ -154,6 +159,7 @@
       { id: "YÖK", content: "<strong>YÖK</strong>" },
       { id: "TÜSEB", content: "<strong>TÜSEB</strong>" },
       { id: "BAGEP", content: "<strong>BAGEP</strong>" },
+      { id: "AMS", content: "<strong>AMS</strong>" },
       { id: "Diğer", content: "<strong>Diğer Ödüller</strong>" }
     ]);
 
@@ -163,8 +169,8 @@
       if (kurum === "YÖK") return "item-yok";
       if (kurum === "TÜSEB") return "item-tuseb";
       if (kurum === "BAGEP") return "item-bagep";
-      if (kurum === "Diğer") return "item-diger";
-      return "";
+      if (kurum === "AMS") return "item-ams";
+      return "item-diger";
     }
 
     function formatDateTR(dateStr) {
@@ -178,7 +184,15 @@
       today.setHours(0, 0, 0, 0);
 
       const filtered = allAwards.filter(item => {
-        const matchKurum = selectedKurum === "ALL" || item.kurum === selectedKurum;
+        let matchKurum = false;
+        if (selectedKurum === "ALL") {
+          matchKurum = true;
+        } else if (selectedKurum === "Diğer") {
+          matchKurum = item.kurum === "Diğer" || !MAIN_KURUMLAR.includes(item.kurum);
+        } else {
+          matchKurum = item.kurum === selectedKurum;
+        }
+
         const endDate = new Date(item.bitis);
         const matchStatus = !onlyOpen || endDate >= today;
         return matchKurum && matchStatus;
@@ -230,6 +244,14 @@
         const response = await fetch("./oduller.json?t=" + Date.now());
         if (!response.ok) throw new Error("JSON yüklenemedi");
         allAwards = await response.json();
+
+        // Özel kurum adı taşıyan diğer ödüller için otomatik ayrı satır (grup) oluştur
+        allAwards.forEach(item => {
+          if (item.kurum && !groups.get(item.kurum)) {
+            groups.add({ id: item.kurum, content: `<strong>${item.kurum}</strong>` });
+          }
+        });
+
         renderFilteredData();
       } catch (err) {
         container.innerHTML = "<p style='padding:16px;color:#b91c1c;'>Ödül veri dosyası (oduller.json) yüklenirken hata oluştu.</p>";

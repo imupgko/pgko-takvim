@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "odul-tüba-uba-akademi-odulleri-basvurusu",
+    "kurum": "TÜBA",
+    "baslik": "Detaylı bilgi için tıklayınız (2026 Uluslararası TÜBA Akademi)",
+    "program_adi": "Detaylı bilgi için tıklayınız - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
+    "surekli_acik": false,
+    "baslangic": "2026-06-05",
+    "bitis": "2026-06-05",
+    "url": "https://www.tuba.gov.tr/tr/tuba-odulleri/uluslararasi-tuba-akademi-odulleri/2026-uluslararasi-tuba-akademi-odulleri-basvurusu"
+  },
+  {
+    "id": "odul-tübi̇tak-bilim-ve-toplum-destek-programlar-p",
+    "kurum": "TÜBİTAK",
+    "baslik": "Bilim ve Toplum Destek Programları Proje Teşvik Ödülleri",
+    "program_adi": "Bilim ve Toplum Destek Programları Proje Teşvik Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-09-29",
+    "bitis": "2026-10-15",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/bilim-ve-toplum-destek-programlari-proje-tesvik-odulleri"
+  },
+  {
+    "id": "odul-bagep-hanaliogluna-tusebden-iki-odul",
+    "kurum": "BAGEP",
+    "baslik": "Bilim Akademisi BAGEP Ödülleri (Bilim Akademisi BAGEP Ödülleri)",
+    "program_adi": "Bilim Akademisi BAGEP Ödülleri - Bilim Akademisi BAGEP Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-07-01",
+    "bitis": "2026-10-31",
+    "url": "https://bilimakademisi.org/bagep-2026-odul-sahibi-sahin-hanaliogluna-tusebden-iki-odul/"
+  }
+]

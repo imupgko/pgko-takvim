@@ -37,9 +37,9 @@ AWARD_SOURCES = [
     {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim ve Toplum Ödülleri", "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum", "hub": True, "keywords": ["ödül", "odul"]},
     # YÖK
     {"kurum": "YÖK", "ad": "YÖK Üstün Başarı Ödülleri", "url": "https://proje.yok.gov.tr/tr/page/621"},
-    
     # BAGEP
     {"kurum": "BAGEP", "ad": "Bilim Akademisi BAGEP Ödülleri", "url": "https://bilimakademisi.org/bagep/"},
+    
     # Diğer Vakıf ve Kurum Ödülleri
     {"kurum": "Diğer", "ad": "L'Oréal-UNESCO Türkiye Ulusal Programı", "url": "https://www.forwomeninscience.com/authority/turkey---national-program", "hub": True, "keywords": ["discover", "know more", "challenge", "apply"], "allow_domain": True},
     {"kurum": "Diğer", "ad": "L'Oréal-UNESCO Uluslararası Ödülleri", "url": "https://www.forwomeninscience.com/authority/international-awards", "hub": True, "keywords": ["discover", "know more", "challenge", "apply"], "allow_domain": True},
@@ -474,7 +474,7 @@ def fetch_ams_awards():
 
         results.append({
             "id": f"odul-ams-{slug}",
-            "kurum": "Diğer",
+            "kurum": "AMS",
             "baslik": f"AMS - {title}",
             "program_adi": title,
             "surekli_acik": False,

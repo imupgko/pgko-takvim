@@ -404,22 +404,12 @@
     "url": "https://tbys.tuseb.gov.tr/"
   },
   {
-    "id": "istka-https-www-istka-org-tr-devlet-destekleri",
-    "kurum": "İSTKA",
-    "baslik": "Devlet Destekleri",
-    "program_adi": "Devlet Destekleri",
-    "surekli_acik": true,
-    "baslangic": "2026-11-20",
-    "bitis": "2026-11-20",
-    "url": "https://www.istka.org.tr/devlet-destekleri"
-  },
-  {
     "id": "istka-5ed3f36892a6e109b6c26e22e6a9f767d35d-pdf",
     "kurum": "İSTKA",
     "baslik": "YARATICI EKONOMİNİN GÜÇLENDİRİLMESİ MALİ DESTEK PROGRAMI.pdf",
     "program_adi": "YARATICI EKONOMİNİN GÜÇLENDİRİLMESİ MALİ DESTEK PROGRAMI.pdf",
     "surekli_acik": false,
-    "baslangic": "2026-12-04",
+    "baslangic": "2026-11-20",
     "bitis": "2026-12-04",
     "url": "https://istka.org.tr/Archive/Content/f77c5ed3f36892a6e109b6c26e22e6a9f767d35d.pdf"
   }

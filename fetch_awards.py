@@ -31,7 +31,7 @@ AWARD_SOURCES = [
     {"kurum": "TÜBA", "ad": "TÜBA Ödülleri", "url": "https://www.tuba.gov.tr/tr/tuba-odulleri", "hub": True},
     # TÜBİTAK
     {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Kurumsal Ödüller", "url": "https://tubitak.gov.tr/tr/kurumsal/oduller", "hub": True},
-    {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim ve Toplum", "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum", "hub": True},
+    {"kurum": "TÜBİTAK", "ad": "TÜBİTAK Bilim ve Toplum Ödülleri", "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum", "hub": True, "keywords": ["ödül", "odul"]},
     # YÖK
     {"kurum": "YÖK", "ad": "YÖK Üstün Başarı Ödülleri", "url": "https://odul.yok.gov.tr/"},
     # TÜSEB
@@ -203,11 +203,15 @@ def fetch_hub_awards(source):
         base_prefix = hub_url + "/"
 
     # 1. Katman: Alt ödül/program sayfalarını keşfet
+    keywords = source.get("keywords")
     sub_pages = []
     seen = {hub_url}
     for a in soup.find_all("a", href=True):
         text = " ".join(a.get_text(" ", strip=True).split())
         full_url = urljoin(base_prefix, a["href"]).rstrip("/")
+
+        if keywords and not any(k in f"{text} {full_url}".lower() for k in keywords):
+            continue
 
         if full_url.startswith(base_prefix) and full_url not in seen and len(text) >= 4:
             seen.add(full_url)

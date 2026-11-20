@@ -98,5 +98,75 @@
     "baslangic": "2026-04-06",
     "bitis": "2026-08-31",
     "url": "https://parlar.org.tr/duyuru-2026-yili-odul-basvurusu-55"
+  },
+  {
+    "id": "odul-diğer-ies-eic-2026-work-programme-en",
+    "kurum": "Diğer",
+    "baslik": "EIC & EIT European Prize for Women Innovators - How to apply (European Innovation Council (E)",
+    "program_adi": "EIC & EIT European Prize for Women Innovators - How to apply - European Innovation Council (EIC) Work Programme",
+    "surekli_acik": false,
+    "baslangic": "2026-03-26",
+    "bitis": "2026-06-17",
+    "url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-2026-work-programme_en"
+  },
+  {
+    "id": "odul-diğer-izon-eit-2026-prize-wip-en-pdf",
+    "kurum": "Diğer",
+    "baslik": "EIC & EIT European Prize for Women Innovators - How to apply (Rules of contest)",
+    "program_adi": "EIC & EIT European Prize for Women Innovators - How to apply - Rules of contest",
+    "surekli_acik": false,
+    "baslangic": "2026-09-02",
+    "bitis": "2026-09-02",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026/roc_horizon-eic-2026-prize-wip_horizon-eit-2026-prize-wip_en.pdf"
+  },
+  {
+    "id": "odul-diğer-eic-eit-european-prize-for-women-in",
+    "kurum": "Diğer",
+    "baslik": "EIC & EIT European Prize for Women Innovators - Online Info session - Eur",
+    "program_adi": "EIC & EIT European Prize for Women Innovators - Online Info session - Eur",
+    "surekli_acik": false,
+    "baslangic": "2026-09-02",
+    "bitis": "2026-09-17",
+    "url": "https://eic.ec.europa.eu/events/online-info-session-european-prize-women-innovators-2027-2026-09-17_en"
+  },
+  {
+    "id": "odul-diğer-t-rkpatent-isif-uluslararas-bulu-d-",
+    "kurum": "Diğer",
+    "baslik": "TÜRKPATENT ISIF Uluslararası Buluş Ödülleri",
+    "program_adi": "TÜRKPATENT ISIF Uluslararası Buluş Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-10-04",
+    "bitis": "2026-10-04",
+    "url": "https://isif.turkpatent.gov.tr/"
+  },
+  {
+    "id": "odul-diğer-emv-2026-etkinliginde-yer-aldi",
+    "kurum": "Diğer",
+    "baslik": "IEEE Türkiye Duyurular (IEEE Türkiye Duyurular)",
+    "program_adi": "IEEE Türkiye Duyurular - IEEE Türkiye Duyurular",
+    "surekli_acik": false,
+    "baslangic": "2026-10-24",
+    "bitis": "2026-11-12",
+    "url": "https://www.ieee.org.tr/ieee-turkiye-subesi-ieee-international-symposium-on-emerging-metaverse-isemv-2026-etkinliginde-yer-aldi/"
+  },
+  {
+    "id": "odul-diğer-eee-uyeleriyle-bir-araya-geldi",
+    "kurum": "Diğer",
+    "baslik": "IEEE Türkiye Duyurular (IEEE Türkiye Duyurular)",
+    "program_adi": "IEEE Türkiye Duyurular - IEEE Türkiye Duyurular",
+    "surekli_acik": false,
+    "baslangic": "2026-11-11",
+    "bitis": "2026-11-11",
+    "url": "https://www.ieee.org.tr/ieee-turkiye-subesi-ieee-day-2026-kapsaminda-azerbaycandaki-ieee-uyeleriyle-bir-araya-geldi/"
+  },
+  {
+    "id": "odul-diğer-ams-matematik-d-lleri",
+    "kurum": "Diğer",
+    "baslik": "AMS Matematik Ödülleri",
+    "program_adi": "AMS Matematik Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-05-01",
+    "bitis": "2027-10-05",
+    "url": "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc"
   }
 ]

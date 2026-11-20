@@ -2,8 +2,8 @@
   {
     "id": "odul-tüba-uba-akademi-odulleri-basvurusu",
     "kurum": "TÜBA",
-    "baslik": "Detaylı bilgi için tıklayınız (2026 Uluslararası TÜBA Akademi)",
-    "program_adi": "Detaylı bilgi için tıklayınız - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
+    "baslik": "TÜBA Ödülleri - Detaylı bilgi için tıklay (2026 Uluslararası TÜBA Akademi)",
+    "program_adi": "TÜBA Ödülleri - Detaylı bilgi için tıklay - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
     "surekli_acik": false,
     "baslangic": "2026-06-05",
     "bitis": "2026-06-05",
@@ -28,5 +28,75 @@
     "baslangic": "2026-07-01",
     "bitis": "2026-10-31",
     "url": "https://bilimakademisi.org/bagep-2026-odul-sahibi-sahin-hanaliogluna-tusebden-iki-odul/"
+  },
+  {
+    "id": "odul-tübi̇tak-t-bi-tak-bilim-ve-toplum-d-lleri-bi",
+    "kurum": "TÜBİTAK",
+    "baslik": "TÜBİTAK Bilim ve Toplum Ödülleri - Bilim ve Toplum Destek Pr",
+    "program_adi": "TÜBİTAK Bilim ve Toplum Ödülleri - Bilim ve Toplum Destek Pr",
+    "surekli_acik": false,
+    "baslangic": "2026-09-29",
+    "bitis": "2026-10-15",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/bilim-ve-toplum-destek-programlari-proje-tesvik-odulleri"
+  },
+  {
+    "id": "odul-yök-y-k-st-n-ba-ar-d-lleri",
+    "kurum": "YÖK",
+    "baslik": "YÖK Üstün Başarı Ödülleri",
+    "program_adi": "YÖK Üstün Başarı Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-04-27",
+    "bitis": "2026-05-18",
+    "url": "https://proje.yok.gov.tr/tr/page/621"
+  },
+  {
+    "id": "odul-diğer-l-or-al-unesco-t-rkiye-ulusal-progr",
+    "kurum": "Diğer",
+    "baslik": "L'Oréal-UNESCO Türkiye Ulusal Programı - To know more about it",
+    "program_adi": "L'Oréal-UNESCO Türkiye Ulusal Programı - To know more about it",
+    "surekli_acik": false,
+    "baslangic": "2026-02-02",
+    "bitis": "2026-09-15",
+    "url": "https://www.forwomeninscience.com/challenge/show/154"
+  },
+  {
+    "id": "odul-diğer-l-or-al-unesco-uluslararas-d-lleri-",
+    "kurum": "Diğer",
+    "baslik": "L'Oréal-UNESCO Uluslararası Ödülleri - To know more about it",
+    "program_adi": "L'Oréal-UNESCO Uluslararası Ödülleri - To know more about it",
+    "surekli_acik": false,
+    "baslangic": "2026-04-06",
+    "bitis": "2026-12-31",
+    "url": "https://www.forwomeninscience.com/challenge/show/158"
+  },
+  {
+    "id": "odul-diğer-g-tr-sayfa-odul-yonetmeligi-11",
+    "kurum": "Diğer",
+    "baslik": "ODTÜ Parlar Vakfı Ödülleri (2026 Ödül yönetmeliği için tık)",
+    "program_adi": "ODTÜ Parlar Vakfı Ödülleri - 2026 Ödül yönetmeliği için tıklayınız.",
+    "surekli_acik": false,
+    "baslangic": "2026-04-06",
+    "bitis": "2026-07-28",
+    "url": "https://parlar.org.tr/sayfa-odul-yonetmeligi-11"
+  },
+  {
+    "id": "odul-diğer-ru-2026-yili-odul-basvurusu-55",
+    "kurum": "Diğer",
+    "baslik": "ODTÜ Parlar Duyurular - 2024 Yılı Ödülleri (ODTÜ Parlar Duyurular - 2024 Y)",
+    "program_adi": "ODTÜ Parlar Duyurular - 2024 Yılı Ödülleri - ODTÜ Parlar Duyurular - 2024 Yılı Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-04-06",
+    "bitis": "2026-08-31",
+    "url": "https://parlar.org.tr/duyuru-2026-yili-odul-basvurusu-55"
+  },
+  {
+    "id": "odul-diğer-odt-parlar-duyurular-2026-yili-d-l-",
+    "kurum": "Diğer",
+    "baslik": "ODTÜ Parlar Duyurular - 2026 YILI ÖDÜL BAŞVURUSU",
+    "program_adi": "ODTÜ Parlar Duyurular - 2026 YILI ÖDÜL BAŞVURUSU",
+    "surekli_acik": false,
+    "baslangic": "2026-04-06",
+    "bitis": "2026-08-31",
+    "url": "https://parlar.org.tr/duyuru-2026-yili-odul-basvurusu-55"
   }
 ]

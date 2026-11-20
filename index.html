@@ -123,6 +123,12 @@
       color: #78350f;
     }
 
+    .vis-item.item-surekli {
+      border-style: dashed;
+      border-width: 2px;
+      opacity: 0.92;
+    }
+
     .vis-item:hover {
       filter: brightness(0.95);
     }
@@ -182,6 +188,26 @@
       return d.toLocaleDateString("tr-TR", { day: "2-digit", month: "long", year: "numeric" });
     }
 
+    // Sürekli açık çağrıları ekranda sabit genişlikte tutup kaydırmayla hareket ettirir
+    function updateAlwaysOpenItems() {
+      if (!timeline) return;
+      const win = timeline.getWindow();
+      const span = win.end.getTime() - win.start.getTime();
+      const visualStart = new Date(win.start.getTime() + span * 0.02);
+      const visualEnd = new Date(win.start.getTime() + span * 0.28);
+
+      const updates = [];
+      itemsDataSet.forEach(item => {
+        if (item.surekli_acik) {
+          updates.push({ id: item.id, start: visualStart, end: visualEnd });
+        }
+      });
+
+      if (updates.length > 0) {
+        itemsDataSet.update(updates);
+      }
+    }
+
     function renderFilteredData() {
       const onlyOpen = document.getElementById("sadeceAcik").checked;
       const today = new Date();
@@ -189,30 +215,41 @@
 
       const filtered = allCalls.filter(call => {
         const matchKurum = selectedKurum === "ALL" || call.kurum === selectedKurum;
+        if (call.surekli_acik) return matchKurum; // Sürekli açıklar her zaman açık sayılır
         const endDate = new Date(call.bitis);
         const matchStatus = !onlyOpen || endDate >= today;
         return matchKurum && matchStatus;
       });
 
-      const visItems = filtered.map(call => ({
-        id: call.id,
-        group: call.kurum,
-        content: call.baslik,
-        start: call.baslangic,
-        end: call.bitis,
-        className: getClassName(call.kurum),
-        url: call.url,
-        title: `<strong>${call.kurum}</strong><br>${call.baslik}${call.program_adi ? `<br><em>${call.program_adi}</em>` : ""}<br>Başlangıç: ${formatDateTR(call.baslangic)}<br>Bitiş: ${formatDateTR(call.bitis)}`
-      }));
+      const defaultEnd = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000);
+
+      const visItems = filtered.map(call => {
+        const isAlwaysOpen = Boolean(call.surekli_acik);
+        const dateInfo = isAlwaysOpen
+          ? "Durum: <strong>Sürekli Başvuruya Açık</strong>"
+          : `Başlangıç: ${formatDateTR(call.baslangic)}<br>Bitiş: ${formatDateTR(call.bitis)}`;
+
+        return {
+          id: call.id,
+          group: call.kurum,
+          content: isAlwaysOpen ? `∞ ${call.baslik}` : call.baslik,
+          start: isAlwaysOpen ? today : call.baslangic,
+          end: isAlwaysOpen ? defaultEnd : call.bitis,
+          surekli_acik: isAlwaysOpen,
+          className: getClassName(call.kurum) + (isAlwaysOpen ? " item-surekli" : ""),
+          url: call.url,
+          title: `<strong>${call.kurum}</strong><br>${call.baslik}${call.program_adi ? `<br><em>${call.program_adi}</em>` : ""}<br>${dateInfo}`
+        };
+      });
 
       itemsDataSet.clear();
       itemsDataSet.add(visItems);
 
       if (timeline && visItems.length > 0) {
-        timeline.fit({ animation: true });
+        timeline.fit({ animation: false });
+        updateAlwaysOpenItems();
       }
     }
-
     async function initTimeline() {
       const container = document.getElementById("timeline");
 
@@ -230,6 +267,9 @@
       };
 
       timeline = new vis.Timeline(container, itemsDataSet, groups, options);
+
+      // Sağa-sola kaydırırken veya yakınlaştırırken sürekli açık çubukları birlikte hareket ettir
+      timeline.on("rangechange", updateAlwaysOpenItems);
 
       // Çubuğa tıklayınca çağrı linkini yeni sekmede aç
       timeline.on("select", function (props) {

@@ -120,7 +120,7 @@ def fetch_eu_calls(limit=50):
 
 
 def fetch_tubitak_calls():
-    """ardeb-pbs.tubitak.gov.tr tablosundan aktif çağrıları çeker."""
+    """ardeb-pbs.tubitak.gov.tr tablosundan hem dönemlik hem sürekli açık çağrıları çeker."""
     target_url = "https://ardeb-pbs.tubitak.gov.tr/"
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     calls = []
@@ -133,40 +133,88 @@ def fetch_tubitak_calls():
         rows = soup.find_all("tr", attrs={"data-program-cagri-id": True})
         print(f"TÜBİTAK teşhis: Tabloda {len(rows)} satır bulundu.")
 
-        for idx, row in enumerate(rows):
+        for row in rows:
             cagri_id = row.get("data-program-cagri-id", "").strip()
             program_adi = row.get("data-program-adi", "").strip()
             cagri_adi = row.get("data-cagri-adi", "").strip()
+            cagri_turu = row.get("data-cagri-turu", "").strip()
             baslangic_raw = row.get("data-baslangic", "").strip()
             bitis_raw = row.get("data-bitis", "").strip()
             detay_url = row.get("data-bilgi-notu-url", "").strip() or target_url
 
-            if idx < 3:
-                print(f"  TÜBİTAK satır {idx+1}: '{cagri_adi}' | başlangıç='{baslangic_raw}' | bitiş='{bitis_raw}'")
-
             start_date = parse_single_date(baslangic_raw)
             end_date = parse_single_date(bitis_raw)
-
-            # Bitiş tarihi varsa ama başlangıç yoksa bugünden başlat
-            if not end_date:
-                continue
-            if not start_date:
-                start_date = today_str
-
             baslik = cagri_adi if cagri_adi and cagri_adi != "-" else program_adi
-            calls.append({
-                "id": f"tubitak-{cagri_id}",
-                "kurum": "TÜBİTAK",
-                "baslik": baslik,
-                "program_adi": program_adi,
-                "baslangic": start_date,
-                "bitis": end_date,
-                "url": detay_url,
-            })
+
+            # Tarihi olmayan veya "Sürekli" etiketli çağrılar
+            if not end_date or "sürekli" in cagri_turu.lower():
+                calls.append({
+                    "id": f"tubitak-{cagri_id}",
+                    "kurum": "TÜBİTAK",
+                    "baslik": baslik,
+                    "program_adi": program_adi,
+                    "surekli_acik": True,
+                    "baslangic": today_str,
+                    "bitis": today_str,
+                    "url": detay_url,
+                })
+            else:
+                calls.append({
+                    "id": f"tubitak-{cagri_id}",
+                    "kurum": "TÜBİTAK",
+                    "baslik": baslik,
+                    "program_adi": program_adi,
+                    "surekli_acik": False,
+                    "baslangic": start_date or today_str,
+                    "bitis": end_date,
+                    "url": detay_url,
+                })
     except Exception as e:
         print(f"TÜBİTAK ARDEB-PBS tarama hatası: {e}")
 
     print(f"TÜBİTAK: {len(calls)} çağrı çekildi.")
+    return calls
+
+
+def fetch_tuseb_calls():
+    """tbys.tuseb.gov.tr üzerinden açık çağrıları tarar."""
+    target_url = "https://tbys.tuseb.gov.tr/"
+    today_str = datetime.utcnow().strftime("%Y-%m-%d")
+    calls = []
+
+    try:
+        resp = requests.get(target_url, headers=HEADERS, timeout=25, verify=False)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Tablo satırları veya duyuru linklerini tara
+        rows = soup.find_all("tr")
+        print(f"TÜSEB TBYS teşhis: Sayfa yüklendi ({len(resp.text)} bayt), {len(rows)} tablo satırı bulundu.")
+
+        for idx, row in enumerate(rows):
+            text = " ".join(row.get_text(" ", strip=True).split())
+            if len(text) < 15 or not any(k in text.lower() for k in ["çağrı", "proje", "destek", "ar-ge", "grubu"]):
+                continue
+
+            dates = parse_tr_dates(text)
+            a_tag = row.find("a", href=True)
+            link = a_tag["href"] if a_tag and a_tag["href"].startswith("http") else target_url
+
+            is_always_open = len(dates) == 0
+            calls.append({
+                "id": f"tuseb-tbys-{idx}",
+                "kurum": "TÜSEB",
+                "baslik": text[:60] + ("..." if len(text) > 60 else ""),
+                "program_adi": text,
+                "surekli_acik": is_always_open,
+                "baslangic": dates[0] if len(dates) >= 1 else today_str,
+                "bitis": dates[-1] if len(dates) >= 1 else today_str,
+                "url": link,
+            })
+    except Exception as e:
+        print(f"TÜSEB TBYS tarama hatası: {e}")
+
+    print(f"TÜSEB: {len(calls)} çağrı çekildi.")
     return calls
 
 
@@ -184,10 +232,11 @@ def load_manual_calls():
 def main():
     eu_calls = fetch_eu_calls(limit=50)
     tubitak_calls = fetch_tubitak_calls()
+    tuseb_calls = fetch_tuseb_calls()
     manual_calls = load_manual_calls()
 
     merged = {}
-    for call in eu_calls + tubitak_calls + manual_calls:
+    for call in eu_calls + tubitak_calls + tuseb_calls + manual_calls:
         merged[call["id"]] = call
 
     final_list = list(merged.values())
@@ -196,7 +245,6 @@ def main():
         json.dump(final_list, f, ensure_ascii=False, indent=2)
 
     print(f"Toplam {len(final_list)} çağrı {OUTPUT_FILE} dosyasına kaydedildi.")
-
 
 if __name__ == "__main__":
     main()

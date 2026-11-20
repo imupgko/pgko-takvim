@@ -1,5 +1,41 @@
 [
   {
+    "id": "ab-HORIZON-CL4-INDUSTRY-2025-01-HUMAN-60",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-INDUSTRY-2025-01-HUMAN-60",
+    "program_adi": "Horizon Standardisation Booster (CSA)",
+    "baslangic": "2025-05-22",
+    "bitis": "2025-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-industry-2025-01-human-60"
+  },
+  {
+    "id": "ab-HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
+    "kurum": "AB",
+    "baslik": "HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
+    "program_adi": "HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
+    "baslangic": "2026-01-08",
+    "bitis": "2026-03-26",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2026-bas-01-ecosystem"
+  },
+  {
+    "id": "ab-HORIZON-JU-CHIPS-2025-CSA-JPN",
+    "kurum": "AB",
+    "baslik": "HORIZON-JU-CHIPS-2025-CSA-JPN",
+    "program_adi": "HORIZON-JU-CHIPS-2025-CSA-JPN",
+    "baslangic": "2025-07-08",
+    "bitis": "2025-09-17",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-chips-2025-csa-jpn"
+  },
+  {
+    "id": "ab-HORIZON-EIC-2026-BAS-02-SCALEUP",
+    "kurum": "AB",
+    "baslik": "HORIZON-EIC-2026-BAS-02-SCALEUP",
+    "program_adi": "HORIZON-EIC-2026-BAS-02-SCLATEUP",
+    "baslangic": "2026-03-03",
+    "bitis": "2026-06-25",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2026-bas-02-scaleup"
+  },
+  {
     "id": "ab-HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
     "kurum": "AB",
     "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
@@ -9,6 +45,15 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
   },
   {
+    "id": "ab-EDF-2026-LS-DA-DIS-OTHR",
+    "kurum": "AB",
+    "baslik": "EDF-2026-LS-DA-DIS-OTHR",
+    "program_adi": "New abilities in over-the-horizon sensing",
+    "baslangic": "2026-02-11",
+    "bitis": "2026-09-29",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/edf-2026-ls-da-dis-othr"
+  },
+  {
     "id": "ab-HORIZON-BRIDGING-2027-06-02",
     "kurum": "AB",
     "baslik": "HORIZON-BRIDGING-2027-06-02",
@@ -16,123 +61,6 @@
     "baslangic": "2026-10-20",
     "bitis": "2027-02-16",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-06-02"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
-    "program_adi": "Horizon scanning and foresight in future enabling digital technologies (CSA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-10"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-01-MAT-PROD-49",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-01-MAT-PROD-49",
-    "program_adi": "‘Proof of market’ to improve valorisation and commercialisation of Horizon generated R&I results (IA)",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-02-02",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-01-mat-prod-49"
-  },
-  {
-    "id": "ab-ERC-2027-POC",
-    "kurum": "AB",
-    "baslik": "ERC-2027-POC",
-    "program_adi": "Proof of Concept Grant",
-    "baslangic": "2026-11-12",
-    "bitis": "2027-09-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erc-2027-poc"
-  },
-  {
-    "id": "ab-HORIZON-EIC-2027-STEP",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-STEP",
-    "program_adi": "EIC STEP Scale Up",
-    "baslangic": "2026-11-18",
-    "bitis": "2027-11-24",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-step"
-  },
-  {
-    "id": "ab-HORIZON-NATURE-2027-03-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-NATURE-2027-03-01",
-    "program_adi": "Advancing interdisciplinary, data-driven research at the biodiversity- health interface under a One Health approach",
-    "baslangic": "2027-06-03",
-    "bitis": "2027-09-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-03-01"
-  },
-  {
-    "id": "ab-HORIZON-RAISE-2027-01-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-RAISE-2027-01-02",
-    "program_adi": "Automated Scientific Discovery – Food (RAISE pilot)",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-02-02",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-02"
-  },
-  {
-    "id": "ab-HORIZON-RAISE-2027-01-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-RAISE-2027-01-01",
-    "program_adi": "Automated Scientific Discovery - Materials Science (RAISE pilot) (RIA)",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-02-02",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-01"
-  },
-  {
-    "id": "ab-HORIZON-BRIDGING-2027-05-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-05-01",
-    "program_adi": "Skills for innovative SMEs",
-    "baslangic": "2026-12-01",
-    "bitis": "2027-03-03",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-05-01"
-  },
-  {
-    "id": "ab-HORIZON-RAISE-2027-01-04",
-    "kurum": "AB",
-    "baslik": "HORIZON-RAISE-2027-01-04",
-    "program_adi": "Developing a model for a Data Lab for Science linking with EOSC and RAISE (RAISE pilot) (CSA)",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-02-02",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-04"
-  },
-  {
-    "id": "ab-HORIZON-CID-2027-01-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-CID-2027-01-02",
-    "program_adi": "R&I in Support of the Clean Industrial Deal: Clean Technologies for Climate Action",
-    "baslangic": "2027-01-12",
-    "bitis": "2027-09-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-02"
-  },
-  {
-    "id": "ab-HORIZON-CID-2027-01-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-CID-2027-01-01",
-    "program_adi": "R&I in Support of the Clean Industrial Deal: Decarbonisation of energy intensive industries (IA) (Processes4Planet and Clean Steel partnerships)",
-    "baslangic": "2027-01-12",
-    "bitis": "2027-09-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-01"
-  },
-  {
-    "id": "ab-HORIZON-BRIDGING-2027-03-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-03-07",
-    "program_adi": "Europe’s world class research and technology infrastructures as strategic assets for talent to Choose Europe",
-    "baslangic": "2027-03-09",
-    "bitis": "2027-06-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-07"
-  },
-  {
-    "id": "ab-HORIZON-NATURE-2027-01-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-NATURE-2027-01-02",
-    "program_adi": "Better understanding, anticipating and addressing the biodiversity benefits and impacts of the clean and digital industries",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-01-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-01-02"
   },
   {
     "id": "tubitak-11801",
@@ -292,6 +220,106 @@
     "surekli_acik": false,
     "baslangic": "2025-12-09",
     "bitis": "2026-12-28",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-71cfec81-9ff8-4049-890b-edc75d3fcf52",
+    "kurum": "TÜSEB",
+    "baslik": "2026-B2",
+    "program_adi": "2026-B2   B GRUBU PROJE DESTEK PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2026-09-01",
+    "bitis": "2026-09-13",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-2e51fb0c-e7ae-4eb9-b99c-216144990bc1",
+    "kurum": "TÜSEB",
+    "baslik": "2026-KOAH",
+    "program_adi": "KOAH’IN DİJİTAL NEFESİ: GELECEĞİ BİRLİKTE TASARLAYALIM YARIŞMA ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-08-03",
+    "bitis": "2026-09-10",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-b37ecef5-c2e1-4712-8f46-b33301b24053",
+    "kurum": "TÜSEB",
+    "baslik": "2026-NATKİT",
+    "program_adi": "KAN ÜRÜNLERİ DONASYONLARINDA KULLANILMAK ÜZERE MULTIPLEKS NAT KİTİ GELİŞTİRİLMESİNE YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-06-16",
+    "bitis": "2026-08-02",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-e6ce8361-6395-434a-82d6-be406413f30a",
+    "kurum": "TÜSEB",
+    "baslik": "2026-A4-UM",
+    "program_adi": "UZMAN GRUBUNA YÖNELİK A4 PROJE DESTEK PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2026-06-16",
+    "bitis": "2026-07-01",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-74a32b29-bfab-4464-ad24-9b6d80118315",
+    "kurum": "TÜSEB",
+    "baslik": "2026-A1",
+    "program_adi": "LİSANS ÖĞRENCİLERİNE YÖNELİK ÜRETEN SAĞLIK EKOSİSTEMİNE GÜÇLÜ ADIM PROJE YARIŞMASI",
+    "surekli_acik": false,
+    "baslangic": "2026-03-15",
+    "bitis": "2026-04-30",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-83c16c55-f829-4552-87aa-b84d0d171931",
+    "kurum": "TÜSEB",
+    "baslik": "2026-ERİŞKİNTd-AŞI",
+    "program_adi": "ERİŞKİN TİP KOMBİNE TETANOS DİFTERİ AŞISININ YERLİ ÜRETİMİ VE ÜRETİM ALT YAPISININ KURULMASINA YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-03-03",
+    "bitis": "2026-04-01",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-a8c6f666-0815-4861-b917-518d1d9cef94",
+    "kurum": "TÜSEB",
+    "baslik": "2026-BCG-AŞI",
+    "program_adi": "BCG AŞISININ YERLİ ÜRETİMİ VE ÜRETİM ALT YAPISININ KURULMASINA YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-02-27",
+    "bitis": "2026-03-27",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-ebae8b26-1f0d-4028-8e5c-c67921073447",
+    "kurum": "TÜSEB",
+    "baslik": "2026- KIZAMIK-KIZAMIKÇIK-KABAKULAK (KKK)-AŞI",
+    "program_adi": "KIZAMIK-KIZAMIKÇIK-KABAKULAK (KKK) AŞISININ YERLİ ÜRETİMİ VE ÜRETİM ALT YAPISININ KURULMASINA YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-02-27",
+    "bitis": "2026-03-27",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-15ccea87-eb5f-4f2b-ae58-727ae10a5176",
+    "kurum": "TÜSEB",
+    "baslik": "2026-ALTI BİLEŞENLİ KARMA-AŞI",
+    "program_adi": "ALTI BİLEŞENLİ (KARMA) AŞININ YERLİ ÜRETİMİ VE ÜRETİM ALT YAPISININ KURULMASINA YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-02-26",
+    "bitis": "2026-03-26",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "tuseb-322d5ae0-b5a9-4edf-8b4b-05088daf67b3",
+    "kurum": "TÜSEB",
+    "baslik": "2026-PEDİATRİK HEPATİT B-AŞI",
+    "program_adi": "PEDİATRİK HEPATİT B AŞISININ YERLİ ÜRETİMİ VE ÜRETİM ALT YAPISININ KURULMASINA YÖNELİK PROJE ÇAĞRISI",
+    "surekli_acik": false,
+    "baslangic": "2026-02-25",
+    "bitis": "2026-03-25",
     "url": "https://tbys.tuseb.gov.tr/"
   }
 ]

@@ -304,12 +304,12 @@ def fetch_istka_calls():
             dates = parse_tr_dates(container_text)
 
             if len(dates) < 2 and container:
-               pdf_link = container.find("a", href=lambda h: h and ".pdf" in h.lower())
-            if pdf_link:
-               pdf_url = urljoin(base_url, pdf_link["href"])
-               pdf_dates = extract_dates_from_pdf(pdf_url)
-            if pdf_dates:
-               dates = sorted(set(dates + pdf_dates))
+                pdf_link = container.find("a", href=lambda h: h and ".pdf" in h.lower())
+                if pdf_link:
+                    pdf_url = urljoin(base_url, pdf_link["href"])
+                    pdf_dates = extract_dates_from_pdf(pdf_url)
+                    if pdf_dates:
+                        dates = sorted(set(dates + pdf_dates))
 
             is_always_open = len(dates) == 0
             if len(dates) >= 2:

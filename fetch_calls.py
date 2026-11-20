@@ -2,6 +2,7 @@ import json
 import os
 import re
 from datetime import datetime
+from urllib.parse import urljoin
 import requests
 import urllib3
 from bs4 import BeautifulSoup
@@ -243,6 +244,60 @@ def fetch_tuseb_calls():
     print(f"TÜSEB: {len(calls)} çağrı (aktif + geçmiş) çekildi.")
     return calls
 
+def fetch_istka_calls():
+    """istka.org.tr/acik-destek-programlari sayfasından aktif çağrıları tarar."""
+    base_url = "https://www.istka.org.tr"
+    target_url = "https://www.istka.org.tr/acik-destek-programlari"
+    today_str = datetime.utcnow().strftime("%Y-%m-%d")
+    calls = []
+
+    try:
+        resp = requests.get(target_url, headers=HEADERS, timeout=25, verify=False)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        seen_links = set()
+        for a_tag in soup.find_all("a", href=True):
+            text = " ".join(a_tag.get_text(" ", strip=True).split())
+            href = a_tag["href"]
+
+            # Program/destek/çağrı içeren bağlantıları filtrele
+            if len(text) < 15 or not any(k in text.lower() for k in ["destek", "program", "çağrı", "mali", "fizibilite", "teknik"]):
+                continue
+
+            full_url = urljoin(base_url, href)
+            if full_url in seen_links or full_url.rstrip("/") == target_url:
+                continue
+            seen_links.add(full_url)
+
+            # Kart veya kapsayıcı metninden tarih ara
+            container = a_tag.find_parent(["article", "div", "li", "tr"])
+            container_text = container.get_text(" ", strip=True) if container else text
+            dates = parse_tr_dates(container_text)
+
+            is_always_open = len(dates) == 0
+            start_date = dates[0] if len(dates) >= 1 else today_str
+            end_date = dates[-1] if len(dates) >= 2 else (dates[0] if len(dates) == 1 else today_str)
+
+            slug = re.sub(r"[^a-zA-Z0-9]+", "-", href.strip("/"))[-40:]
+            calls.append({
+                "id": f"istka-{slug}",
+                "kurum": "İSTKA",
+                "baslik": text[:65] + ("..." if len(text) > 65 else ""),
+                "program_adi": text,
+                "surekli_acik": is_always_open,
+                "baslangic": start_date,
+                "bitis": end_date,
+                "url": full_url,
+            })
+
+            if len(calls) >= 15:
+                break
+    except Exception as e:
+        print(f"İSTKA tarama hatası: {e}")
+
+    print(f"İSTKA: {len(calls)} çağrı çekildi.")
+    return calls
 
 def load_manual_calls():
     if not os.path.exists(MANUAL_FILE):
@@ -280,11 +335,12 @@ def main():
     eu_calls = fetch_eu_calls()
     tubitak_calls = fetch_tubitak_calls()
     tuseb_calls = fetch_tuseb_calls()
+    istka_calls = fetch_istka_calls()
     manual_calls = load_manual_calls()
 
     # Öncelik sırası: Arşiv < Güncel çekilenler < Manuel kayıtlar
     merged = {}
-    for call in archived_tubitak + eu_calls + tubitak_calls + tuseb_calls + manual_calls:
+    for call in archived_tubitak + eu_calls + tubitak_calls + tuseb_calls + istka_calls + manual_calls:
         merged[call["id"]] = call
 
     final_list = list(merged.values())

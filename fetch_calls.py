@@ -1,3 +1,4 @@
+import time
 import json
 import os
 import re
@@ -133,11 +134,23 @@ def fetch_tubitak_calls():
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     calls = []
 
-    try:
-        resp = requests.get(target_url, headers=HEADERS, timeout=25, verify=False)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
+    resp = None
+    for attempt in range(2):
+        try:
+            resp = requests.get(target_url, headers=HEADERS, timeout=45, verify=False)
+            resp.raise_for_status()
+            break
+        except Exception as e:
+            print(f"TÜBİTAK deneme {attempt + 1} hatası: {e}")
+            if attempt == 0:
+                time.sleep(3)
 
+    if resp is None:
+        print("TÜBİTAK: 0 çağrı çekildi (sunucu yanıt vermedi).")
+        return []
+
+    try:
+        soup = BeautifulSoup(resp.text, "html.parser")
         rows = soup.find_all("tr", attrs={"data-program-cagri-id": True})
         print(f"TÜBİTAK teşhis: Tabloda {len(rows)} satır bulundu.")
 
@@ -154,7 +167,6 @@ def fetch_tubitak_calls():
             end_date = parse_single_date(bitis_raw)
             baslik = cagri_adi if cagri_adi and cagri_adi != "-" else program_adi
 
-            # Tarihi olmayan veya "Sürekli" etiketli çağrılar
             if not end_date or "sürekli" in cagri_turu.lower():
                 calls.append({
                     "id": f"tubitak-{cagri_id}",
@@ -178,7 +190,7 @@ def fetch_tubitak_calls():
                     "url": detay_url,
                 })
     except Exception as e:
-        print(f"TÜBİTAK ARDEB-PBS tarama hatası: {e}")
+        print(f"TÜBİTAK ARDEB-PBS ayrıştırma hatası: {e}")
 
     print(f"TÜBİTAK: {len(calls)} çağrı çekildi.")
     return calls
@@ -330,6 +342,18 @@ def load_archived_tubitak_calls():
         return []
 
 
+def load_previous_calls_by_kurum(kurum_adi):
+    """Bağlantı hatasında ilgili kurumun bir önceki cagrilar.json kayıtlarını korur."""
+    if not os.path.exists(OUTPUT_FILE):
+        return []
+    try:
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+        return [c for c in existing if c.get("kurum") == kurum_adi]
+    except Exception:
+        return []
+
+
 def main():
     archived_tubitak = load_archived_tubitak_calls()
     eu_calls = fetch_eu_calls()
@@ -337,6 +361,19 @@ def main():
     tuseb_calls = fetch_tuseb_calls()
     istka_calls = fetch_istka_calls()
     manual_calls = load_manual_calls()
+
+    # Bağlantı hatası olursa ilgili kurumun önceki kayıtlarını koru
+    if not tubitak_calls:
+        tubitak_calls = load_previous_calls_by_kurum("TÜBİTAK")
+        print(f"TÜBİTAK yedek: Önceki kayıtlardan {len(tubitak_calls)} çağrı korundu.")
+
+    if not tuseb_calls:
+        tuseb_calls = load_previous_calls_by_kurum("TÜSEB")
+        print(f"TÜSEB yedek: Önceki kayıtlardan {len(tuseb_calls)} çağrı korundu.")
+
+    if not eu_calls:
+        eu_calls = load_previous_calls_by_kurum("AB")
+        print(f"AB yedek: Önceki kayıtlardan {len(eu_calls)} çağrı korundu.")
 
     # Öncelik sırası: Arşiv < Güncel çekilenler < Manuel kayıtlar
     merged = {}
@@ -349,6 +386,7 @@ def main():
         json.dump(final_list, f, ensure_ascii=False, indent=2)
 
     print(f"Toplam {len(final_list)} çağrı {OUTPUT_FILE} dosyasına kaydedildi.")
+
 
 if __name__ == "__main__":
     main()

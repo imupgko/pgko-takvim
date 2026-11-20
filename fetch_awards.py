@@ -436,6 +436,13 @@ def fetch_ams_awards():
         if any(k in block_text.lower() for k in exclude_keywords):
             continue
 
+        # "February 1 - May 31, 2027" gibi aralıklarda ilk tarihe de yılı ekle
+        block_text = re.sub(
+            r"([A-Za-z]+\s+\d{1,2})\s*[-–—]\s*([A-Za-z]+\s+\d{1,2},?\s*(\d{4}))",
+            r"\1, \3 - \2",
+            block_text,
+        )
+
         dates = [d for d in parse_tr_dates(block_text) if d[:4] in target_years]
         if not dates:
             continue

@@ -22,7 +22,7 @@ jobs:
           python-version: '3.11'
 
       - name: Gerekli kütüphaneleri yükle
-        run: pip install requests
+        run: pip install requests beautifulsoup4
 
       - name: Çağrıları çek
         run: python fetch_calls.py

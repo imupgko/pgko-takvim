@@ -2,8 +2,8 @@
   {
     "id": "odul-tüba-uba-akademi-odulleri-basvurusu",
     "kurum": "TÜBA",
-    "baslik": "TÜBA Ödülleri - Detaylı bilgi için tıklay (2026 Uluslararası TÜBA Akademi)",
-    "program_adi": "TÜBA Ödülleri - Detaylı bilgi için tıklay - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
+    "baslik": "TÜBA Ödülleri - Uluslararası TÜBA Akademi Ödülleri (2026 Uluslararası TÜBA Akademi)",
+    "program_adi": "TÜBA Ödülleri - Uluslararası TÜBA Akademi Ödülleri - 2026 Uluslararası TÜBA Akademi Ödülleri Başvurusu",
     "surekli_acik": false,
     "baslangic": "2026-06-05",
     "bitis": "2026-06-05",
@@ -141,7 +141,7 @@
   },
   {
     "id": "odul-ams-ivo-and-renata-babu-ka-thesis-prize",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Ivo and Renata Babuška Thesis Prize",
     "program_adi": "Ivo and Renata Babuška Thesis Prize",
     "surekli_acik": false,
@@ -151,7 +151,7 @@
   },
   {
     "id": "odul-ams-stefan-bergman-fellowship",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Stefan Bergman Fellowship",
     "program_adi": "Stefan Bergman Fellowship",
     "surekli_acik": false,
@@ -161,7 +161,7 @@
   },
   {
     "id": "odul-ams-joan-and-joseph-birman-fellowship-f",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Joan and Joseph Birman Fellowship for the Advancement of Women Scholars",
     "program_adi": "Joan and Joseph Birman Fellowship for the Advancement of Women Scholars",
     "surekli_acik": false,
@@ -171,7 +171,7 @@
   },
   {
     "id": "odul-ams-centennial-fellowship",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Centennial Fellowship",
     "program_adi": "Centennial Fellowship",
     "surekli_acik": false,
@@ -181,7 +181,7 @@
   },
   {
     "id": "odul-ams-chevalley-prize-in-lie-theory",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Chevalley Prize in Lie Theory",
     "program_adi": "Chevalley Prize in Lie Theory",
     "surekli_acik": false,
@@ -191,7 +191,7 @@
   },
   {
     "id": "odul-ams-claytor-gilmer-fellowship",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Claytor-Gilmer Fellowship",
     "program_adi": "Claytor-Gilmer Fellowship",
     "surekli_acik": false,
@@ -201,7 +201,7 @@
   },
   {
     "id": "odul-ams-levi-l-conant-prize",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Levi L. Conant Prize",
     "program_adi": "Levi L. Conant Prize",
     "surekli_acik": false,
@@ -211,7 +211,7 @@
   },
   {
     "id": "odul-ams-ams-congressional-fellowship",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - AMS Congressional Fellowship",
     "program_adi": "AMS Congressional Fellowship",
     "surekli_acik": false,
@@ -221,7 +221,7 @@
   },
   {
     "id": "odul-ams-award-for-distinguished-public-serv",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Award for Distinguished Public Service",
     "program_adi": "Award for Distinguished Public Service",
     "surekli_acik": false,
@@ -231,7 +231,7 @@
   },
   {
     "id": "odul-ams-award-for-an-exemplary-program-or-a",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Award for an Exemplary Program or Achievement in a Mathematics Department",
     "program_adi": "Award for an Exemplary Program or Achievement in a Mathematics Department",
     "surekli_acik": false,
@@ -241,7 +241,7 @@
   },
   {
     "id": "odul-ams-ciprian-foias-prize-in-operator-the",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Ciprian Foias Prize in Operator Theory",
     "program_adi": "Ciprian Foias Prize in Operator Theory",
     "surekli_acik": false,
@@ -251,7 +251,7 @@
   },
   {
     "id": "odul-ams-delbert-ray-fulkerson-prize-ams-mos",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Delbert Ray Fulkerson Prize (AMS-MOS)",
     "program_adi": "Delbert Ray Fulkerson Prize (AMS-MOS)",
     "surekli_acik": false,
@@ -261,7 +261,7 @@
   },
   {
     "id": "odul-ams-award-for-impact-on-the-teaching-an",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Award for Impact on the Teaching and Learning of Mathematics",
     "program_adi": "Award for Impact on the Teaching and Learning of Mathematics",
     "surekli_acik": false,
@@ -271,7 +271,7 @@
   },
   {
     "id": "odul-ams-george-lusztig-thesis-prize-in-alge",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - George Lusztig Thesis Prize in Algebra",
     "program_adi": "George Lusztig Thesis Prize in Algebra",
     "surekli_acik": false,
@@ -281,7 +281,7 @@
   },
   {
     "id": "odul-ams-george-lusztig-thesis-prize-in-lie-",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - George Lusztig Thesis Prize in Lie Theory",
     "program_adi": "George Lusztig Thesis Prize in Lie Theory",
     "surekli_acik": false,
@@ -291,7 +291,7 @@
   },
   {
     "id": "odul-ams-ams-mass-media-fellowship",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - AMS Mass Media Fellowship",
     "program_adi": "AMS Mass Media Fellowship",
     "surekli_acik": false,
@@ -301,7 +301,7 @@
   },
   {
     "id": "odul-ams-the-milestone-prize-for-foundationa",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - The Milestone Prize for Foundational Work in Formal Verification",
     "program_adi": "The Milestone Prize for Foundational Work in Formal Verification",
     "surekli_acik": false,
@@ -311,7 +311,7 @@
   },
   {
     "id": "odul-ams-e-h-moore-research-article-prize",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - E. H. Moore Research Article Prize",
     "program_adi": "E. H. Moore Research Article Prize",
     "surekli_acik": false,
@@ -321,7 +321,7 @@
   },
   {
     "id": "odul-ams-frank-and-brennie-morgan-prize-for-",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Frank and Brennie Morgan Prize for Outstanding Research in Mathematics by an Undergraduate Student (AMS-MAA-SIAM)",
     "program_adi": "Frank and Brennie Morgan Prize for Outstanding Research in Mathematics by an Undergraduate Student (AMS-MAA-SIAM)",
     "surekli_acik": false,
@@ -331,7 +331,7 @@
   },
   {
     "id": "odul-ams-mathematics-programs-that-make-a-di",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Mathematics Programs that Make a Difference",
     "program_adi": "Mathematics Programs that Make a Difference",
     "surekli_acik": false,
@@ -341,7 +341,7 @@
   },
   {
     "id": "odul-ams-david-p-robbins-prize",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - David P. Robbins Prize",
     "program_adi": "David P. Robbins Prize",
     "surekli_acik": false,
@@ -351,7 +351,7 @@
   },
   {
     "id": "odul-ams-leroy-p-steele-prize-for-lifetime-a",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Leroy P. Steele Prize for Lifetime Achievement",
     "program_adi": "Leroy P. Steele Prize for Lifetime Achievement",
     "surekli_acik": false,
@@ -361,7 +361,7 @@
   },
   {
     "id": "odul-ams-leroy-p-steele-prize-for-mathematic",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Leroy P. Steele Prize for Mathematical Exposition",
     "program_adi": "Leroy P. Steele Prize for Mathematical Exposition",
     "surekli_acik": false,
@@ -371,7 +371,7 @@
   },
   {
     "id": "odul-ams-leroy-p-steele-prize-for-seminal-co",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Leroy P. Steele Prize for Seminal Contribution to Research",
     "program_adi": "Leroy P. Steele Prize for Seminal Contribution to Research",
     "surekli_acik": false,
@@ -381,7 +381,7 @@
   },
   {
     "id": "odul-ams-elias-m-stein-prize-for-transformat",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Elias M. Stein Prize for Transformative Exposition",
     "program_adi": "Elias M. Stein Prize for Transformative Exposition",
     "surekli_acik": false,
@@ -391,7 +391,7 @@
   },
   {
     "id": "odul-ams-oswald-veblen-prize-in-geometry",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - Oswald Veblen Prize in Geometry",
     "program_adi": "Oswald Veblen Prize in Geometry",
     "surekli_acik": false,
@@ -401,7 +401,7 @@
   },
   {
     "id": "odul-ams-ams-siam-norbert-wiener-prize-in-ap",
-    "kurum": "Diğer",
+    "kurum": "AMS",
     "baslik": "AMS - AMS-SIAM Norbert Wiener Prize in Applied Mathematics",
     "program_adi": "AMS-SIAM Norbert Wiener Prize in Applied Mathematics",
     "surekli_acik": false,
@@ -418,5 +418,25 @@
     "baslangic": "2026-05-01",
     "bitis": "2027-10-05",
     "url": "https://www.ams.org/prizes-awards/pabrowse.cgi?year="
+  },
+  {
+    "id": "odul-diğer-l-or-al-unesco-t-rkiye-ulusal-progr",
+    "kurum": "Diğer",
+    "baslik": "L'Oréal-UNESCO Türkiye Ulusal Programı - L'Oréal Turkey 2026 Call for Applications",
+    "program_adi": "L'Oréal-UNESCO Türkiye Ulusal Programı - L'Oréal Turkey 2026 Call for Applications",
+    "surekli_acik": false,
+    "baslangic": "2026-02-02",
+    "bitis": "2026-06-15",
+    "url": "https://www.forwomeninscience.com/challenge/show/154"
+  },
+  {
+    "id": "odul-diğer-l-or-al-unesco-uluslararas-d-lleri-",
+    "kurum": "Diğer",
+    "baslik": "L'Oréal-UNESCO Uluslararası Ödülleri - International Awards in Physical Sciences, Mathematics ",
+    "program_adi": "L'Oréal-UNESCO Uluslararası Ödülleri - International Awards in Physical Sciences, Mathematics ",
+    "surekli_acik": false,
+    "baslangic": "2026-04-06",
+    "bitis": "2026-07-05",
+    "url": "https://www.forwomeninscience.com/challenge/show/158"
   }
 ]

@@ -49,73 +49,80 @@ def parse_single_date(date_str):
     return None
 
 
-def fetch_eu_calls(limit=50):
-    """AB Funding & Tenders API'sinden tekrarsız, açık ve yaklaşan Horizon çağrılarını çeker."""
+def fetch_eu_calls(open_limit=50, closed_limit=30):
+    """AB Funding & Tenders API'sinden açık/yaklaşan ve 2025+ kapalı çağrıları ayrı kotalarla çeker."""
     url = "https://api.tech.ec.europa.eu/search-api/prod/rest/search"
-    params = {
-        "apiKey": "SEDIA",
-        "text": "HORIZON",
-        "pageSize": limit,
-        "pageNumber": 1,
-    }
-    payload = {
-        "bool": {
-            "must": [
-                {"terms": {"type": ["1", "2"]}},
-                {"terms": {"status": ["31094501", "31094502", "31094503"]}},
-                {"terms": {"language": ["en"]}},
-            ]
-        }
-    }
-
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     seen_ids = set()
     calls = []
 
-    try:
-        response = requests.post(
-            url,
-            params=params,
-            files={"query": (None, json.dumps(payload), "application/json")},
-            timeout=30,
-        )
-        response.raise_for_status()
-        data = response.json()
+    queries = [
+        # 1. Sorgu: Sadece Yaklaşan (31094501) ve Açık (31094502) çağrılar
+        (["31094501", "31094502"], open_limit, today_str),
+        # 2. Sorgu: Sadece Kapalı (31094503) çağrılar (2025 ve sonrası)
+        (["31094503"], closed_limit, "2025-01-01"),
+    ]
 
-        for item in data.get("results", []):
-            meta = item.get("metadata", {})
-            identifier = (meta.get("identifier") or [""])[0].strip()
-            if not identifier or identifier in seen_ids:
-                continue
+    for statuses, limit, min_deadline in queries:
+        params = {
+            "apiKey": "SEDIA",
+            "text": "HORIZON",
+            "pageSize": limit,
+            "pageNumber": 1,
+        }
+        payload = {
+            "bool": {
+                "must": [
+                    {"terms": {"type": ["1", "2"]}},
+                    {"terms": {"status": statuses}},
+                    {"terms": {"language": ["en"]}},
+                ]
+            }
+        }
 
-            title = (meta.get("title") or [identifier])[0]
-            start_dates = [format_eu_date(d) for d in (meta.get("startDate") or []) if format_eu_date(d)]
-            deadlines = [format_eu_date(d) for d in (meta.get("deadlineDate") or []) if format_eu_date(d)]
+        try:
+            response = requests.post(
+                url,
+                params=params,
+                files={"query": (None, json.dumps(payload), "application/json")},
+                timeout=30,
+            )
+            response.raise_for_status()
+            data = response.json()
 
-            if not start_dates or not deadlines:
-                continue
+            for item in data.get("results", []):
+                meta = item.get("metadata", {})
+                identifier = (meta.get("identifier") or [""])[0].strip()
+                if not identifier or identifier in seen_ids:
+                    continue
 
-            start_date = min(start_dates)
-            deadline = max(deadlines)
+                title = (meta.get("title") or [identifier])[0]
+                start_dates = [format_eu_date(d) for d in (meta.get("startDate") or []) if format_eu_date(d)]
+                deadlines = [format_eu_date(d) for d in (meta.get("deadlineDate") or []) if format_eu_date(d)]
 
-            # Süresi geçmiş çağrıları atla
-            if deadline < "2025-01-01":
-                continue
+                if not start_dates or not deadlines:
+                    continue
 
-            seen_ids.add(identifier)
-            calls.append({
-                "id": f"ab-{identifier}",
-                "kurum": "AB",
-                "baslik": identifier,
-                "program_adi": title,
-                "baslangic": start_date,
-                "bitis": deadline,
-                "url": f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}",
-            })
-    except Exception as e:
-        print(f"AB API hatası: {e}")
+                start_date = min(start_dates)
+                deadline = max(deadlines)
 
-    print(f"AB: {len(calls)} benzersiz açık çağrı çekildi.")
+                if deadline < min_deadline:
+                    continue
+
+                seen_ids.add(identifier)
+                calls.append({
+                    "id": f"ab-{identifier}",
+                    "kurum": "AB",
+                    "baslik": identifier,
+                    "program_adi": title,
+                    "baslangic": start_date,
+                    "bitis": deadline,
+                    "url": f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}",
+                })
+        except Exception as e:
+            print(f"AB API hatası ({statuses}): {e}")
+
+    print(f"AB: {len(calls)} benzersiz çağrı (açık + geçmiş) çekildi.")
     return calls
 
 
@@ -270,7 +277,7 @@ def load_archived_tubitak_calls():
 
 def main():
     archived_tubitak = load_archived_tubitak_calls()
-    eu_calls = fetch_eu_calls(limit=50)
+    eu_calls = fetch_eu_calls()
     tubitak_calls = fetch_tubitak_calls()
     tuseb_calls = fetch_tuseb_calls()
     manual_calls = load_manual_calls()

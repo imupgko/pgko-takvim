@@ -117,6 +117,12 @@
       color: #7f1d1d;
     }
 
+    .vis-item.item-istka {
+      background-color: #7c3aed;
+      border-color: #6d28d9;
+      color: #ffffff;
+    }
+    
     .vis-item.item-ab {
       background-color: #fef3c7;
       border-color: var(--ab-color);
@@ -147,6 +153,7 @@
       <button class="btn active" data-kurum="ALL">Tümü</button>
       <button class="btn btn-tubitak" data-kurum="TÜBİTAK">TÜBİTAK</button>
       <button class="btn btn-tuseb" data-kurum="TÜSEB">TÜSEB</button>
+      <button class="filter-btn" data-kurum="İSTKA">İSTKA</button>
       <button class="btn btn-ab" data-kurum="AB">AB Projeleri</button>
     </div>
 
@@ -173,12 +180,14 @@
     const groups = new vis.DataSet([
       { id: "TÜBİTAK", content: "<strong>TÜBİTAK</strong>" },
       { id: "TÜSEB", content: "<strong>TÜSEB</strong>" },
+      { id: "İSTKA", content: "İSTKA" },
       { id: "AB", content: "<strong>AB Projeleri</strong>" }
     ]);
 
     function getClassName(kurum) {
       if (kurum === "TÜBİTAK") return "item-tubitak";
       if (kurum === "TÜSEB") return "item-tuseb";
+      if (kurum === "İSTKA") return "item-istka";
       if (kurum === "AB") return "item-ab";
       return "";
     }

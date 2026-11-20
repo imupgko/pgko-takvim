@@ -1,5 +1,21 @@
 [
   {
+    "id": "ab-HORIZON-EIT-2024-WomenInnovatorsPrize",
+    "kurum": "AB",
+    "baslik": "HORIZON-EIT-2024-WomenInnovatorsPrize - Horizon-EIT-2024-Prize-EPWI-WomenLeadership",
+    "baslangic": "2024-06-27",
+    "bitis": "2024-09-25",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2024-womeninnovatorsprize"
+  },
+  {
+    "id": "ab-HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
+    "kurum": "AB",
+    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage - HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
+    "baslangic": "2026-11-25",
+    "bitis": "2027-02-25",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+  },
+  {
     "id": "tubitak-1001-2026",
     "kurum": "TÜBİTAK",
     "baslik": "1001 - Bilimsel ve Teknolojik Araştırma Projeleri",
@@ -14,21 +30,5 @@
     "baslangic": "2026-11-01",
     "bitis": "2027-01-20",
     "url": "https://tbys.tuseb.gov.tr/"
-  },
-  {
-    "id": "ab-horizon-cl5-2026",
-    "kurum": "AB",
-    "baslik": "Horizon Europe - Climate, Energy and Mobility",
-    "baslangic": "2026-09-15",
-    "bitis": "2027-02-10",
-    "url": "https://ec.europa.eu/info/funding-tenders/"
-  },
-  {
-    "id": "tubitak-3005-2026",
-    "kurum": "TÜBİTAK",
-    "baslik": "3005 - Sosyal ve Beşeri Bilimlerde Yenilikçi Çözümler",
-    "baslangic": "2026-11-10",
-    "bitis": "2027-01-30",
-    "url": "https://tubitak.gov.tr/"
   }
 ]

@@ -159,17 +159,7 @@
     "bitis": "2026-11-11",
     "url": "https://www.ieee.org.tr/ieee-turkiye-subesi-ieee-day-2026-kapsaminda-azerbaycandaki-ieee-uyeleriyle-bir-araya-geldi/"
   },
-  {
-    "id": "odul-diğer-ams-matematik-d-lleri",
-    "kurum": "Diğer",
-    "baslik": "AMS Matematik Ödülleri",
-    "program_adi": "AMS Matematik Ödülleri",
-    "surekli_acik": false,
-    "baslangic": "2026-05-01",
-    "bitis": "2027-10-05",
-    "url": "https://www.ams.org/prizes-awards/palist.cgi?deadline=yes&sort=keyword-asc"
-  },
-  {
+    {
     "id": "odul-ams-ivo-and-renata-babu-ka-thesis-prize",
     "kurum": "Diğer",
     "baslik": "AMS - Ivo and Renata Babuška Thesis Prize",

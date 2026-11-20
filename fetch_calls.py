@@ -1,3 +1,5 @@
+from io import BytesIO
+from pypdf import PdfReader
 import time
 import json
 import os
@@ -256,6 +258,18 @@ def fetch_tuseb_calls():
     print(f"TÜSEB: {len(calls)} çağrı (aktif + geçmiş) çekildi.")
     return calls
 
+def extract_dates_from_pdf(pdf_url):
+    """Verilen PDF bağlantısının ilk 2 sayfasından GG.AA.YYYY tarihlerini çeker."""
+    try:
+        resp = requests.get(pdf_url, headers=HEADERS, timeout=25, verify=False)
+        resp.raise_for_status()
+        reader = PdfReader(BytesIO(resp.content))
+        text = " ".join((page.extract_text() or "") for page in reader.pages[:2])
+        return parse_tr_dates(text)
+    except Exception as e:
+        print(f"PDF tarih okuma hatası ({pdf_url}): {e}")
+        return []
+
 def fetch_istka_calls():
     """istka.org.tr/acik-destek-programlari sayfasından menüleri eleyerek aktif çağrıları tarar."""
     base_url = "https://www.istka.org.tr"
@@ -288,6 +302,14 @@ def fetch_istka_calls():
             container = a_tag.find_parent(["article", "div", "li", "tr"])
             container_text = container.get_text(" ", strip=True) if container else text
             dates = parse_tr_dates(container_text)
+
+            if len(dates) < 2 and container:
+               pdf_link = container.find("a", href=lambda h: h and ".pdf" in h.lower())
+            if pdf_link:
+               pdf_url = urljoin(base_url, pdf_link["href"])
+               pdf_dates = extract_dates_from_pdf(pdf_url)
+            if pdf_dates:
+               dates = sorted(set(dates + pdf_dates))
 
             is_always_open = len(dates) == 0
             if len(dates) >= 2:

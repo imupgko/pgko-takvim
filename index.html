@@ -202,7 +202,7 @@
         end: call.bitis,
         className: getClassName(call.kurum),
         url: call.url,
-        title: `<strong>${call.kurum}</strong><br>${call.baslik}<br>Başlangıç: ${formatDateTR(call.baslangic)}<br>Bitiş: ${formatDateTR(call.bitis)}`
+        title: `<strong>${call.kurum}</strong><br>${call.baslik}${call.program_adi ? `<br><em>${call.program_adi}</em>` : ""}<br>Başlangıç: ${formatDateTR(call.baslangic)}<br>Bitiş: ${formatDateTR(call.bitis)}`
       }));
 
       itemsDataSet.clear();

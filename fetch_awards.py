@@ -133,6 +133,13 @@ def fetch_award_source(source):
     for tag in soup.find_all(["header", "nav", "footer"]):
         tag.decompose()
 
+    # --- YENİ 1: Buton metni ("To know more about it" vb.) yerine gerçek H1 başlığını al ---
+    generic_texts = ("to know more", "detaylı bilgi", "tıklay", "read more", "more info")
+    if any(g in ad.lower() for g in generic_texts) and soup.find("h1"):
+        h1_text = soup.find("h1").get_text(" ", strip=True)
+        if len(h1_text) > 5:
+            ad = f"{ad.split(' - ')[0]} - {h1_text[:55]}"
+
     # 1. Aşama: Sayfa içinde güncel/gelecek yıl içeren alt linkleri keşfet
     yearly_links = []
     seen_urls = set()
@@ -147,13 +154,13 @@ def fetch_award_source(source):
                 seen_urls.add(full_url)
                 yearly_links.append((text or ad, full_url))
 
-    # --- YENİ: Hariç tutma (exclude_keywords) kontrolü ---
+    # Hariç tutma (exclude_keywords) kontrolü
     exclude_keywords = source.get("exclude_keywords")
     main_text = soup.get_text(" ", strip=True)
     if exclude_keywords and any(k in main_text.lower() for k in exclude_keywords):
         print(f"{ad}: Uluslararası başvuruya kapalı (filtreyle elendi).")
         return []
-    
+
     # 2. Aşama: Alt link varsa içlerinden tarih çek
     for link_text, detail_url in yearly_links[:4]:
         if detail_url.lower().endswith(".pdf"):
@@ -188,9 +195,21 @@ def fetch_award_source(source):
 
     # 3. Aşama: Alt linkten tarih çıkmadıysa doğrudan ana sayfanın kendi metnindeki tarihleri kontrol et
     if not results:
-        main_dates = [d for d in parse_tr_dates(soup.get_text(" ", strip=True)) if d[:4] in target_years]
+        main_dates = [d for d in parse_tr_dates(main_text) if d[:4] in target_years]
         if main_dates:
             end_date = main_dates[-1]
+
+            # --- YENİ 2: Kapanış tarihini (closing/deadline) final seçiminden ayır ---
+            closing_match = re.search(
+                r"([A-Za-z]+\s+\d{1,2},?\s+\d{4})\s*(?:closing of the call|deadline|son başvuru)",
+                main_text,
+                re.I,
+            )
+            if closing_match:
+                c_dates = parse_tr_dates(closing_match.group(1))
+                if c_dates:
+                    end_date = c_dates[0]
+
             start_date = main_dates[0] if len(main_dates) >= 2 else (today_str if today_str < end_date else end_date)
             slug = re.sub(r"[^a-zA-Z0-9]+", "-", ad.lower())[:35]
             results.append({
@@ -415,13 +434,14 @@ def fetch_ams_awards():
 
     for a in soup.find_all("a", href=True):
         href = a["href"].strip()
-        if "paview.cgi" not in href and "pabrowse.cgi" not in href:
+        if "paview.cgi" not in href:
             continue
-
+        
         title = a.get_text(" ", strip=True)
-        if not title or len(title) < 4:
+        if not title or len(title) < 4 or "archive" in title.lower():
             continue
 
+        
         full_url = urljoin(url, href).split("#")[0]
         if full_url in seen:
             continue

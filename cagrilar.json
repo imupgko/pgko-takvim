@@ -1,0 +1,34 @@
+[
+  {
+    "id": "tubitak-1001-2026",
+    "kurum": "TÜBİTAK",
+    "baslik": "1001 - Bilimsel ve Teknolojik Araştırma Projeleri",
+    "baslangic": "2026-10-01",
+    "bitis": "2026-12-15",
+    "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1001"
+  },
+  {
+    "id": "tuseb-a-grubu-2026",
+    "kurum": "TÜSEB",
+    "baslik": "A Grubu Acil Ar-Ge Proje Destek Programı",
+    "baslangic": "2026-11-01",
+    "bitis": "2027-01-20",
+    "url": "https://tbys.tuseb.gov.tr/"
+  },
+  {
+    "id": "ab-horizon-cl5-2026",
+    "kurum": "AB",
+    "baslik": "Horizon Europe - Climate, Energy and Mobility",
+    "baslangic": "2026-09-15",
+    "bitis": "2027-02-10",
+    "url": "https://ec.europa.eu/info/funding-tenders/"
+  },
+  {
+    "id": "tubitak-3005-2026",
+    "kurum": "TÜBİTAK",
+    "baslik": "3005 - Sosyal ve Beşeri Bilimlerde Yenilikçi Çözümler",
+    "baslangic": "2026-11-10",
+    "bitis": "2027-01-30",
+    "url": "https://tubitak.gov.tr/"
+  }
+]

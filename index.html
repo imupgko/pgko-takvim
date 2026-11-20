@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PGKO Proje Çağrıları Tarih Şeridi</title>
+
+  <!-- Vis.js Timeline CDN -->
+  <link href="https://unpkg.com/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1f2937;
+      --border-color: #e5e7eb;
+      --tubitak-color: #1d4ed8;
+      --tuseb-color: #b91c1c;
+      --ab-color: #d97706;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* Üst Kontrol Çubuğu */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .filter-group, .action-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 7px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: #f9fafb;
+      color: var(--text-color);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover {
+      background: #f3f4f6;
+    }
+
+    .btn.active {
+      background: #111827;
+      color: #ffffff;
+      border-color: #111827;
+    }
+
+    .btn-tubitak.active { background: var(--tubitak-color); border-color: var(--tubitak-color); }
+    .btn-tuseb.active   { background: var(--tuseb-color); border-color: var(--tuseb-color); }
+    .btn-ab.active      { background: var(--ab-color); border-color: var(--ab-color); }
+
+    .toggle-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      user-select: none;
+      margin-right: 8px;
+    }
+
+    /* Timeline Kapsayıcı */
+    #timeline {
+      width: 100%;
+      min-height: 360px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Kurumlara Göre Çubuk Renkleri */
+    .vis-item {
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-width: 1px;
+    }
+
+    .vis-item.item-tubitak {
+      background-color: #dbeafe;
+      border-color: var(--tubitak-color);
+      color: #1e3a8a;
+    }
+
+    .vis-item.item-tuseb {
+      background-color: #fee2e2;
+      border-color: var(--tuseb-color);
+      color: #7f1d1d;
+    }
+
+    .vis-item.item-ab {
+      background-color: #fef3c7;
+      border-color: var(--ab-color);
+      color: #78350f;
+    }
+
+    .vis-item:hover {
+      filter: brightness(0.95);
+    }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="filter-group" id="kurumFiltreleri">
+      <button class="btn active" data-kurum="ALL">Tümü</button>
+      <button class="btn btn-tubitak" data-kurum="TÜBİTAK">TÜBİTAK</button>
+      <button class="btn btn-tuseb" data-kurum="TÜSEB">TÜSEB</button>
+      <button class="btn btn-ab" data-kurum="AB">AB Projeleri</button>
+    </div>
+
+    <div class="action-group">
+      <label class="toggle-label">
+        <input type="checkbox" id="sadeceAcik" checked />
+        Sadece Açık Çağrılar
+      </label>
+      <button class="btn" id="btnBugun">Bugün</button>
+      <button class="btn" id="btnYil">Yıllık Görünüm</button>
+    </div>
+  </div>
+
+  <div id="timeline"></div>
+  <div class="hint">Çağrı detaylarına gitmek için ilgili zaman çubuğuna tıklayabilirsiniz.</div>
+
+  <script>
+    let allCalls = [];
+    let selectedKurum = "ALL";
+    let timeline = null;
+    const itemsDataSet = new vis.DataSet();
+
+    // Kurum grupları (yatay şeritler)
+    const groups = new vis.DataSet([
+      { id: "TÜBİTAK", content: "<strong>TÜBİTAK</strong>" },
+      { id: "TÜSEB", content: "<strong>TÜSEB</strong>" },
+      { id: "AB", content: "<strong>AB Projeleri</strong>" }
+    ]);
+
+    function getClassName(kurum) {
+      if (kurum === "TÜBİTAK") return "item-tubitak";
+      if (kurum === "TÜSEB") return "item-tuseb";
+      if (kurum === "AB") return "item-ab";
+      return "";
+    }
+
+    function formatDateTR(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString("tr-TR", { day: "2-digit", month: "long", year: "numeric" });
+    }
+
+    function renderFilteredData() {
+      const onlyOpen = document.getElementById("sadeceAcik").checked;
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const filtered = allCalls.filter(call => {
+        const matchKurum = selectedKurum === "ALL" || call.kurum === selectedKurum;
+        const endDate = new Date(call.bitis);
+        const matchStatus = !onlyOpen || endDate >= today;
+        return matchKurum && matchStatus;
+      });
+
+      const visItems = filtered.map(call => ({
+        id: call.id,
+        group: call.kurum,
+        content: call.baslik,
+        start: call.baslangic,
+        end: call.bitis,
+        className: getClassName(call.kurum),
+        url: call.url,
+        title: `<strong>${call.kurum}</strong><br>${call.baslik}<br>Başlangıç: ${formatDateTR(call.baslangic)}<br>Bitiş: ${formatDateTR(call.bitis)}`
+      }));
+
+      itemsDataSet.clear();
+      itemsDataSet.add(visItems);
+
+      if (timeline && visItems.length > 0) {
+        timeline.fit({ animation: true });
+      }
+    }
+
+    async function initTimeline() {
+      const container = document.getElementById("timeline");
+
+      const options = {
+        stack: true,
+        horizontalScroll: true,
+        zoomKey: "ctrlKey",
+        maxHeight: 500,
+        margin: { item: 10, axis: 5 },
+        tooltip: { followMouse: true, overflowMethod: "cap" }
+      };
+
+      timeline = new vis.Timeline(container, itemsDataSet, groups, options);
+
+      // Çubuğa tıklayınca çağrı linkini yeni sekmede aç
+      timeline.on("select", function (props) {
+        if (props.items.length > 0) {
+          const item = itemsDataSet.get(props.items[0]);
+          if (item && item.url) {
+            window.open(item.url, "_blank", "noopener,noreferrer");
+          }
+        }
+      });
+
+      // JSON dosyasını çek
+      try {
+        const response = await fetch("./cagrilar.json?t=" + Date.now());
+        if (!response.ok) throw new Error("JSON yüklenemedi");
+        allCalls = await response.json();
+        renderFilteredData();
+      } catch (err) {
+        container.innerHTML = "<p style='padding:16px;color:#b91c1c;'>Veri dosyası (cagrilar.json) yüklenirken hata oluştu.</p>";
+        console.error(err);
+      }
+    }
+
+    // Filtre butonları
+    document.querySelectorAll("#kurumFiltreleri .btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#kurumFiltreleri .btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        selectedKurum = btn.dataset.kurum;
+        renderFilteredData();
+      });
+    });
+
+    // Sadece açık çağrılar anahtarı
+    document.getElementById("sadeceAcik").addEventListener("change", renderFilteredData);
+
+    // Bugün ve Yıllık Görünüm butonları
+    document.getElementById("btnBugun").addEventListener("click", () => {
+      if (timeline) timeline.moveTo(new Date(), { animation: true });
+    });
+
+    document.getElementById("btnYil").addEventListener("click", () => {
+      if (!timeline) return;
+      const now = new Date();
+      const start = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const end = new Date(now.getFullYear(), now.getMonth() + 11, 1);
+      timeline.setWindow(start, end, { animation: true });
+    });
+
+    initTimeline();
+  </script>
+</body>
+</html>

@@ -177,42 +177,51 @@ def fetch_tubitak_calls():
 
 
 def fetch_tuseb_calls():
-    """tbys.tuseb.gov.tr üzerinden açık çağrıları tarar."""
-    target_url = "https://tbys.tuseb.gov.tr/"
+    """TÜSEB TBYS BFF API'sinden (AktifCagrilar) doğrudan aktif çağrıları çeker."""
+    api_url = "https://tbysbff.tuseb.gov.tr/api/Cagri/AktifCagrilar"
+    portal_url = "https://tbys.tuseb.gov.tr/"
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     calls = []
 
+    headers = {
+        **HEADERS,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://tbys.tuseb.gov.tr",
+        "Referer": "https://tbys.tuseb.gov.tr/",
+    }
+
     try:
-        resp = requests.get(target_url, headers=HEADERS, timeout=25, verify=False)
+        resp = requests.post(api_url, headers=headers, json={}, timeout=25, verify=False)
         resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
+        payload = resp.json()
 
-        # Tablo satırları veya duyuru linklerini tara
-        rows = soup.find_all("tr")
-        print(f"TÜSEB TBYS teşhis: Sayfa yüklendi ({len(resp.text)} bayt), {len(rows)} tablo satırı bulundu.")
+        items = (payload.get("value") or {}).get("data") or []
+        print(f"TÜSEB API teşhis: {len(items)} aktif çağrı döndü.")
 
-        for idx, row in enumerate(rows):
-            text = " ".join(row.get_text(" ", strip=True).split())
-            if len(text) < 15 or not any(k in text.lower() for k in ["çağrı", "proje", "destek", "ar-ge", "grubu"]):
-                continue
+        for item in items:
+            cagri_id = item.get("id") or ""
+            kodu = (item.get("kodu") or "").strip()
+            konu = (item.get("konu") or "").strip()
+            start_raw = item.get("baslangicTarihi")
+            end_raw = item.get("bitisTarihi")
 
-            dates = parse_tr_dates(text)
-            a_tag = row.find("a", href=True)
-            link = a_tag["href"] if a_tag and a_tag["href"].startswith("http") else target_url
+            start_date = format_eu_date(start_raw)
+            end_date = format_eu_date(end_raw)
+            is_always_open = not bool(end_date)
 
-            is_always_open = len(dates) == 0
             calls.append({
-                "id": f"tuseb-tbys-{idx}",
+                "id": f"tuseb-{cagri_id or kodu}",
                 "kurum": "TÜSEB",
-                "baslik": text[:60] + ("..." if len(text) > 60 else ""),
-                "program_adi": text,
+                "baslik": kodu if kodu else (konu[:60] + ("..." if len(konu) > 60 else "")),
+                "program_adi": konu,
                 "surekli_acik": is_always_open,
-                "baslangic": dates[0] if len(dates) >= 1 else today_str,
-                "bitis": dates[-1] if len(dates) >= 1 else today_str,
-                "url": link,
+                "baslangic": start_date or today_str,
+                "bitis": end_date or today_str,
+                "url": portal_url,
             })
     except Exception as e:
-        print(f"TÜSEB TBYS tarama hatası: {e}")
+        print(f"TÜSEB API hatası: {e}")
 
     print(f"TÜSEB: {len(calls)} çağrı çekildi.")
     return calls

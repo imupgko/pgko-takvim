@@ -131,70 +131,100 @@ def fetch_eu_calls(open_limit=50, closed_limit=30):
 
 
 def fetch_tubitak_calls():
-    """ardeb-pbs.tubitak.gov.tr tablosundan hem dönemlik hem sürekli açık çağrıları çeker."""
-    target_url = "https://ardeb-pbs.tubitak.gov.tr/"
+    """ARDEB, Bilim ve Toplum ve UİDB PBS portallarından çağrıları çeker."""
+    portals = [
+        ("TÜBİTAK ARDEB", "tubitak", "https://ardeb-pbs.tubitak.gov.tr/"),
+        ("TÜBİTAK Bilim ve Toplum", "tubitak-bito", "https://bilimtoplum-pbs.tubitak.gov.tr/"),
+        ("TÜBİTAK UİDB", "tubitak-uidb", "https://uidb-pbs.tubitak.gov.tr/"),
+    ]
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     calls = []
 
-    resp = None
-    for attempt in range(2):
+    for portal_ad, id_prefix, target_url in portals:
+        resp = None
+        for attempt in range(2):
+            try:
+                resp = requests.get(target_url, headers=HEADERS, timeout=45, verify=False)
+                resp.raise_for_status()
+                break
+            except Exception as e:
+                print(f"{portal_ad} deneme {attempt + 1} hatası: {e}")
+                if attempt == 0:
+                    time.sleep(3)
+
+        if resp is None:
+            print(f"{portal_ad}: 0 çağrı çekildi (sunucu yanıt vermedi).")
+            continue
+
+        portal_count = 0
         try:
-            resp = requests.get(target_url, headers=HEADERS, timeout=45, verify=False)
-            resp.raise_for_status()
-            break
-        except Exception as e:
-            print(f"TÜBİTAK deneme {attempt + 1} hatası: {e}")
-            if attempt == 0:
-                time.sleep(3)
+            soup = BeautifulSoup(resp.text, "html.parser")
+            rows = soup.find_all("tr", attrs={"data-program-cagri-id": True})
+            print(f"{portal_ad} teşhis: Tabloda {len(rows)} PBS satırı bulundu.")
 
-    if resp is None:
-        print("TÜBİTAK: 0 çağrı çekildi (sunucu yanıt vermedi).")
-        return []
+            if rows:
+                for row in rows:
+                    cagri_id = row.get("data-program-cagri-id", "").strip()
+                    program_adi = row.get("data-program-adi", "").strip()
+                    cagri_adi = row.get("data-cagri-adi", "").strip()
+                    cagri_turu = row.get("data-cagri-turu", "").strip()
+                    baslangic_raw = row.get("data-baslangic", "").strip()
+                    bitis_raw = row.get("data-bitis", "").strip()
+                    detay_url = row.get("data-bilgi-notu-url", "").strip() or target_url
 
-    try:
-        soup = BeautifulSoup(resp.text, "html.parser")
-        rows = soup.find_all("tr", attrs={"data-program-cagri-id": True})
-        print(f"TÜBİTAK teşhis: Tabloda {len(rows)} satır bulundu.")
+                    start_date = parse_single_date(baslangic_raw)
+                    end_date = parse_single_date(bitis_raw)
+                    baslik = cagri_adi if cagri_adi and cagri_adi != "-" else program_adi
 
-        for row in rows:
-            cagri_id = row.get("data-program-cagri-id", "").strip()
-            program_adi = row.get("data-program-adi", "").strip()
-            cagri_adi = row.get("data-cagri-adi", "").strip()
-            cagri_turu = row.get("data-cagri-turu", "").strip()
-            baslangic_raw = row.get("data-baslangic", "").strip()
-            bitis_raw = row.get("data-bitis", "").strip()
-            detay_url = row.get("data-bilgi-notu-url", "").strip() or target_url
-
-            start_date = parse_single_date(baslangic_raw)
-            end_date = parse_single_date(bitis_raw)
-            baslik = cagri_adi if cagri_adi and cagri_adi != "-" else program_adi
-
-            if not end_date or "sürekli" in cagri_turu.lower():
-                calls.append({
-                    "id": f"tubitak-{cagri_id}",
-                    "kurum": "TÜBİTAK",
-                    "baslik": baslik,
-                    "program_adi": program_adi,
-                    "surekli_acik": True,
-                    "baslangic": today_str,
-                    "bitis": today_str,
-                    "url": detay_url,
-                })
+                    is_always_open = not end_date or "sürekli" in cagri_turu.lower()
+                    calls.append({
+                        "id": f"{id_prefix}-{cagri_id}",
+                        "kurum": "TÜBİTAK",
+                        "baslik": baslik,
+                        "program_adi": program_adi,
+                        "surekli_acik": is_always_open,
+                        "baslangic": today_str if is_always_open else (start_date or today_str),
+                        "bitis": today_str if is_always_open else end_date,
+                        "url": detay_url,
+                    })
+                    portal_count += 1
             else:
-                calls.append({
-                    "id": f"tubitak-{cagri_id}",
-                    "kurum": "TÜBİTAK",
-                    "baslik": baslik,
-                    "program_adi": program_adi,
-                    "surekli_acik": False,
-                    "baslangic": start_date or today_str,
-                    "bitis": end_date,
-                    "url": detay_url,
-                })
-    except Exception as e:
-        print(f"TÜBİTAK ARDEB-PBS ayrıştırma hatası: {e}")
+                # Yedek: Düz HTML tablosu kullanan PBS portalları için
+                all_trs = soup.find_all("tr")
+                print(f"{portal_ad} yedek teşhis: Toplam {len(all_trs)} <tr> satırı bulundu.")
+                seen_titles = set()
+                for tr in all_trs:
+                    text = " ".join(tr.get_text(" ", strip=True).split())
+                    dates = parse_tr_dates(text)
+                    if not dates or len(text) < 15 or len(text) > 400:
+                        continue
 
-    print(f"TÜBİTAK: {len(calls)} çağrı çekildi.")
+                    title = re.sub(r"\b\d{2}[./]\d{2}[./]\d{4}\b", "", text).strip(" -–—:|")[:100]
+                    if not title or title in seen_titles:
+                        continue
+                    seen_titles.add(title)
+
+                    a_tag = tr.find("a", href=True)
+                    detay_url = urljoin(target_url, a_tag["href"]) if a_tag else target_url
+                    slug = re.sub(r"[^a-zA-Z0-9]+", "-", title.lower()).strip("-")[:35]
+
+                    calls.append({
+                        "id": f"{id_prefix}-{slug}",
+                        "kurum": "TÜBİTAK",
+                        "baslik": title,
+                        "program_adi": portal_ad,
+                        "surekli_acik": False,
+                        "baslangic": dates[0],
+                        "bitis": dates[-1],
+                        "url": detay_url,
+                    })
+                    portal_count += 1
+        except Exception as e:
+            print(f"{portal_ad} ayrıştırma hatası: {e}")
+
+        print(f"{portal_ad}: {portal_count} çağrı çekildi.")
+
+    print(f"TÜBİTAK toplam: {len(calls)} çağrı çekildi.")
     return calls
 
 

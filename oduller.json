@@ -418,5 +418,15 @@
     "baslangic": "2026-04-06",
     "bitis": "2026-07-05",
     "url": "https://www.forwomeninscience.com/challenge/show/158"
+  },
+  {
+    "id": "odul-bagep-bilim-akademisi-bagep-d-lleri",
+    "kurum": "BAGEP",
+    "baslik": "Bilim Akademisi BAGEP Ödülleri",
+    "program_adi": "Bilim Akademisi BAGEP Ödülleri",
+    "surekli_acik": false,
+    "baslangic": "2026-07-01",
+    "bitis": "2026-11-03",
+    "url": "https://bilimakademisi.org/bagep/"
   }
 ]

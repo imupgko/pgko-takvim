@@ -1,5 +1,165 @@
 [
   {
+    "id": "tubitak-bito-11739",
+    "kurum": "TÜBİTAK",
+    "baslik": "Milli Teknoloji Kulüpler Birliği Çağrısı",
+    "program_adi": "MİLLİ TEKNOLOJİ KULÜPLER BİRLİĞİ PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2025-03-31",
+    "bitis": "2027-12-31",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-kulupler-birligi"
+  },
+  {
+    "id": "tubitak-bito-13652",
+    "kurum": "TÜBİTAK",
+    "baslik": "20. DOĞA EĞİTİMİ VE BİLİM OKULLARI",
+    "program_adi": "4004 DOĞA EĞİTİMİ VE BİLİM OKULLARI DESTEKLEME PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-13",
+    "bitis": "2026-12-14",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-ve-toplum/ulusal-destek-programlari/icerik-4004-doga-egitimi-ve-bilim-okullari"
+  },
+  {
+    "id": "tubitak-bito-13653",
+    "kurum": "TÜBİTAK",
+    "baslik": "14. YENİLİKÇİ EĞİTİM UYGULAMALARI DESTEKLEME PROGRAMI",
+    "program_adi": "4005 YENİLİKÇİ EĞİTİM UYGULAMALARI DESTEKLEME PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-13",
+    "bitis": "2026-12-14",
+    "url": "https://www.tubitak.gov.tr/tr/destekler/bilim-ve-toplum/ulusal-destek-programlari/icerik-4005-yenilikci-egitim-uygulamalari"
+  },
+  {
+    "id": "tubitak-uidb-13352",
+    "kurum": "TÜBİTAK",
+    "baslik": "DUT Ortaklığı 2026 Yılı Çağrısı 1. Aşama",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
+    "surekli_acik": false,
+    "baslangic": "2026-09-16",
+    "bitis": "2026-11-24",
+    "url": "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13373",
+    "kurum": "TÜBİTAK",
+    "baslik": "FOREST 2026 Yılı Çağrısı (1. Aşama)",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
+    "surekli_acik": false,
+    "baslangic": "2026-09-15",
+    "bitis": "2026-12-08",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-09/FOREST_2026_Cagrisi_Ulusal_Surec_Dokumani.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13592",
+    "kurum": "TÜBİTAK",
+    "baslik": "SBEP ORTAKLIĞI 2026 YILI ÇAĞRISI 1. AŞAMA",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
+    "surekli_acik": false,
+    "baslangic": "2026-09-14",
+    "bitis": "2026-11-26",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-10/SBEP_2026_Cagrisi_Ulusal_Basvuru_Kurallari.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13672",
+    "kurum": "TÜBİTAK",
+    "baslik": "RCH ORTAKLIĞI 2027 YILI ÇAĞRISI 1. AŞAMA",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
+    "surekli_acik": false,
+    "baslangic": "2026-11-12",
+    "bitis": "2027-01-14",
+    "url": "https://uidb-pbs.tubitak.gov.tr/"
+  },
+  {
+    "id": "tubitak-uidb-13572",
+    "kurum": "TÜBİTAK",
+    "baslik": "LEAP-SE 2026 Ortak Çağrısı - 2. Aşama",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-10-26",
+    "bitis": "2026-11-30",
+    "url": "https://ufukavrupa.org.tr/tr/haberler/leap-se-2026-ortak-cagrisi-acildi"
+  },
+  {
+    "id": "tubitak-uidb-13612",
+    "kurum": "TÜBİTAK",
+    "baslik": "WATER4ALL Ortaklığı 2025 Çağrısı 2. Aşama",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-09",
+    "bitis": "2026-11-30",
+    "url": "https://ufukavrupa.org.tr/sites/default/files/users/user397/Water4All_Ortakligi_2025_Cagrisi_Ar-Ge_ve_Yenilik_Projeleri_Ulusal_Basvuru_Kurallari_8.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13632",
+    "kurum": "TÜBİTAK",
+    "baslik": "OH TREAT OHAMR 2026-2",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-06",
+    "bitis": "2026-11-30",
+    "url": "https://uidb-pbs.tubitak.gov.tr/"
+  },
+  {
+    "id": "tubitak-uidb-13692",
+    "kurum": "TÜBİTAK",
+    "baslik": "ERA4Health ORTAKLIĞI JTC8 PREVENT-OO 2026 YILI ÇAĞRISI (2. AŞAMA)",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-13",
+    "bitis": "2026-11-27",
+    "url": "https://tubitak.gov.tr/sites/default/files/2025-12/Iki_asamali_Surec_Dokumani_JTC-Ulusal_Kurallar_Dokumani.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13693",
+    "kurum": "TÜBİTAK",
+    "baslik": "AGROECOLOGY Ortaklığı 2026 Çağrısı 2. Aşama",
+    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-16",
+    "bitis": "2026-11-26",
+    "url": "https://tubitak.gov.tr/sites/default/files/2025-12/AGROECOLOGY_Ortakligi_3_Cagrisi_Ulusal_Basvuru_Kurallari.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13313",
+    "kurum": "TÜBİTAK",
+    "baslik": "2518 -  Özbekistan Cumhuriyeti Yükseköğretim, Bilim ve Yenilikler Bakanlığı (MHESI) ile İkili İşbirliği Çağrısı",
+    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-09-14",
+    "bitis": "2026-12-14",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-09/2518-TUBITAK-MHESI-2026_Call_Text.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13392",
+    "kurum": "TÜBİTAK",
+    "baslik": "2572 - Ürdün Ulusal Araştırma Geliştirme Merkezi (NCRD) ile İkili İşbirliği Çağrısı",
+    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-10-01",
+    "bitis": "2026-12-31",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-09/TUBITAK-NCRD_Call_Text_2026.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13412",
+    "kurum": "TÜBİTAK",
+    "baslik": "2531 - Alman Akademik Değişim Servisi (DAAD) ile İkili İşbirliği Seyahat Destek Çağrısı",
+    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-10-07",
+    "bitis": "2027-02-01",
+    "url": "https://tubitak.gov.tr/sites/default/files/2025-09/CfP_TUBITAK_DAAD_2025-26.pdf"
+  },
+  {
+    "id": "tubitak-uidb-13552",
+    "kurum": "TÜBİTAK",
+    "baslik": "2508 - Slovenya Araştırma ve Yenilik Ajansı (ARIS) ile İkili İşbirliği Çağrısı",
+    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
+    "surekli_acik": false,
+    "baslangic": "2026-11-09",
+    "bitis": "2026-12-21",
+    "url": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026.pdf"
+  },
+  {
     "id": "ab-HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
     "kurum": "AB",
     "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
@@ -264,36 +424,6 @@
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
   },
   {
-    "id": "tubitak-bito-11739",
-    "kurum": "TÜBİTAK",
-    "baslik": "Milli Teknoloji Kulüpler Birliği Çağrısı",
-    "program_adi": "MİLLİ TEKNOLOJİ KULÜPLER BİRLİĞİ PROGRAMI",
-    "surekli_acik": false,
-    "baslangic": "2025-03-31",
-    "bitis": "2027-12-31",
-    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-kulupler-birligi"
-  },
-  {
-    "id": "tubitak-bito-13652",
-    "kurum": "TÜBİTAK",
-    "baslik": "20. DOĞA EĞİTİMİ VE BİLİM OKULLARI",
-    "program_adi": "4004 DOĞA EĞİTİMİ VE BİLİM OKULLARI DESTEKLEME PROGRAMI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-13",
-    "bitis": "2026-12-14",
-    "url": "https://tubitak.gov.tr/tr/destekler/bilim-ve-toplum/ulusal-destek-programlari/icerik-4004-doga-egitimi-ve-bilim-okullari"
-  },
-  {
-    "id": "tubitak-bito-13653",
-    "kurum": "TÜBİTAK",
-    "baslik": "14. YENİLİKÇİ EĞİTİM UYGULAMALARI DESTEKLEME PROGRAMI",
-    "program_adi": "4005 YENİLİKÇİ EĞİTİM UYGULAMALARI DESTEKLEME PROGRAMI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-13",
-    "bitis": "2026-12-14",
-    "url": "https://www.tubitak.gov.tr/tr/destekler/bilim-ve-toplum/ulusal-destek-programlari/icerik-4005-yenilikci-egitim-uygulamalari"
-  },
-  {
     "id": "tubitak-bito-11654",
     "kurum": "TÜBİTAK",
     "baslik": "4001 - A Ulusal Yarışma/Etkinlik Katılım Desteği (3. Dönem)",
@@ -354,46 +484,6 @@
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/coklu-birligi-programlari/cost-bilim-ve-teknolojide-avrupa-isbirligi"
   },
   {
-    "id": "tubitak-uidb-13352",
-    "kurum": "TÜBİTAK",
-    "baslik": "DUT Ortaklığı 2026 Yılı Çağrısı 1. Aşama",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
-    "surekli_acik": false,
-    "baslangic": "2026-09-16",
-    "bitis": "2026-11-24",
-    "url": "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13373",
-    "kurum": "TÜBİTAK",
-    "baslik": "FOREST 2026 Yılı Çağrısı (1. Aşama)",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
-    "surekli_acik": false,
-    "baslangic": "2026-09-15",
-    "bitis": "2026-12-08",
-    "url": "https://tubitak.gov.tr/sites/default/files/2026-09/FOREST_2026_Cagrisi_Ulusal_Surec_Dokumani.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13592",
-    "kurum": "TÜBİTAK",
-    "baslik": "SBEP ORTAKLIĞI 2026 YILI ÇAĞRISI 1. AŞAMA",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
-    "surekli_acik": false,
-    "baslangic": "2026-09-14",
-    "bitis": "2026-11-26",
-    "url": "https://tubitak.gov.tr/sites/default/files/2026-10/SBEP_2026_Cagrisi_Ulusal_Basvuru_Kurallari.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13672",
-    "kurum": "TÜBİTAK",
-    "baslik": "RCH ORTAKLIĞI 2027 YILI ÇAĞRISI 1. AŞAMA",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
-    "surekli_acik": false,
-    "baslangic": "2026-11-12",
-    "bitis": "2027-01-14",
-    "url": "https://uidb-pbs.tubitak.gov.tr/"
-  },
-  {
     "id": "tubitak-uidb-5486",
     "kurum": "TÜBİTAK",
     "baslik": "IRASME",
@@ -412,56 +502,6 @@
     "baslangic": "2026-11-22",
     "bitis": "2026-11-22",
     "url": "https://tubitak.gov.tr/sites/default/files/2026-02/CORNET-Ulusal_Kurallar_Dokumani.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13572",
-    "kurum": "TÜBİTAK",
-    "baslik": "LEAP-SE 2026 Ortak Çağrısı - 2. Aşama",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-10-26",
-    "bitis": "2026-11-30",
-    "url": "https://ufukavrupa.org.tr/tr/haberler/leap-se-2026-ortak-cagrisi-acildi"
-  },
-  {
-    "id": "tubitak-uidb-13612",
-    "kurum": "TÜBİTAK",
-    "baslik": "WATER4ALL Ortaklığı 2025 Çağrısı 2. Aşama",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-09",
-    "bitis": "2026-11-30",
-    "url": "https://ufukavrupa.org.tr/sites/default/files/users/user397/Water4All_Ortakligi_2025_Cagrisi_Ar-Ge_ve_Yenilik_Projeleri_Ulusal_Basvuru_Kurallari_8.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13632",
-    "kurum": "TÜBİTAK",
-    "baslik": "OH TREAT OHAMR 2026-2",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-06",
-    "bitis": "2026-11-30",
-    "url": "https://uidb-pbs.tubitak.gov.tr/"
-  },
-  {
-    "id": "tubitak-uidb-13692",
-    "kurum": "TÜBİTAK",
-    "baslik": "ERA4Health ORTAKLIĞI JTC8 PREVENT-OO 2026 YILI ÇAĞRISI (2. AŞAMA)",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-13",
-    "bitis": "2026-11-27",
-    "url": "https://tubitak.gov.tr/sites/default/files/2025-12/Iki_asamali_Surec_Dokumani_JTC-Ulusal_Kurallar_Dokumani.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13693",
-    "kurum": "TÜBİTAK",
-    "baslik": "AGROECOLOGY Ortaklığı 2026 Çağrısı 2. Aşama",
-    "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-16",
-    "bitis": "2026-11-26",
-    "url": "https://tubitak.gov.tr/sites/default/files/2025-12/AGROECOLOGY_Ortakligi_3_Cagrisi_Ulusal_Basvuru_Kurallari.pdf"
   },
   {
     "id": "tubitak-uidb-180",
@@ -502,46 +542,6 @@
     "baslangic": "2026-11-22",
     "bitis": "2026-11-22",
     "url": "http://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/ikili-isbirligi-destekleri/2501/icerik-2501-abd-ulusal-bilim-vakfi-nsf-ile-ikili-isbirligi-programi"
-  },
-  {
-    "id": "tubitak-uidb-13313",
-    "kurum": "TÜBİTAK",
-    "baslik": "2518 -  Özbekistan Cumhuriyeti Yükseköğretim, Bilim ve Yenilikler Bakanlığı (MHESI) ile İkili İşbirliği Çağrısı",
-    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-09-14",
-    "bitis": "2026-12-14",
-    "url": "https://tubitak.gov.tr/sites/default/files/2026-09/2518-TUBITAK-MHESI-2026_Call_Text.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13392",
-    "kurum": "TÜBİTAK",
-    "baslik": "2572 - Ürdün Ulusal Araştırma Geliştirme Merkezi (NCRD) ile İkili İşbirliği Çağrısı",
-    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-10-01",
-    "bitis": "2026-12-31",
-    "url": "https://tubitak.gov.tr/sites/default/files/2026-09/TUBITAK-NCRD_Call_Text_2026.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13412",
-    "kurum": "TÜBİTAK",
-    "baslik": "2531 - Alman Akademik Değişim Servisi (DAAD) ile İkili İşbirliği Seyahat Destek Çağrısı",
-    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-10-07",
-    "bitis": "2027-02-01",
-    "url": "https://tubitak.gov.tr/sites/default/files/2025-09/CfP_TUBITAK_DAAD_2025-26.pdf"
-  },
-  {
-    "id": "tubitak-uidb-13552",
-    "kurum": "TÜBİTAK",
-    "baslik": "2508 - Slovenya Araştırma ve Yenilik Ajansı (ARIS) ile İkili İşbirliği Çağrısı",
-    "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
-    "surekli_acik": false,
-    "baslangic": "2026-11-09",
-    "bitis": "2026-12-21",
-    "url": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026.pdf"
   },
   {
     "id": "tuseb-f995d96f-c2ae-4e6e-9112-03c1eeec92d6",

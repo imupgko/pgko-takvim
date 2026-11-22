@@ -148,7 +148,8 @@ def fetch_award_source(source):
         href = a["href"]
         combined = f"{text} {href}".lower()
 
-        if any(y in combined for y in target_years):
+        news_words = ("sahibi", "kazanan", "tören", "seçildi", "layık görüldü", "winner", "recipient")
+        if any(y in combined for y in target_years) and not any(w in combined for w in news_words):
             full_url = urljoin(page_url, href)
             if full_url not in seen_urls and full_url.rstrip("/") != page_url.rstrip("/"):
                 seen_urls.add(full_url)
@@ -172,7 +173,10 @@ def fetch_award_source(source):
             d_soup = BeautifulSoup(d_resp.text, "html.parser")
             for tag in d_soup.find_all(["header", "nav", "footer"]):
                 tag.decompose()
-            dates = parse_tr_dates(d_soup.get_text(" ", strip=True))
+            d_text = d_soup.get_text(" ", strip=True)
+            if not any(k in d_text.lower() for k in ("başvuru", "application", "nomination", "deadline", "son tarih")):
+                continue
+            dates = parse_tr_dates(d_text)
 
         dates = [d for d in dates if d[:4] in target_years]
         if not dates:

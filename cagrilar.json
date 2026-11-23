@@ -414,6 +414,16 @@
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
   },
   {
+    "id": "tubitak-bito-11739",
+    "kurum": "TÜBİTAK",
+    "baslik": "Milli Teknoloji Kulüpler Birliği Çağrısı",
+    "program_adi": "MİLLİ TEKNOLOJİ KULÜPLER BİRLİĞİ PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2025-03-31",
+    "bitis": "2027-12-31",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-kulupler-birligi"
+  },
+  {
     "id": "tubitak-bito-11654",
     "kurum": "TÜBİTAK",
     "baslik": "4001 - A Ulusal Yarışma/Etkinlik Katılım Desteği (3. Dönem)",

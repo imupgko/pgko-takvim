@@ -29,6 +29,13 @@ jobs:
           python fetch_calls.py
           python fetch_awards.py
 
+      - name: Yeni çağrı ve ödüller için e-posta gönder
+        env:
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASS: ${{ secrets.MAIL_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python notify_email.py
+
       - name: Değişiklik varsa kaydet
         run: |
           git config --global user.name "PGKO Bot"

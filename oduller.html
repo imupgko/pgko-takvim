@@ -30,7 +30,7 @@
 
     body {
       margin: 0;
-      padding: 16px;
+      padding: 12px;
       background-color: var(--bg-color);
       color: var(--text-color);
     }
@@ -40,9 +40,9 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -50,16 +50,16 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .btn {
-      padding: 7px 14px;
+      padding: 5px 10px;
       border: 1px solid var(--border-color);
-      border-radius: 6px;
+      border-radius: 5px;
       background: #f9fafb;
       color: var(--text-color);
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.15s ease;
@@ -79,11 +79,11 @@
     .toggle-label {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 13px;
+      gap: 5px;
+      font-size: 11px;
       cursor: pointer;
       user-select: none;
-      margin-right: 8px;
+      margin-right: 6px;
     }
 
     #timeline {
@@ -95,11 +95,21 @@
     }
 
     .vis-item {
-      border-radius: 6px;
-      font-size: 13px;
+      border-radius: 5px;
+      font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       border-width: 1px;
+    }
+
+    .vis-item .vis-item-content {
+      padding: 2px 6px;
+      line-height: 1.2;
+    }
+
+    .vis-label,
+    .vis-time-axis .vis-text {
+      font-size: 11px;
     }
 
     .vis-item.item-tubitak { background-color: #dbeafe; border-color: var(--tubitak-color); color: #1e3a8a; }
@@ -113,8 +123,8 @@
     .vis-item:hover { filter: brightness(0.95); }
 
     .hint {
-      margin-top: 10px;
-      font-size: 12px;
+      margin-top: 8px;
+      font-size: 10px;
       color: #6b7280;
     }
   </style>
@@ -226,10 +236,10 @@
         verticalScroll: true,
         horizontalScroll: false,
         zoomKey: "ctrlKey",
-        zoomMin: 1000 * 60 * 60 * 24 * 7, // En fazla 1 haftalık (gün gün) görünüme kadar yakınlaştır
-        zoomMax: 1000 * 60 * 60 * 24 * 365 * 3,  // En fazla 3 yıllık görünüme kadar uzaklaş
+        zoomMin: 1000 * 60 * 60 * 24 * 7,
+        zoomMax: 1000 * 60 * 60 * 24 * 365 * 3,
         maxHeight: "440px",
-        margin: { item: 10, axis: 5 },
+        margin: { item: 5, axis: 4 },
         tooltip: { followMouse: true, overflowMethod: "cap" }
       };
 
@@ -247,7 +257,6 @@
         if (!response.ok) throw new Error("JSON yüklenemedi");
         allAwards = await response.json();
 
-        // Özel kurum adı taşıyan diğer ödüller için otomatik ayrı satır (grup) oluştur
         allAwards.forEach(item => {
           if (item.kurum && !groups.get(item.kurum)) {
             groups.add({ id: item.kurum, content: `<strong>${item.kurum}</strong>` });
@@ -256,7 +265,7 @@
 
         renderFilteredData();
       } catch (err) {
-        container.innerHTML = "<p style='padding:16px;color:#b91c1c;'>Ödül veri dosyası (oduller.json) yüklenirken hata oluştu.</p>";
+        container.innerHTML = "<p style='padding:12px;color:#b91c1c;font-size:12px;'>Ödül veri dosyası (oduller.json) yüklenirken hata oluştu.</p>";
         console.error(err);
       }
     }

@@ -219,11 +219,24 @@
         title: `<strong>${item.kurum}</strong><br>${item.baslik}${item.program_adi ? `<br><em>${item.program_adi}</em>` : ""}<br>Başlangıç: ${formatDateTR(item.baslangic)}<br>Bitiş: ${formatDateTR(item.bitis)}`
       }));
 
-      itemsDataSet.clear();
+     itemsDataSet.clear();
       itemsDataSet.add(visItems);
 
       if (timeline && visItems.length > 0) {
         timeline.fit({ animation: false });
+
+        setTimeout(() => {
+          const activeGroups = new Set(visItems.map(item => item.group));
+          const allGroups = groups.get();
+          const firstFilledIndex = allGroups.findIndex(g => activeGroups.has(g.id));
+          const labels = document.querySelectorAll("#timeline .vis-labelset .vis-label");
+          const scrollEl = document.querySelector("#timeline .vis-vertical-scroll");
+
+          if (scrollEl && firstFilledIndex >= 0 && labels[firstFilledIndex]) {
+            scrollEl.scrollTop = labels[firstFilledIndex].offsetTop;
+            scrollEl.dispatchEvent(new Event("scroll"));
+          }
+        }, 50);
       }
     }
 

@@ -237,17 +237,19 @@
         updateAlwaysOpenItems();
 
         setTimeout(() => {
-          const activeGroups = new Set(visItems.map(item => item.group));
-          const allGroups = groups.get();
-          const firstFilledIndex = allGroups.findIndex(g => activeGroups.has(g.id));
-          const labels = document.querySelectorAll("#timeline .vis-labelset .vis-label");
-          const scrollEl = document.querySelector("#timeline .vis-vertical-scroll");
+          requestAnimationFrame(() => {
+            const activeGroups = new Set(visItems.map(item => item.group));
+            const allGroups = groups.get().sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+            const firstFilledIndex = allGroups.findIndex(g => activeGroups.has(g.id));
+            const labels = document.querySelectorAll("#timeline .vis-labelset .vis-label");
+            const scrollEl = document.querySelector("#timeline .vis-vertical-scroll");
 
-          if (scrollEl && firstFilledIndex >= 0 && labels[firstFilledIndex]) {
-            scrollEl.scrollTop = labels[firstFilledIndex].offsetTop;
-            scrollEl.dispatchEvent(new Event("scroll"));
-          }
-        }, 50);
+            if (scrollEl && firstFilledIndex >= 0) {
+              scrollEl.scrollTop = firstFilledIndex === 0 ? 0 : (labels[firstFilledIndex]?.offsetTop ?? 0);
+              scrollEl.dispatchEvent(new Event("scroll"));
+            }
+          });
+        }, 150);
       }
     }
 

@@ -441,13 +441,18 @@ def main():
     for call in archived_tubitak + eu_calls + tubitak_calls + tuseb_calls + istka_calls + manual_calls:
         merged[call["id"]] = call
 
-    final_list = list(merged.values())
+    final_list = [
+        call for call in merged.values()
+        if not (
+            call.get("kurum") == "TÜBİTAK"
+            and "kktc" in f"{call.get('baslik', '')} {call.get('program_adi', '')}".lower()
+        )
+    ]
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(final_list, f, ensure_ascii=False, indent=2)
 
     print(f"Toplam {len(final_list)} çağrı {OUTPUT_FILE} dosyasına kaydedildi.")
-
 
 if __name__ == "__main__":
     main()

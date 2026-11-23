@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PGKO Proje Çağrıları Tarih Şeridi</title>
 
-  <!-- Vis.js Timeline CDN -->
   <link href="https://unpkg.com/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
@@ -28,20 +27,19 @@
 
     body {
       margin: 0;
-      padding: 16px;
+      padding: 12px;
       background-color: var(--bg-color);
       color: var(--text-color);
     }
 
-    /* Üst Kontrol Çubuğu */
     .toolbar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -49,30 +47,23 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .btn {
-      padding: 7px 14px;
+      padding: 5px 10px;
       border: 1px solid var(--border-color);
-      border-radius: 6px;
+      border-radius: 5px;
       background: #f9fafb;
       color: var(--text-color);
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.15s ease;
     }
 
-    .btn:hover {
-      background: #f3f4f6;
-    }
-
-    .btn.active {
-      background: #111827;
-      color: #ffffff;
-      border-color: #111827;
-    }
+    .btn:hover { background: #f3f4f6; }
+    .btn.active { background: #111827; color: #ffffff; border-color: #111827; }
 
     .btn-tubitak.active { background: var(--tubitak-color); border-color: var(--tubitak-color); }
     .btn-tuseb.active   { background: var(--tuseb-color); border-color: var(--tuseb-color); }
@@ -82,14 +73,13 @@
     .toggle-label {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 13px;
+      gap: 5px;
+      font-size: 11px;
       cursor: pointer;
       user-select: none;
-      margin-right: 8px;
+      margin-right: 6px;
     }
 
-    /* Timeline Kapsayıcı */
     #timeline {
       width: 100%;
       min-height: 300px;
@@ -98,38 +88,28 @@
       overflow: hidden;
     }
 
-    /* Kurumlara Göre Çubuk Renkleri */
     .vis-item {
-      border-radius: 6px;
-      font-size: 13px;
+      border-radius: 5px;
+      font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       border-width: 1px;
     }
 
-    .vis-item.item-tubitak {
-      background-color: #dbeafe;
-      border-color: var(--tubitak-color);
-      color: #1e3a8a;
+    .vis-item .vis-item-content {
+      padding: 2px 6px;
+      line-height: 1.2;
     }
 
-    .vis-item.item-tuseb {
-      background-color: #fee2e2;
-      border-color: var(--tuseb-color);
-      color: #7f1d1d;
+    .vis-label,
+    .vis-time-axis .vis-text {
+      font-size: 11px;
     }
 
-    .vis-item.item-istka {
-       background-color: #f3e8ff;
-       border-color: var(--istka-color);
-       color: #5b21b6;
-     }
-    
-    .vis-item.item-ab {
-      background-color: #fef3c7;
-      border-color: var(--ab-color);
-      color: #78350f;
-    }
+    .vis-item.item-tubitak { background-color: #dbeafe; border-color: var(--tubitak-color); color: #1e3a8a; }
+    .vis-item.item-tuseb   { background-color: #fee2e2; border-color: var(--tuseb-color); color: #7f1d1d; }
+    .vis-item.item-istka   { background-color: #f3e8ff; border-color: var(--istka-color); color: #5b21b6; }
+    .vis-item.item-ab      { background-color: #fef3c7; border-color: var(--ab-color); color: #78350f; }
 
     .vis-item.item-surekli {
       border-style: dashed;
@@ -137,13 +117,11 @@
       opacity: 0.92;
     }
 
-    .vis-item:hover {
-      filter: brightness(0.95);
-    }
+    .vis-item:hover { filter: brightness(0.95); }
 
     .hint {
-      margin-top: 10px;
-      font-size: 12px;
+      margin-top: 8px;
+      font-size: 10px;
       color: #6b7280;
     }
   </style>
@@ -178,7 +156,6 @@
     let timeline = null;
     const itemsDataSet = new vis.DataSet();
 
-    // Kurum grupları (yatay şeritler)
     const groups = new vis.DataSet([
       { id: "TÜBİTAK", content: "<strong>TÜBİTAK</strong>" },
       { id: "TÜSEB", content: "<strong>TÜSEB</strong>" },
@@ -199,7 +176,6 @@
       return d.toLocaleDateString("tr-TR", { day: "2-digit", month: "long", year: "numeric" });
     }
 
-    // Sürekli açık çağrıları ekranda sabit genişlikte tutup kaydırmayla hareket ettirir
     function updateAlwaysOpenItems() {
       if (!timeline) return;
       const win = timeline.getWindow();
@@ -226,7 +202,7 @@
 
       const filtered = allCalls.filter(call => {
         const matchKurum = selectedKurum === "ALL" || call.kurum === selectedKurum;
-        if (call.surekli_acik) return matchKurum; // Sürekli açıklar her zaman açık sayılır
+        if (call.surekli_acik) return matchKurum;
         const endDate = new Date(call.bitis);
         const matchStatus = !onlyOpen || endDate >= today;
         return matchKurum && matchStatus;
@@ -261,53 +237,46 @@
         updateAlwaysOpenItems();
       }
     }
+
     async function initTimeline() {
       const container = document.getElementById("timeline");
 
       const options = {
         locale: "tr",
-        moment: function (date) {
-          return moment(date).locale("tr");
-        },
+        moment: function (date) { return moment(date).locale("tr"); },
         stack: true,
         verticalScroll: true,
         horizontalScroll: false,
         zoomKey: "ctrlKey",
-        zoomMin: 1000 * 60 * 60 * 24 * 30,
+        zoomMin: 1000 * 60 * 60 * 24 * 7,
         zoomMax: 1000 * 60 * 60 * 24 * 365 * 3,
         maxHeight: "440px",
-        margin: { item: 10, axis: 5 },
+        margin: { item: 5, axis: 4 },
         tooltip: { followMouse: true, overflowMethod: "cap" }
       };
 
       timeline = new vis.Timeline(container, itemsDataSet, groups, options);
 
-      // Sağa-sola kaydırırken veya yakınlaştırırken sürekli açık çubukları birlikte hareket ettir
       timeline.on("rangechange", updateAlwaysOpenItems);
 
-      // Çubuğa tıklayınca çağrı linkini yeni sekmede aç
       timeline.on("select", function (props) {
         if (props.items.length > 0) {
           const item = itemsDataSet.get(props.items[0]);
-          if (item && item.url) {
-            window.open(item.url, "_blank", "noopener,noreferrer");
-          }
+          if (item && item.url) window.open(item.url, "_blank", "noopener,noreferrer");
         }
       });
 
-      // JSON dosyasını çek
       try {
         const response = await fetch("./cagrilar.json?t=" + Date.now());
         if (!response.ok) throw new Error("JSON yüklenemedi");
         allCalls = await response.json();
         renderFilteredData();
       } catch (err) {
-        container.innerHTML = "<p style='padding:16px;color:#b91c1c;'>Veri dosyası (cagrilar.json) yüklenirken hata oluştu.</p>";
+        container.innerHTML = "<p style='padding:12px;color:#b91c1c;font-size:12px;'>Veri dosyası (cagrilar.json) yüklenirken hata oluştu.</p>";
         console.error(err);
       }
     }
 
-    // Filtre butonları
     document.querySelectorAll("#kurumFiltreleri .btn").forEach(btn => {
       btn.addEventListener("click", () => {
         document.querySelectorAll("#kurumFiltreleri .btn").forEach(b => b.classList.remove("active"));
@@ -317,10 +286,8 @@
       });
     });
 
-    // Sadece açık çağrılar anahtarı
     document.getElementById("sadeceAcik").addEventListener("change", renderFilteredData);
 
-    // Bugün ve Yıllık Görünüm butonları
     document.getElementById("btnBugun").addEventListener("click", () => {
       if (timeline) timeline.moveTo(new Date(), { animation: true });
     });
@@ -328,9 +295,7 @@
     document.getElementById("btnYil").addEventListener("click", () => {
       if (!timeline) return;
       const now = new Date();
-      const start = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-      const end = new Date(now.getFullYear(), now.getMonth() + 11, 1);
-      timeline.setWindow(start, end, { animation: true });
+      timeline.setWindow(new Date(now.getFullYear(), now.getMonth() - 1, 1), new Date(now.getFullYear(), now.getMonth() + 11, 1), { animation: true });
     });
 
     initTimeline();

@@ -364,6 +364,7 @@ def fetch_istka_calls():
         seen_links = set()
         for a_tag in soup.find_all("a", href=True):
             text = " ".join(a_tag.get_text(" ", strip=True).split())
+            text = re.sub(r"\s*\.(pdf|docx?|xlsx?)$", "", text, flags=re.IGNORECASE).strip()
             href = a_tag["href"]
 
             if len(text) < 15 or not any(k in text.lower() for k in ["destek", "program", "çağrı", "mali", "fizibilite", "teknik", "güdümlü"]):
@@ -486,13 +487,19 @@ def main():
     for call in archived_tubitak + eu_calls + tubitak_calls + tuseb_calls + istka_calls + manual_calls:
         merged[call["id"]] = call
 
-    final_list = [
-        call for call in merged.values()
-        if not (
+    final_list = []
+    for call in merged.values():
+        if (
             call.get("kurum") == "TÜBİTAK"
             and "kktc" in f"{call.get('baslik', '')} {call.get('program_adi', '')}".lower()
-        )
-    ]
+        ):
+            continue
+
+        for field in ("baslik", "program_adi"):
+            if call.get(field):
+                call[field] = re.sub(r"\s*\.(pdf|docx?|xlsx?)$", "", call[field], flags=re.IGNORECASE).strip()
+
+        final_list.append(call)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(final_list, f, ensure_ascii=False, indent=2)

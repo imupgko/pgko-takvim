@@ -150,6 +150,16 @@
     "url": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026.pdf"
   },
   {
+    "id": "tubitak-bito-11739",
+    "kurum": "TÜBİTAK",
+    "baslik": "Milli Teknoloji Kulüpler Birliği Çağrısı",
+    "program_adi": "MİLLİ TEKNOLOJİ KULÜPLER BİRLİĞİ PROGRAMI",
+    "surekli_acik": false,
+    "baslangic": "2025-03-31",
+    "bitis": "2027-12-31",
+    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-kulupler-birligi"
+  },
+  {
     "id": "ab-HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
     "kurum": "AB",
     "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
@@ -204,24 +214,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-step"
   },
   {
-    "id": "ab-HORIZON-NATURE-2027-03-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-NATURE-2027-03-01",
-    "program_adi": "Advancing interdisciplinary, data-driven research at the biodiversity- health interface under a One Health approach",
-    "baslangic": "2027-06-03",
-    "bitis": "2027-09-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-03-01"
-  },
-  {
-    "id": "ab-HORIZON-RAISE-2027-01-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-RAISE-2027-01-02",
-    "program_adi": "Automated Scientific Discovery – Food (RAISE pilot)",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-02-02",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-02"
-  },
-  {
     "id": "ab-HORIZON-RAISE-2027-01-01",
     "kurum": "AB",
     "baslik": "HORIZON-RAISE-2027-01-01",
@@ -229,6 +221,15 @@
     "baslangic": "2026-10-13",
     "bitis": "2027-02-02",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-01"
+  },
+  {
+    "id": "ab-HORIZON-NATURE-2027-03-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-NATURE-2027-03-01",
+    "program_adi": "Advancing interdisciplinary, data-driven research at the biodiversity- health interface under a One Health approach",
+    "baslangic": "2027-06-03",
+    "bitis": "2027-09-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-03-01"
   },
   {
     "id": "ab-HORIZON-BRIDGING-2027-05-01",
@@ -240,6 +241,24 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-05-01"
   },
   {
+    "id": "ab-HORIZON-RAISE-2027-01-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-RAISE-2027-01-02",
+    "program_adi": "Automated Scientific Discovery – Food (RAISE pilot)",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-02-02",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-02"
+  },
+  {
+    "id": "ab-HORIZON-BRIDGING-2027-04-11",
+    "kurum": "AB",
+    "baslik": "HORIZON-BRIDGING-2027-04-11",
+    "program_adi": "Detection, monitoring, modelling, and attribution capabilities for Solar Radiation Modification (SRM) activities and assessing their impacts on Earth's climate and ecosystems",
+    "baslangic": "2026-10-06",
+    "bitis": "2027-02-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-04-11"
+  },
+  {
     "id": "ab-HORIZON-RAISE-2027-01-04",
     "kurum": "AB",
     "baslik": "HORIZON-RAISE-2027-01-04",
@@ -247,6 +266,15 @@
     "baslangic": "2026-10-13",
     "bitis": "2027-02-02",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-04"
+  },
+  {
+    "id": "ab-HORIZON-EURATOM-2027-01-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-EURATOM-2027-01-01",
+    "program_adi": "Key enabling technologies for fusion power plants (European Partnership on Fusion Energy)",
+    "baslangic": "2026-09-15",
+    "bitis": "2027-03-04",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-euratom-2027-01-01"
   },
   {
     "id": "ab-HORIZON-CID-2027-01-02",
@@ -258,31 +286,13 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-02"
   },
   {
-    "id": "ab-HORIZON-CID-2027-01-01",
+    "id": "ab-HORIZON-EURATOM-2027-02-01",
     "kurum": "AB",
-    "baslik": "HORIZON-CID-2027-01-01",
-    "program_adi": "R&I in Support of the Clean Industrial Deal: Decarbonisation of energy intensive industries (IA) (Processes4Planet and Clean Steel partnerships)",
-    "baslangic": "2027-01-12",
-    "bitis": "2027-09-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-01"
-  },
-  {
-    "id": "ab-HORIZON-BRIDGING-2027-03-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-03-07",
-    "program_adi": "Europe’s world class research and technology infrastructures as strategic assets for talent to Choose Europe",
-    "baslangic": "2027-03-09",
-    "bitis": "2027-06-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-07"
-  },
-  {
-    "id": "ab-HORIZON-NATURE-2027-01-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-NATURE-2027-01-02",
-    "program_adi": "Better understanding, anticipating and addressing the biodiversity benefits and impacts of the clean and digital industries",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-01-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-01-02"
+    "baslik": "HORIZON-EURATOM-2027-02-01",
+    "program_adi": "Key enabling technologies for fusion power plants (European Partnership on Fusion Energy)",
+    "baslangic": "2027-04-15",
+    "bitis": "2027-11-04",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-euratom-2027-02-01"
   },
   {
     "id": "ab-HORIZON-CL4-INDUSTRY-2025-01-HUMAN-60",
@@ -294,13 +304,22 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-industry-2025-01-human-60"
   },
   {
+    "id": "ab-HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
+    "kurum": "AB",
+    "baslik": "HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
+    "program_adi": "HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
+    "baslangic": "2026-01-08",
+    "bitis": "2026-03-26",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2026-bas-01-ecosystem"
+  },
+  {
     "id": "tubitak-11802",
     "kurum": "TÜBİTAK",
     "baslik": "1002-A HIZLI DESTEK MODÜLÜ",
     "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
   },
   {
@@ -309,8 +328,8 @@
     "baslik": "1002-B ACİL DESTEK MODÜLÜ",
     "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-b-acil-destek-modulu"
   },
   {
@@ -319,8 +338,8 @@
     "baslik": "ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
     "program_adi": "1005 - ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1005-ulusal-yeni-fikirler-ve-urunler-arastirma-destek-programi"
   },
   {
@@ -329,8 +348,8 @@
     "baslik": "3005-A POLİTİKA GELİŞTİRME MODÜLÜ",
     "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://ardeb-pbs.tubitak.gov.tr/"
   },
   {
@@ -339,8 +358,8 @@
     "baslik": "3005-B TEKNOLOJİK İLERLEMELERİN TOPLUMSAL ETKİLERİ MODÜLÜ",
     "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://ardeb-pbs.tubitak.gov.tr/"
   },
   {
@@ -349,8 +368,8 @@
     "baslik": "KARİYER GELİŞTİRME PROGRAMI",
     "program_adi": "3501 - KARİYER GELİŞTİRME PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/3501-kariyer-gelistirme-programi"
   },
   {
@@ -359,19 +378,9 @@
     "baslik": "1004 Platformları İle İş Birliği Çağrısı",
     "program_adi": "BİLİMSEL VE TEKNOLOJİK ARAŞTIRMA PROJELERİ - ÖZEL ÇAĞRILAR",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
-  },
-  {
-    "id": "tubitak-bito-11739",
-    "kurum": "TÜBİTAK",
-    "baslik": "Milli Teknoloji Kulüpler Birliği Çağrısı",
-    "program_adi": "MİLLİ TEKNOLOJİ KULÜPLER BİRLİĞİ PROGRAMI",
-    "surekli_acik": false,
-    "baslangic": "2025-03-31",
-    "bitis": "2027-12-31",
-    "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-kulupler-birligi"
   },
   {
     "id": "tubitak-bito-11654",
@@ -379,8 +388,8 @@
     "baslik": "4001 - A Ulusal Yarışma/Etkinlik Katılım Desteği (3. Dönem)",
     "program_adi": "4001 ULUSAL VE ULUSLARARASI YARIŞMA/ETKİNLİK KATILIM DESTEĞİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/4001"
   },
   {
@@ -389,8 +398,8 @@
     "baslik": "4001- B Uluslararası Yarışma/Etkinlik Katılım Desteği (3. Dönem)",
     "program_adi": "4001 ULUSAL VE ULUSLARARASI YARIŞMA/ETKİNLİK KATILIM DESTEĞİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/4001"
   },
   {
@@ -399,8 +408,8 @@
     "baslik": "4003-T Atölye Kurulum ve Faaliyet Dönemi Projesi Çağrısı",
     "program_adi": "4003-T MİLLİ TEKNOLOJİ ATÖLYELERİ DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-atolyeleri-proje-destegi"
   },
   {
@@ -409,8 +418,8 @@
     "baslik": "2515 - COST Aksiyon Üyeleri Ar-Ge Destek Programı",
     "program_adi": "COST DESTEKLERİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/cok-tarafli-programlar/cost/icerik-2515-cost-aksiyon-uyeleri-ar-ge-destek-programi"
   },
   {
@@ -419,8 +428,8 @@
     "baslik": "COST Aksiyonu Yönetim Komitesi (Management Committee-MC) Katılım Başvurusu - Destek Mektubu ile Başvuru",
     "program_adi": "COST DESTEKLERİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/coklu-birligi-programlari/cost-bilim-ve-teknolojide-avrupa-isbirligi"
   },
   {
@@ -429,8 +438,8 @@
     "baslik": "COST Aksiyonu Yönetim Komitesi (Management Committee-MC) Katılım Başvurusu - Devam Eden/Tamamlanmış Proje ile Başvuru",
     "program_adi": "COST DESTEKLERİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/coklu-birligi-programlari/cost-bilim-ve-teknolojide-avrupa-isbirligi"
   },
   {
@@ -439,8 +448,8 @@
     "baslik": "IRASME",
     "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/sites/default/files/2025-06/IRASME_Ulusal_Surecler_Dokumani.pdf"
   },
   {
@@ -449,8 +458,8 @@
     "baslik": "CORNET",
     "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/sites/default/files/2026-02/CORNET-Ulusal_Kurallar_Dokumani.pdf"
   },
   {
@@ -459,8 +468,8 @@
     "baslik": "2501 - Araştırma Projeleri - ABD Ulusal Bilim Vakfı (NSF) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "http://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/ikili-isbirligi-destekleri/2501/icerik-2501-abd-ulusal-bilim-vakfi-nsf-ile-ikili-isbirligi-programi"
   },
   {
@@ -469,8 +478,8 @@
     "baslik": "2502 - Araştırma Projeleri - Bulgaristan Bilimler Akademisi (BAS) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/ikili-birligi-programlari/2502-bulgaristan-bilimler-akademisi-bas-ile-ikili-isbirligi-programi"
   },
   {
@@ -479,8 +488,8 @@
     "baslik": "2507 - Araştırma Projeleri - Almanya Araştırmalar Konseyi (DFG) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/2507_TUBITAK_DFG_CfP_standingopen.pdf"
   },
   {
@@ -489,8 +498,8 @@
     "baslik": "2501 - Ar-Ge ve Yenilik Projeleri - ABD Ulusal Bilim Vakfı (NSF) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-23",
-    "bitis": "2026-11-23",
+    "baslangic": "2026-11-24",
+    "bitis": "2026-11-24",
     "url": "http://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/ikili-isbirligi-destekleri/2501/icerik-2501-abd-ulusal-bilim-vakfi-nsf-ile-ikili-isbirligi-programi"
   },
   {

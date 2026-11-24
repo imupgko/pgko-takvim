@@ -53,78 +53,123 @@ def parse_single_date(date_str):
     return None
 
 
-def fetch_eu_calls(open_limit=50, closed_limit=30):
-    """AB Funding & Tenders API'sinden açık/yaklaşan ve 2025+ kapalı çağrıları ayrı kotalarla çeker."""
+def fetch_eu_calls(open_limit=300, closed_limit=50):
+    """AB Funding & Tenders API'sinden Türkiye'ye açık programların çağrılarını sayfalayarak çeker."""
     url = "https://api.tech.ec.europa.eu/search-api/prod/rest/search"
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
+    allowed_prefixes = ("HORIZON-", "DIGITAL-", "ERASMUS-")
     seen_ids = set()
     calls = []
 
     queries = [
-        # 1. Sorgu: Sadece Yaklaşan (31094501) ve Açık (31094502) çağrılar
-        (["31094501", "31094502"], open_limit, today_str),
-        # 2. Sorgu: Sadece Kapalı (31094503) çağrılar (2025 ve sonrası)
-        (["31094503"], closed_limit, "2025-01-01"),
+        # (durum_kodlari, hedef_benzersiz_cagri_sayisi, min_bitis, max_sayfa)
+        (["31094501", "31094502"], open_limit, today_str, 15),
+        (["31094503"], closed_limit, "2025-01-01", 5),
     ]
 
-    for statuses, limit, min_deadline in queries:
-        params = {
-            "apiKey": "SEDIA",
-            "text": "HORIZON",
-            "pageSize": limit,
-            "pageNumber": 1,
-        }
-        payload = {
-            "bool": {
-                "must": [
-                    {"terms": {"type": ["1", "2"]}},
-                    {"terms": {"status": statuses}},
-                    {"terms": {"language": ["en"]}},
-                ]
+    for statuses, target_count, min_deadline, max_pages in queries:
+        collected_for_query = 0
+        page_size = 100
+
+        for page_number in range(1, max_pages + 1):
+            if collected_for_query >= target_count:
+                break
+
+            params = {
+                "apiKey": "SEDIA",
+                "text": "***",
+                "pageSize": page_size,
+                "pageNumber": page_number,
             }
-        }
+            payload = {
+                "bool": {
+                    "must": [
+                        {"terms": {"type": ["1", "2"]}},
+                        {"terms": {"status": statuses}},
+                        {"terms": {"language": ["en"]}},
+                    ]
+                }
+            }
 
-        try:
-            response = requests.post(
-                url,
-                params=params,
-                files={"query": (None, json.dumps(payload), "application/json")},
-                timeout=30,
-            )
-            response.raise_for_status()
-            data = response.json()
+            try:
+                response = requests.post(
+                    url,
+                    params=params,
+                    files={"query": (None, json.dumps(payload), "application/json")},
+                    timeout=30,
+                )
+                response.raise_for_status()
+                results = response.json().get("results", [])
 
-            for item in data.get("results", []):
-                meta = item.get("metadata", {})
-                identifier = (meta.get("identifier") or [""])[0].strip()
-                if not identifier or identifier in seen_ids:
-                    continue
+                if not results:
+                    break
 
-                title = (meta.get("title") or [identifier])[0]
-                start_dates = [format_eu_date(d) for d in (meta.get("startDate") or []) if format_eu_date(d)]
-                deadlines = [format_eu_date(d) for d in (meta.get("deadlineDate") or []) if format_eu_date(d)]
+                for item in results:
+                    meta = item.get("metadata", {})
+                    identifier = (meta.get("identifier") or [""])[0].strip()
+                    if not identifier or identifier in seen_ids:
+                        continue
 
-                if not start_dates or not deadlines:
-                    continue
+                    identifier_upper = identifier.upper()
+                    is_allowed_programme = identifier_upper.startswith(allowed_prefixes)
+                    is_turkey_europeaid = identifier_upper.startswith("EUROPEAID/") and (
+                        identifier_upper.endswith("/TR")
+                        or "turkey" in json.dumps(meta, ensure_ascii=False).lower()
+                        or "türkiye" in json.dumps(meta, ensure_ascii=False).lower()
+                    )
 
-                start_date = min(start_dates)
-                deadline = max(deadlines)
+                    if not (is_allowed_programme or is_turkey_europeaid):
+                        continue
 
-                if deadline < min_deadline:
-                    continue
+                    title = (meta.get("title") or [identifier])[0]
+                    start_dates = [format_eu_date(d) for d in (meta.get("startDate") or []) if format_eu_date(d)]
+                    deadlines = [format_eu_date(d) for d in (meta.get("deadlineDate") or []) if format_eu_date(d)]
 
-                seen_ids.add(identifier)
-                calls.append({
-                    "id": f"ab-{identifier}",
-                    "kurum": "AB",
-                    "baslik": identifier,
-                    "program_adi": title,
-                    "baslangic": start_date,
-                    "bitis": deadline,
-                    "url": f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}",
-                })
-        except Exception as e:
-            print(f"AB API hatası ({statuses}): {e}")
+                    if not start_dates or not deadlines:
+                        continue
+
+                    start_date = min(start_dates)
+                    deadline = max(deadlines)
+
+                    if deadline < min_deadline:
+                        continue
+
+                    if identifier_upper.startswith("EUROPEAID/"):
+                        meta_url = meta.get("url")
+                        raw_url = (
+                            meta_url[0]
+                            if isinstance(meta_url, list) and meta_url
+                            else (meta_url if isinstance(meta_url, str) else item.get("url", ""))
+                        )
+                        call_url = (
+                            raw_url
+                            if isinstance(raw_url, str) and raw_url.startswith("http")
+                            else f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?keywords={requests.utils.quote(identifier)}"
+                        )
+                    else:
+                        call_url = f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/{identifier.lower()}"
+
+                    seen_ids.add(identifier)
+                    calls.append({
+                        "id": f"ab-{identifier}",
+                        "kurum": "AB",
+                        "baslik": identifier,
+                        "program_adi": title,
+                        "baslangic": start_date,
+                        "bitis": deadline,
+                        "url": call_url,
+                    })
+                    collected_for_query += 1
+
+                    if collected_for_query >= target_count:
+                        break
+
+                if len(results) < page_size:
+                    break
+
+            except Exception as e:
+                print(f"AB API hatası ({statuses}, sayfa {page_number}): {e}")
+                break
 
     print(f"AB: {len(calls)} benzersiz çağrı (açık + geçmiş) çekildi.")
     return calls

@@ -26,7 +26,7 @@
     "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI (1.AŞAMA)",
     "surekli_acik": false,
     "baslangic": "2026-09-16",
-    "bitis": "2026-11-24",
+    "bitis": "2026-11-27",
     "url": "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf"
   },
   {
@@ -197,15 +197,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-05-digital-emerging-03"
   },
   {
-    "id": "ab-HORIZON-CL4-2027-04-HUMAN-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-HUMAN-01",
-    "program_adi": "Advanced and Innovative hardware components for Virtual Worlds (RIA) (Virtual Worlds Partnership)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-human-01"
-  },
-  {
     "id": "ab-HORIZON-CL5-2027-06-D6-11",
     "kurum": "AB",
     "baslik": "HORIZON-CL5-2027-06-D6-11",
@@ -222,33 +213,6 @@
     "baslangic": "2026-12-08",
     "bitis": "2027-04-06",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-cofund-01-01"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-HUMAN-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-HUMAN-02",
-    "program_adi": "Create a thriving and competitive Virtual Worlds and Web 4.0 ecosystem (CSA) (Virtual Worlds Partnership)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-human-02"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-HUMAN-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-HUMAN-07",
-    "program_adi": "Facilitate the engagement of European stakeholders in international digital standardisation (CSA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-human-07"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DATA-03",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DATA-03",
-    "program_adi": "New approaches for decentralized, federated and sustainable AI data processing (RIA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-03"
   },
   {
     "id": "ab-HORIZON-CL5-2027-06-D6-08",
@@ -314,33 +278,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-03-d5-20"
   },
   {
-    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-06",
-    "program_adi": "International cooperation in AI (IA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-06"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DATA-09",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DATA-09",
-    "program_adi": "Energy efficiency and sustainability of AI data processing in Data Centres (IA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-09"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DATA-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DATA-08",
-    "program_adi": "Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-08"
-  },
-  {
     "id": "ab-HORIZON-NEB-2027-01-REGEN-04",
     "kurum": "AB",
     "baslik": "HORIZON-NEB-2027-01-REGEN-04",
@@ -386,15 +323,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-02"
   },
   {
-    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-05",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-05",
-    "program_adi": "Apply AI: AI-Driven Robotics for Industry: Enabling System Integration and Adoption (IA) (Partnership in AI, Data and Robotics)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-05"
-  },
-  {
     "id": "ab-HORIZON-RAISE-2027-01-01",
     "kurum": "AB",
     "baslik": "HORIZON-RAISE-2027-01-01",
@@ -402,33 +330,6 @@
     "baslangic": "2026-10-13",
     "bitis": "2027-02-02",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-01"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-11",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-11",
-    "program_adi": "EU Frontier AI Initiative:  Developing frontier AI solutions that are safe and computationally efficient within Apply AI (RIA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-11"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-04",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-04",
-    "program_adi": "Apply AI: Challenge-Driven AI Innovation Booster in Apply AI prioritised sectors (RIA) (Partnership in AI, Data and Robotics)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-04"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
-    "program_adi": "Horizon scanning and foresight in future enabling digital technologies (CSA)",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-10"
   },
   {
     "id": "ab-HORIZON-CL5-2027-03-D5-08",
@@ -584,15 +485,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-02-d3-08"
   },
   {
-    "id": "ab-HORIZON-CL5-2027-01-D1-11",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-11",
-    "program_adi": "Africa-EU CO-FUND action on climate",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-11"
-  },
-  {
     "id": "ab-DIGITAL-ECCC-2027-DEPLOY-CYBER-12-CBCH",
     "kurum": "AB",
     "baslik": "DIGITAL-ECCC-2027-DEPLOY-CYBER-12-CBCH",
@@ -672,15 +564,6 @@
     "baslangic": "2026-08-04",
     "bitis": "2026-12-01",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-11-d3-06"
-  },
-  {
-    "id": "ab-HORIZON-CL5-2027-01-D1-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-08",
-    "program_adi": "Palaeoclimate science for a better understanding of Earth system dynamics",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-08"
   },
   {
     "id": "ab-HORIZON-CL5-2027-02-D2-06",
@@ -845,24 +728,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-01-mat-prod-22"
   },
   {
-    "id": "ab-HORIZON-CL5-2027-01-D1-13",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-13",
-    "program_adi": "Next generation scenarios for informing climate and sustainability transitions",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-13"
-  },
-  {
-    "id": "ab-HORIZON-CL5-2027-01-D1-12",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-12",
-    "program_adi": "Better understanding and attribution of land and ocean carbon sources and sinks",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-12"
-  },
-  {
     "id": "ab-HORIZON-WIDERA-2027-04-WIDENING-01",
     "kurum": "AB",
     "baslik": "HORIZON-WIDERA-2027-04-WIDENING-01",
@@ -888,15 +753,6 @@
     "baslangic": "2027-06-03",
     "bitis": "2027-10-07",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-06-d6-12"
-  },
-  {
-    "id": "ab-HORIZON-CL5-2027-01-D1-10",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-10",
-    "program_adi": "Understanding and avoiding maladaptation to climate change",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-10"
   },
   {
     "id": "ab-HORIZON-HLTH-2027-03-TOOL-02",
@@ -944,15 +800,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-03-d5-14"
   },
   {
-    "id": "ab-HORIZON-CL5-2027-01-D1-09",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-09",
-    "program_adi": "Assessing the performance of policy instruments to inform climate change mitigation action",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-09"
-  },
-  {
     "id": "ab-HORIZON-CL4-2027-01-MAT-PROD-42",
     "kurum": "AB",
     "baslik": "HORIZON-CL4-2027-01-MAT-PROD-42",
@@ -987,15 +834,6 @@
     "baslangic": "2026-08-04",
     "bitis": "2026-12-01",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-11-d3-04"
-  },
-  {
-    "id": "ab-HORIZON-CL5-2027-01-D1-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2027-01-D1-07",
-    "program_adi": "Advancing understanding, modelling and prediction of extreme events in a changing climate",
-    "baslangic": "2026-11-17",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-07"
   },
   {
     "id": "ab-HORIZON-CL5-2026-11-D3-05",
@@ -1383,15 +1221,6 @@
     "baslangic": "2026-10-06",
     "bitis": "2027-01-05",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eie-2027-02-connect-01"
-  },
-  {
-    "id": "ab-ERASMUS-EDU-2027-PEX-EMJM-MOB",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-PEX-EMJM-MOB",
-    "program_adi": "Erasmus Mundus Joint Masters",
-    "baslangic": "2026-11-19",
-    "bitis": "2027-02-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-pex-emjm-mob"
   },
   {
     "id": "ab-HORIZON-BRIDGING-2027-05-01",
@@ -1817,24 +1646,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-climate-03"
   },
   {
-    "id": "ab-HORIZON-CL6-2027-02-CLIMATE-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-02-CLIMATE-02",
-    "program_adi": "Strengthening evidence-based policies for the resilience of European agriculture and forestry and related supply chains against crises and systemic risks",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-climate-02"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-02-CLIMATE-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-02-CLIMATE-01",
-    "program_adi": "Governance, sustainable development and international politics of a future ice-free Arctic",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-climate-01"
-  },
-  {
     "id": "ab-HORIZON-CL6-2027-02-COMMUNITIES-01",
     "kurum": "AB",
     "baslik": "HORIZON-CL6-2027-02-COMMUNITIES-01",
@@ -1842,33 +1653,6 @@
     "baslangic": "2027-04-20",
     "bitis": "2027-09-23",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-communities-01"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-02-FARM2FORK-03",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-02-FARM2FORK-03",
-    "program_adi": "Microbiome for terrestrial livestock sustainability and health within a One Health approach",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-farm2fork-03"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-02-FARM2FORK-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-02-FARM2FORK-08",
-    "program_adi": "AI-powered foodome characterization",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-farm2fork-08"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-02-FARM2FORK-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-02-FARM2FORK-06",
-    "program_adi": "Unleashing the potential of sustainable small-scale aquatic food production and recreational fisheries for prosperous local communities",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-farm2fork-06"
   },
   {
     "id": "ab-HORIZON-CL6-2027-02-FARM2FORK-05",
@@ -1880,40 +1664,85 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-farm2fork-05"
   },
   {
-    "id": "ab-HORIZON-NEB-2026-01-BUSINESS-02",
+    "id": "ab-HORIZON-CL2-2027-01-TRANSFO-01",
     "kurum": "AB",
-    "baslik": "HORIZON-NEB-2026-01-BUSINESS-02",
-    "program_adi": "Understanding capital market dynamics for increased investment in New European Bauhaus projects in neighbourhoods",
+    "baslik": "HORIZON-CL2-2027-01-TRANSFO-01",
+    "program_adi": "Impact of access to nature-positive environments in promoting social cohesion and reducing inequalities in urban and peri-urban settings",
+    "baslangic": "2027-05-13",
+    "bitis": "2027-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-transfo-01"
+  },
+  {
+    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-03",
+    "program_adi": "Student and family engagement for developing a culture of democratic/civic participation",
+    "baslangic": "2027-05-13",
+    "bitis": "2027-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-03"
+  },
+  {
+    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-08",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-08",
+    "program_adi": "Global Human Rights and EU values",
+    "baslangic": "2027-05-13",
+    "bitis": "2027-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-08"
+  },
+  {
+    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-07",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-07",
+    "program_adi": "The role of private companies in democracy",
+    "baslangic": "2027-05-13",
+    "bitis": "2027-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-07"
+  },
+  {
+    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-05",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-05",
+    "program_adi": "Development aid and democratic governance",
+    "baslangic": "2027-05-13",
+    "bitis": "2027-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-05"
+  },
+  {
+    "id": "ab-HORIZON-NEB-2026-01-REGEN-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-NEB-2026-01-REGEN-02",
+    "program_adi": "Advancing sustainable maintenance and repair measures for existing buildings",
     "baslangic": "2026-05-05",
     "bitis": "2026-12-01",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-business-02"
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-regen-02"
   },
   {
-    "id": "ab-HORIZON-WIDERA-2027-03-WIDENING-01",
+    "id": "ab-HORIZON-NEB-2026-01-BUSINESS-03",
     "kurum": "AB",
-    "baslik": "HORIZON-WIDERA-2027-03-WIDENING-01",
-    "program_adi": "ERA Fellowships",
-    "baslangic": "2027-04-07",
-    "bitis": "2027-09-08",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2027-03-widening-01"
+    "baslik": "HORIZON-NEB-2026-01-BUSINESS-03",
+    "program_adi": "Approaches to reuse vacant, obsolete or underutilised spaces",
+    "baslangic": "2026-05-05",
+    "bitis": "2026-12-01",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-business-03"
   },
   {
-    "id": "ab-ERASMUS-EDU-2027-CB-VET-CA",
+    "id": "ab-ERASMUS-EDU-2027-EMJM-DESIGN",
     "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-CB-VET-CA",
-    "program_adi": "Capacity building in VET in Caribbean",
-    "baslangic": "2027-02-09",
-    "bitis": "2027-05-12",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-cb-vet-ca"
+    "baslik": "ERASMUS-EDU-2027-EMJM-DESIGN",
+    "program_adi": "Erasmus Mundus Design Measures",
+    "baslangic": "2026-11-19",
+    "bitis": "2027-02-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-emjm-design"
   },
   {
-    "id": "ab-ERASMUS-EDU-2027-CB-VET-WB",
+    "id": "ab-HORIZON-MSCA-2027-DN-01-01",
     "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-CB-VET-WB",
-    "program_adi": "Capacity building in VET in Western Balkans",
-    "baslangic": "2027-02-09",
-    "bitis": "2027-05-12",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-cb-vet-wb"
+    "baslik": "HORIZON-MSCA-2027-DN-01-01",
+    "program_adi": "MSCA Doctoral Networks 2027",
+    "baslangic": "2027-05-26",
+    "bitis": "2027-11-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-dn-01-01"
   },
   {
     "id": "ab-HORIZON-NEB-2026-01-BUSINESS-01",
@@ -1925,51 +1754,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-business-01"
   },
   {
-    "id": "ab-ERASMUS-EDU-2027-CB-VET-SSA",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-CB-VET-SSA",
-    "program_adi": "Capacity building in VET in Sub-Saharan Africa",
-    "baslangic": "2027-02-09",
-    "bitis": "2027-05-12",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-cb-vet-ssa"
-  },
-  {
-    "id": "ab-ERASMUS-EDU-2027-CB-VET-LA",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-CB-VET-LA",
-    "program_adi": "Capacity building in VET in Latin America",
-    "baslangic": "2027-02-09",
-    "bitis": "2027-05-12",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-cb-vet-la"
-  },
-  {
-    "id": "ab-ERASMUS-EDU-2027-CB-VET-SMC",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-CB-VET-SMC",
-    "program_adi": "Capacity building in VET in South Mediterranean Countries",
-    "baslangic": "2027-02-09",
-    "bitis": "2027-05-12",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-cb-vet-smc"
-  },
-  {
-    "id": "ab-ERASMUS-EDU-2027-CB-VET-NE",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-CB-VET-NE",
-    "program_adi": "Capacity building in VET in Neighborhood East",
-    "baslangic": "2027-02-09",
-    "bitis": "2027-05-12",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-cb-vet-ne"
-  },
-  {
-    "id": "ab-HORIZON-EIC-2027-STEP",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-STEP",
-    "program_adi": "EIC STEP Scale Up",
-    "baslangic": "2026-11-18",
-    "bitis": "2027-11-24",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-step"
-  },
-  {
     "id": "ab-HORIZON-CL3-2027-02-CS-ECCC-02",
     "kurum": "AB",
     "baslik": "HORIZON-CL3-2027-02-CS-ECCC-02",
@@ -1979,58 +1763,31 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl3-2027-02-cs-eccc-02"
   },
   {
-    "id": "ab-HORIZON-CL6-2027-02-COMMUNITIES-02",
+    "id": "ab-HORIZON-INFRA-2027-DEV-01-03",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-02-COMMUNITIES-02",
-    "program_adi": "Empowering local urban food systems entrepreneurship and innovation",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-communities-02"
+    "baslik": "HORIZON-INFRA-2027-DEV-01-03",
+    "program_adi": "Consolidation of the research infrastructure landscape – individual support for evolution, long-term sustainability and emerging needs of pan-European research infrastructures",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-dev-01-03"
   },
   {
-    "id": "ab-HORIZON-CL6-2027-01-BIODIV-01",
+    "id": "ab-HORIZON-CL3-2027-02-CS-ECCC-04",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-BIODIV-01",
-    "program_adi": "Integrating Remote Sensing and in-situ observations of Biodiversity, towards a fully interoperable observation and data framework",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-01"
+    "baslik": "HORIZON-CL3-2027-02-CS-ECCC-04",
+    "program_adi": "New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks",
+    "baslangic": "2027-03-02",
+    "bitis": "2027-09-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl3-2027-02-cs-eccc-04"
   },
   {
-    "id": "ab-HORIZON-CL6-2027-01-ZEROPOLLUTION-03",
+    "id": "ab-HORIZON-MSCA-2027-CITIZENS-01-01",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-ZEROPOLLUTION-03",
-    "program_adi": "Improve the capacity to monitor and reduce air pollution from agriculture",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-zeropollution-03"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-ZEROPOLLUTION-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-ZEROPOLLUTION-01",
-    "program_adi": "Replacing hazardous substances in biocidal products",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-zeropollution-01"
-  },
-  {
-    "id": "ab-HORIZON-WIDERA-2027-02-WIDENING-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-WIDERA-2027-02-WIDENING-01",
-    "program_adi": "ERA Chairs",
-    "baslangic": "2027-04-06",
-    "bitis": "2027-09-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2027-02-widening-01"
-  },
-  {
-    "id": "ab-HORIZON-WIDERA-2027-02-WIDENING-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-WIDERA-2027-02-WIDENING-02",
-    "program_adi": "ERA Research Managers",
-    "baslangic": "2027-04-06",
-    "bitis": "2027-09-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2027-02-widening-02"
+    "baslik": "HORIZON-MSCA-2027-CITIZENS-01-01",
+    "program_adi": "MSCA and Citizens 2027",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-08",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-citizens-01-01"
   },
   {
     "id": "ab-HORIZON-INFRA-2027-SERV-01-03",
@@ -2042,6 +1799,24 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-serv-01-03"
   },
   {
+    "id": "ab-HORIZON-WIDERA-2027-02-WIDENING-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-WIDERA-2027-02-WIDENING-02",
+    "program_adi": "ERA Research Managers",
+    "baslangic": "2027-04-06",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2027-02-widening-02"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-09",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-09",
+    "program_adi": "Enhancing the competitiveness of organic crop breeding: focus on intercropping adapted varieties",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-09"
+  },
+  {
     "id": "ab-HORIZON-MSCA-2027-PF-01-01",
     "kurum": "AB",
     "baslik": "HORIZON-MSCA-2027-PF-01-01",
@@ -2051,85 +1826,22 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-pf-01-01"
   },
   {
-    "id": "ab-HORIZON-INFRA-2027-DEV-01-01",
+    "id": "ab-HORIZON-INFRA-2027-SERV-01-02",
     "kurum": "AB",
-    "baslik": "HORIZON-INFRA-2027-DEV-01-01",
-    "program_adi": "Preparatory phase of new ESFRI research infrastructure projects",
+    "baslik": "HORIZON-INFRA-2027-SERV-01-02",
+    "program_adi": "Access to research infrastructure services to enable R&I addressing EU priorities and emerging challenges",
     "baslangic": "2027-03-09",
     "bitis": "2027-06-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-dev-01-01"
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-serv-01-02"
   },
   {
-    "id": "ab-HORIZON-INFRA-2027-TECH-01-02",
+    "id": "ab-HORIZON-INFRA-2027-DEV-01-02",
     "kurum": "AB",
-    "baslik": "HORIZON-INFRA-2027-TECH-01-02",
-    "program_adi": "Pioneering Destination Earth for a Sustainable Future: Large-Scale Pilots and Demonstrators",
+    "baslik": "HORIZON-INFRA-2027-DEV-01-02",
+    "program_adi": "Consolidation of the research infrastructure landscape – development of complementarities, synergies and/or integration between a set of pan-European research infrastructures",
     "baslangic": "2027-03-09",
     "bitis": "2027-06-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-tech-01-02"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-05",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-05",
-    "program_adi": "Innovative circular solutions for end-of-life footwear through collection, sorting and recycling",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-05"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-02",
-    "program_adi": "Enhancing ecodesign and circularity of construction products",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-02"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-06",
-    "program_adi": "Towards a Europe of Bioeconomy Places",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-06"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-BIODIV-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-BIODIV-08",
-    "program_adi": "Fostering common farmland birds and mammals for resilient food production systems",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-08"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-BIODIV-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-BIODIV-07",
-    "program_adi": "Health of ecosystems and wild species, predictions and impacts on human health, in the face of existing and emerging stressors, from a One Health approach",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-07"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-03",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-03",
-    "program_adi": "Developing novel recycling technologies for complex plastic materials applying biotech solutions",
-    "baslangic": "2027-04-20",
-    "bitis": "2027-09-22",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-03"
-  },
-  {
-    "id": "ab-HORIZON-CL3-2027-02-CS-ECCC-03",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL3-2027-02-CS-ECCC-03",
-    "program_adi": "Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust",
-    "baslangic": "2027-03-02",
-    "bitis": "2027-09-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl3-2027-02-cs-eccc-03"
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-dev-01-02"
   },
   {
     "id": "ab-HORIZON-INFRA-2027-01-EOSC-01",
@@ -2150,6 +1862,42 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-01-eosc-02"
   },
   {
+    "id": "ab-HORIZON-INFRA-2027-SERV-01-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-INFRA-2027-SERV-01-01",
+    "program_adi": "Access to research infrastructures, their resources and services: large-scale pilots for more integrated scheme across (sub)domains",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-serv-01-01"
+  },
+  {
+    "id": "ab-HORIZON-CL3-2027-02-CS-ECCC-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL3-2027-02-CS-ECCC-03",
+    "program_adi": "Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust",
+    "baslangic": "2027-03-02",
+    "bitis": "2027-09-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl3-2027-02-cs-eccc-03"
+  },
+  {
+    "id": "ab-HORIZON-INFRA-2027-DEV-01-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-INFRA-2027-DEV-01-01",
+    "program_adi": "Preparatory phase of new ESFRI research infrastructure projects",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-dev-01-01"
+  },
+  {
+    "id": "ab-HORIZON-INFRA-2027-TECH-01-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-INFRA-2027-TECH-01-02",
+    "program_adi": "Pioneering Destination Earth for a Sustainable Future: Large-Scale Pilots and Demonstrators",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2027-tech-01-02"
+  },
+  {
     "id": "ab-HORIZON-INFRA-2027-TECH-01-01",
     "kurum": "AB",
     "baslik": "HORIZON-INFRA-2027-TECH-01-01",
@@ -2166,6 +1914,105 @@
     "baslangic": "2027-03-02",
     "bitis": "2027-09-15",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl3-2027-02-cs-eccc-01"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-08",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-08",
+    "program_adi": "Fostering common farmland birds and mammals for resilient food production systems",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-08"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-06",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-06",
+    "program_adi": "Towards a Europe of Bioeconomy Places",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-06"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-07",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-07",
+    "program_adi": "Health of ecosystems and wild species, predictions and impacts on human health, in the face of existing and emerging stressors, from a One Health approach",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-07"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-03",
+    "program_adi": "Developing novel recycling technologies for complex plastic materials applying biotech solutions",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-03"
+  },
+  {
+    "id": "ab-HORIZON-WIDERA-2027-02-WIDENING-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-WIDERA-2027-02-WIDENING-01",
+    "program_adi": "ERA Chairs",
+    "baslangic": "2027-04-06",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2027-02-widening-01"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-02-COMMUNITIES-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-02-COMMUNITIES-02",
+    "program_adi": "Empowering local urban food systems entrepreneurship and innovation",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-23",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-communities-02"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-05",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-05",
+    "program_adi": "Accelerating the transition to a nature positive economy: Integrating biodiversity into the private sector",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-05"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-01",
+    "program_adi": "Enhancing ecodesign and circularity of consumer electronics",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-01"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-06",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-06",
+    "program_adi": "Living labs driving transformative change via knowledge integration and inclusive governance",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-06"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-02",
+    "program_adi": "Enhancing ecodesign and circularity of construction products",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-02"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-05",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-05",
+    "program_adi": "Innovative circular solutions for end-of-life footwear through collection, sorting and recycling",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-05"
   },
   {
     "id": "ab-HORIZON-CL6-2027-01-ZEROPOLLUTION-02",
@@ -2195,211 +2042,58 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-09"
   },
   {
-    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-05",
+    "id": "ab-HORIZON-EIC-2026-PRIZE-WIP-RisingInnovators",
     "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-05",
-    "program_adi": "Development aid and democratic governance",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-05"
-  },
-  {
-    "id": "ab-ERASMUS-EDU-2027-EMJM-DESIGN",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-EMJM-DESIGN",
-    "program_adi": "Erasmus Mundus Design Measures",
-    "baslangic": "2026-11-19",
-    "bitis": "2027-02-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-emjm-design"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-TRANSFO-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-TRANSFO-08",
-    "program_adi": "Scaling and deploying innovations in migration management",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-transfo-08"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-06",
-    "program_adi": "Identifying user-focused solutions to support news media freedom",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-06"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-07",
-    "program_adi": "The role of private companies in democracy",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-07"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-08",
-    "program_adi": "Global Human Rights and EU values",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-08"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-HERITAGE-08",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-HERITAGE-08",
-    "program_adi": "Safeguarding & transmission of intangible cultural heritage",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-heritage-08"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-DEMOCRACY-03",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-DEMOCRACY-03",
-    "program_adi": "Student and family engagement for developing a culture of democratic/civic participation",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-democracy-03"
-  },
-  {
-    "id": "ab-HORIZON-MSCA-2027-DN-01-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-MSCA-2027-DN-01-01",
-    "program_adi": "MSCA Doctoral Networks 2027",
-    "baslangic": "2027-05-26",
-    "bitis": "2027-11-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-dn-01-01"
-  },
-  {
-    "id": "ab-ERASMUS-EDU-2027-PEX-TEACH-ACA",
-    "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-PEX-TEACH-ACA",
-    "program_adi": "Erasmus + Teacher Academies",
-    "baslangic": "2026-12-09",
-    "bitis": "2027-02-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-pex-teach-aca"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-TRANSFO-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-TRANSFO-01",
-    "program_adi": "Impact of access to nature-positive environments in promoting social cohesion and reducing inequalities in urban and peri-urban settings",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-transfo-01"
-  },
-  {
-    "id": "ab-HORIZON-CL2-2027-01-TRANSFO-04",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL2-2027-01-TRANSFO-04",
-    "program_adi": "The impact of EU labour mobility on the Member States of the EU",
-    "baslangic": "2027-05-13",
-    "bitis": "2027-09-23",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2027-01-transfo-04"
-  },
-  {
-    "id": "ab-HORIZON-NEB-2026-01-BUSINESS-03",
-    "kurum": "AB",
-    "baslik": "HORIZON-NEB-2026-01-BUSINESS-03",
-    "program_adi": "Approaches to reuse vacant, obsolete or underutilised spaces",
-    "baslangic": "2026-05-05",
+    "baslik": "HORIZON-EIC-2026-PRIZE-WIP-RisingInnovators",
+    "program_adi": "Rising Innovators category",
+    "baslangic": "2026-09-02",
     "bitis": "2026-12-01",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-business-03"
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2026-prize-wip-risinginnovators"
   },
   {
-    "id": "ab-HORIZON-NEB-2026-01-REGEN-02",
+    "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-07",
     "kurum": "AB",
-    "baslik": "HORIZON-NEB-2026-01-REGEN-02",
-    "program_adi": "Advancing sustainable maintenance and repair measures for existing buildings",
-    "baslangic": "2026-05-05",
-    "bitis": "2026-12-01",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-regen-02"
+    "baslik": "HORIZON-CL6-2027-01-CIRCBIO-07",
+    "program_adi": "Improving biomass flows for a sustainable and circular bioeconomy",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-circbio-07"
   },
   {
-    "id": "ab-ERASMUS-EDU-2027-EUR-UNIV",
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-02",
     "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2027-EUR-UNIV",
-    "program_adi": "European Universities",
-    "baslangic": "2026-10-29",
-    "bitis": "2027-03-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2027-eur-univ"
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-02",
+    "program_adi": "Science-policy support to the implementation of EU and global biodiversity policies and strategies",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-02"
   },
   {
-    "id": "ab-HORIZON-BRIDGING-2027-03-07",
+    "id": "ab-HORIZON-CL6-2027-01-BIODIV-01",
     "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-03-07",
-    "program_adi": "Europe’s world class research and technology infrastructures as strategic assets for talent to Choose Europe",
-    "baslangic": "2027-03-09",
-    "bitis": "2027-06-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-07"
+    "baslik": "HORIZON-CL6-2027-01-BIODIV-01",
+    "program_adi": "Integrating Remote Sensing and in-situ observations of Biodiversity, towards a fully interoperable observation and data framework",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-biodiv-01"
   },
   {
-    "id": "ab-HORIZON-BRIDGING-2027-04-08",
+    "id": "ab-HORIZON-CL6-2027-01-ZEROPOLLUTION-01",
     "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-04-08",
-    "program_adi": "Sustainability and resilience of climate projections and related data records for European and global science and policy",
-    "baslangic": "2026-10-06",
-    "bitis": "2027-02-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-04-08"
+    "baslik": "HORIZON-CL6-2027-01-ZEROPOLLUTION-01",
+    "program_adi": "Replacing hazardous substances in biocidal products",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-zeropollution-01"
   },
   {
-    "id": "ab-HORIZON-BRIDGING-2027-04-03",
+    "id": "ab-HORIZON-CL6-2027-01-ZEROPOLLUTION-03",
     "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-04-03",
-    "program_adi": "Bringing innovative climate preparedness and resilience solutions closer to the market",
-    "baslangic": "2026-10-06",
-    "bitis": "2027-02-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-04-03"
-  },
-  {
-    "id": "ab-HORIZON-NATURE-2027-02-05",
-    "kurum": "AB",
-    "baslik": "HORIZON-NATURE-2027-02-05",
-    "program_adi": "Cost-effective biodiversity monitoring for EU policies",
-    "baslangic": "2026-10-13",
-    "bitis": "2027-01-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-02-05"
-  },
-  {
-    "id": "ab-DIGITAL-ECCC-2027-DEPLOY-CYBER-11-REGCABH",
-    "kurum": "AB",
-    "baslik": "DIGITAL-ECCC-2027-DEPLOY-CYBER-11-REGCABH",
-    "program_adi": "Regional Cable Hubs",
-    "baslangic": "2026-09-01",
-    "bitis": "2027-01-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/digital-eccc-2027-deploy-cyber-11-regcabh"
-  },
-  {
-    "id": "ab-DIGITAL-ECCC-2027-DEPLOY-CYBER-11-DUALUSE",
-    "kurum": "AB",
-    "baslik": "DIGITAL-ECCC-2027-DEPLOY-CYBER-11-DUALUSE",
-    "program_adi": "Dual-use technologies",
-    "baslangic": "2026-09-01",
-    "bitis": "2027-01-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/digital-eccc-2027-deploy-cyber-11-dualuse"
-  },
-  {
-    "id": "ab-HORIZON-BRIDGING-2027-03-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-BRIDGING-2027-03-06",
-    "program_adi": "Access to research infrastructure services to enable R&I addressing industry needs in priority areas",
-    "baslangic": "2027-03-09",
-    "bitis": "2027-06-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-06"
-  },
-  {
-    "id": "ab-HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "program_adi": "HORIZON-EIC-2027-PATHFINDEROPEN-two-stage",
-    "baslangic": "2026-11-25",
-    "bitis": "2027-09-16",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2027-pathfinderopen-two-stage"
+    "baslik": "HORIZON-CL6-2027-01-ZEROPOLLUTION-03",
+    "program_adi": "Improve the capacity to monitor and reduce air pollution from agriculture",
+    "baslangic": "2027-04-20",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-01-zeropollution-03"
   },
   {
     "id": "ab-HORIZON-CL6-2027-01-CIRCBIO-08",
@@ -2870,184 +2564,355 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-01-clima-01"
   },
   {
-    "id": "ab-HORIZON-CL6-2026-02-COMMUNITIES-01",
+    "id": "ab-HORIZON-EURATOM-2027-02-01",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2026-02-COMMUNITIES-01",
-    "program_adi": "Boosting sustainable competitiveness in rural areas through innovation",
-    "baslangic": "2026-01-14",
-    "bitis": "2026-04-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-02-communities-01"
+    "baslik": "HORIZON-EURATOM-2027-02-01",
+    "program_adi": "Key enabling technologies for fusion power plants (European Partnership on Fusion Energy)",
+    "baslangic": "2027-04-15",
+    "bitis": "2027-11-04",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-euratom-2027-02-01"
   },
   {
-    "id": "ab-HORIZON-JU-CLEAN-AVIATION-2026-04-CSA-01",
+    "id": "ab-HORIZON-MISS-2027-05-SOIL-05-two-stage",
     "kurum": "AB",
-    "baslik": "HORIZON-JU-CLEAN-AVIATION-2026-04-CSA-01",
-    "program_adi": "Operational stakeholders’ group to support the deployment of Clean Aviation aircraft concepts and technologies",
-    "baslangic": "2026-03-31",
-    "bitis": "2026-05-19",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-clean-aviation-2026-04-csa-01"
+    "baslik": "HORIZON-MISS-2027-05-SOIL-05-two-stage",
+    "program_adi": "Innovative biotechnologies to restore soil health and improve agricultural competitiveness and resilience",
+    "baslangic": "2027-02-04",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-05-soil-05-two-stage"
   },
   {
-    "id": "ab-ERASMUS-EDU-2025-PI-FORWARD-HE-LD",
+    "id": "ab-HORIZON-BRIDGING-2027-04-08",
     "kurum": "AB",
-    "baslik": "ERASMUS-EDU-2025-PI-FORWARD-HE-LD",
-    "program_adi": "Leadership Development programme for higher education institutions’ leaders",
-    "baslangic": "2025-12-03",
-    "bitis": "2026-03-19",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/erasmus-edu-2025-pi-forward-he-ld"
+    "baslik": "HORIZON-BRIDGING-2027-04-08",
+    "program_adi": "Sustainability and resilience of climate projections and related data records for European and global science and policy",
+    "baslangic": "2026-10-06",
+    "bitis": "2027-02-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-04-08"
   },
   {
-    "id": "ab-HORIZON-CL6-2026-02-FARM2FORK-04",
+    "id": "ab-HORIZON-BRIDGING-2027-04-03",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2026-02-FARM2FORK-04",
-    "program_adi": "Accelerating the development of breeding tools for perennial crops, specifically fruits and nuts",
-    "baslangic": "2026-01-14",
-    "bitis": "2026-04-14",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-02-farm2fork-04"
+    "baslik": "HORIZON-BRIDGING-2027-04-03",
+    "program_adi": "Bringing innovative climate preparedness and resilience solutions closer to the market",
+    "baslangic": "2026-10-06",
+    "bitis": "2027-02-16",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-04-03"
   },
   {
-    "id": "ab-HORIZON-CL6-2025-03-GOVERNANCE-14",
+    "id": "ab-HORIZON-BRIDGING-2027-03-07",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2025-03-GOVERNANCE-14",
-    "program_adi": "Preparing farmers, their workforce and advisors to the future of agriculture by providing the relevant knowledge, skills and competences at the right time and place",
+    "baslik": "HORIZON-BRIDGING-2027-03-07",
+    "program_adi": "Europe’s world class research and technology infrastructures as strategic assets for talent to Choose Europe",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-07"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-05-SOIL-02-two-stage",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-05-SOIL-02-two-stage",
+    "program_adi": "Living Labs for co-creating solutions to reduce eutrophication from agriculture",
+    "baslangic": "2027-02-04",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-05-soil-02-two-stage"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-05-SOIL-01-two-stage",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-05-SOIL-01-two-stage",
+    "program_adi": "Living labs to enhance soil health in Continental, Black Sea, Pannonian and Steppic biogeographical regions",
+    "baslangic": "2027-02-04",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-05-soil-01-two-stage"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-01-CLIMA-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-01-CLIMA-02",
+    "program_adi": "Researching and applying the potential of Artificial Intelligence to foster climate resilience at the regional and local levels",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-09-21",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-01-clima-02"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-05-SOIL-04-two-stage",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-05-SOIL-04-two-stage",
+    "program_adi": "Participatory research on the health of communities in contact with polluted soils",
+    "baslangic": "2027-02-04",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-05-soil-04-two-stage"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-02-CLIMATE-01-two-stage",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-02-CLIMATE-01-two-stage",
+    "program_adi": "Open topic: Innovative solutions for the European Water Resilience Strategy",
+    "baslangic": "2027-02-04",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-climate-01-two-stage"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2027-02-FARM2FORK-02-two-stage",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2027-02-FARM2FORK-02-two-stage",
+    "program_adi": "Optimising the water-nutrient-energy nexus for sustainable and climate smart agriculture in Africa (FNSSA)",
+    "baslangic": "2027-02-04",
+    "bitis": "2027-09-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2027-02-farm2fork-02-two-stage"
+  },
+  {
+    "id": "ab-HORIZON-BRIDGING-2027-03-06",
+    "kurum": "AB",
+    "baslik": "HORIZON-BRIDGING-2027-03-06",
+    "program_adi": "Access to research infrastructure services to enable R&I addressing industry needs in priority areas",
+    "baslangic": "2027-03-09",
+    "bitis": "2027-06-15",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-bridging-2027-03-06"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-04-CIT-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-04-CIT-01",
+    "program_adi": "Innovative microgrids for improved energy system integration and efficiency in urban contexts",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-10-07",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-04-cit-01"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-07-CLIMA-CIT-NEB-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-07-CLIMA-CIT-NEB-01",
+    "program_adi": "Urban nature: supporting restoration of urban ecosystems, along urban transport networks and in the built environment",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-07-clima-cit-neb-01"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-04-CIT-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-04-CIT-02",
+    "program_adi": "Hydrogen cities",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-10-07",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-04-cit-02"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-04-CIT-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-04-CIT-03",
+    "program_adi": "Inclusive and climate resilient multimodal passenger hubs enhancing modal shift towards sustainable transport and shared mobility",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-10-07",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-04-cit-03"
+  },
+  {
+    "id": "ab-HORIZON-NATURE-2027-02-05",
+    "kurum": "AB",
+    "baslik": "HORIZON-NATURE-2027-02-05",
+    "program_adi": "Cost-effective biodiversity monitoring for EU policies",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-01-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-02-05"
+  },
+  {
+    "id": "ab-HORIZON-NATURE-2027-01-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-NATURE-2027-01-02",
+    "program_adi": "Better understanding, anticipating and addressing the biodiversity benefits and impacts of the clean and digital industries",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-01-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-01-02"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-03-OCEAN-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-03-OCEAN-02",
+    "program_adi": "Circularity of seafood supply chain",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-09-21",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-03-ocean-02"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-03-OCEAN-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-03-OCEAN-03",
+    "program_adi": "Green, circular and resilient harbours",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-09-21",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-03-ocean-03"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-03-OCEAN-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-03-OCEAN-01",
+    "program_adi": "Increasing riparian and coastal areas resilience to climate change, including in waterfront cities and islands.",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-09-21",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-03-ocean-01"
+  },
+  {
+    "id": "ab-HORIZON-NATURE-2027-02-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-NATURE-2027-02-03",
+    "program_adi": "Networking to scale up living labs for nature restoration solutions and to address bottlenecks to implementation",
+    "baslangic": "2026-10-13",
+    "bitis": "2027-01-14",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-02-03"
+  },
+  {
+    "id": "ab-HORIZON-MISS-2027-07-CLIMA-CIT-CCRI-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-MISS-2027-07-CLIMA-CIT-CCRI-02",
+    "program_adi": "Deploying innovative wastewater management, treatment and valorisation solutions in European cities and regions in the context of climate change",
+    "baslangic": "2027-02-09",
+    "bitis": "2027-09-22",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-miss-2027-07-clima-cit-ccri-02"
+  },
+  {
+    "id": "ab-HORIZON-HLTH-2027-01-IND-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-HLTH-2027-01-IND-01",
+    "program_adi": "Development of cell-free protein synthesis platforms for discovery and/or production of biologicals",
+    "baslangic": "2026-10-29",
+    "bitis": "2027-02-17",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-hlth-2027-01-ind-01"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-06",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-06",
+    "program_adi": "International cooperation in AI (IA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-06"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DATA-09",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DATA-09",
+    "program_adi": "Energy efficiency and sustainability of AI data processing in Data Centres (IA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-09"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-HUMAN-02",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-HUMAN-02",
+    "program_adi": "Create a thriving and competitive Virtual Worlds and Web 4.0 ecosystem (CSA) (Virtual Worlds Partnership)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-human-02"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-05",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-05",
+    "program_adi": "Apply AI: AI-Driven Robotics for Industry: Enabling System Integration and Adoption (IA) (Partnership in AI, Data and Robotics)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-05"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DATA-08",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DATA-08",
+    "program_adi": "Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-08"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-11",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-11",
+    "program_adi": "EU Frontier AI Initiative:  Developing frontier AI solutions that are safe and computationally efficient within Apply AI (RIA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-11"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DATA-03",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DATA-03",
+    "program_adi": "New approaches for decentralized, federated and sustainable AI data processing (RIA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-03"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-HUMAN-07",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-HUMAN-07",
+    "program_adi": "Facilitate the engagement of European stakeholders in international digital standardisation (CSA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-human-07"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-10",
+    "program_adi": "Horizon scanning and foresight in future enabling digital technologies (CSA)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-10"
+  },
+  {
+    "id": "ab-HORIZON-CL4-2027-04-HUMAN-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL4-2027-04-HUMAN-01",
+    "program_adi": "Advanced and Innovative hardware components for Virtual Worlds (RIA) (Virtual Worlds Partnership)",
+    "baslangic": "2026-11-17",
+    "bitis": "2027-03-18",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-human-01"
+  },
+  {
+    "id": "ab-HORIZON-WIDERA-2026-03-WIDENING-01",
+    "kurum": "AB",
+    "baslik": "HORIZON-WIDERA-2026-03-WIDENING-01",
+    "program_adi": "Hop-On Facility",
+    "baslangic": "2026-01-13",
+    "bitis": "2026-09-24",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2026-03-widening-01"
+  },
+  {
+    "id": "ab-HORIZON-CL6-2025-03-GOVERNANCE-06",
+    "kurum": "AB",
+    "baslik": "HORIZON-CL6-2025-03-GOVERNANCE-06",
+    "program_adi": "Strengthening and connecting bioeconomy networks",
     "baslangic": "2025-05-06",
     "bitis": "2025-09-24",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2025-03-governance-14"
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2025-03-governance-06"
   },
   {
-    "id": "ab-HORIZON-CL6-2025-03-GOVERNANCE-12",
+    "id": "ab-HORIZON-CL6-2025-03-GOVERNANCE-03",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2025-03-GOVERNANCE-12",
-    "program_adi": "Increasing knowledge flows to practice within Agricultural Knowledge and Innovation Systems (AKIS) via thematic networks",
+    "baslik": "HORIZON-CL6-2025-03-GOVERNANCE-03",
+    "program_adi": "Boosting the attractiveness of agriculture and the connection between the farming community and society",
     "baslangic": "2025-05-06",
     "bitis": "2025-09-24",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2025-03-governance-12"
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2025-03-governance-03"
   },
   {
-    "id": "ab-HORIZON-CL6-2025-03-GOVERNANCE-13",
+    "id": "ab-HORIZON-CL5-2024-D4-02-03",
     "kurum": "AB",
-    "baslik": "HORIZON-CL6-2025-03-GOVERNANCE-13",
-    "program_adi": "Strengthening knowledge and skills of advisors and integrating them within Agricultural Knowledge and Innovation Systems (AKIS) via an EU advisory network",
-    "baslangic": "2025-05-06",
-    "bitis": "2025-09-24",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2025-03-governance-13"
+    "baslik": "HORIZON-CL5-2024-D4-02-03",
+    "program_adi": "BIM-based processes and digital twins for facilitating and optimising circular energy renovation (Built4People Partnership)",
+    "baslangic": "2024-09-16",
+    "bitis": "2025-02-03",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2024-d4-02-03"
   },
   {
-    "id": "ab-HORIZON-CL5-2024-D3-02-09",
+    "id": "ab-HORIZON-ER-JU-2025-FA7-01",
     "kurum": "AB",
-    "baslik": "HORIZON-CL5-2024-D3-02-09",
-    "program_adi": "Demonstrations of innovative floating wind concepts",
-    "baslangic": "2024-09-17",
-    "bitis": "2025-02-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2024-d3-02-09"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2026-03-GOVERNANCE-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2026-03-GOVERNANCE-06",
-    "program_adi": "A services and business incubator for geospatial open-source developments",
-    "baslangic": "2026-01-14",
-    "bitis": "2026-04-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-03-governance-06"
-  },
-  {
-    "id": "ab-HORIZON-CL4-2026-04-DIGITAL-EMERGING-15",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL4-2026-04-DIGITAL-EMERGING-15",
-    "program_adi": "Strengthening the cooperation of semiconductor-intensive EU regions (CSA)",
-    "baslangic": "2026-01-15",
-    "bitis": "2026-04-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-04-digital-emerging-15"
-  },
-  {
-    "id": "ab-HORIZON-CL5-2024-D3-02-02",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL5-2024-D3-02-02",
-    "program_adi": "Development of next generation synthetic renewable fuel technologies",
-    "baslangic": "2024-09-17",
-    "bitis": "2025-02-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2024-d3-02-02"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2026-03-GOVERNANCE-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2026-03-GOVERNANCE-07",
-    "program_adi": "Interconnect Earth Observation research for addressing environmental policies",
-    "baslangic": "2026-01-14",
-    "bitis": "2026-04-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-03-governance-07"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2026-03-GOVERNANCE-09",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2026-03-GOVERNANCE-09",
-    "program_adi": "Increasing knowledge flows to practice within AKIS via EU thematic knowledge hubs",
-    "baslangic": "2026-01-14",
-    "bitis": "2026-04-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-03-governance-09"
-  },
-  {
-    "id": "ab-HORIZON-JU-SNS-2025-01-STREAM-B-03-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-JU-SNS-2025-01-STREAM-B-03-01",
-    "program_adi": "6G NTN-TN Unification/Integration",
-    "baslangic": "2025-05-22",
-    "bitis": "2025-09-18",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-sns-2025-01-stream-b-03-01"
-  },
-  {
-    "id": "ab-HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-05",
-    "kurum": "AB",
-    "baslik": "HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-05",
-    "program_adi": "Cryo-cooled power electronics for a fully electric hydrogen fuel cell powered aircraft",
-    "baslangic": "2026-03-31",
-    "bitis": "2026-05-19",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-clean-aviation-2026-04-fta-05"
-  },
-  {
-    "id": "ab-HORIZON-CL6-2026-02-FARM2FORK-01-two-stage",
-    "kurum": "AB",
-    "baslik": "HORIZON-CL6-2026-02-FARM2FORK-01-two-stage",
-    "program_adi": "Open topic: Improving the competitiveness of the agricultural sector by enhancing the efficient and sustainable use of agricultural production factors",
-    "baslangic": "2026-02-12",
-    "bitis": "2026-09-15",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-02-farm2fork-01-two-stage"
-  },
-  {
-    "id": "ab-HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-07",
-    "kurum": "AB",
-    "baslik": "HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-07",
-    "program_adi": "Innovative light weight and reliable liquid hydrogen tank",
-    "baslangic": "2026-03-31",
-    "bitis": "2026-05-19",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-clean-aviation-2026-04-fta-07"
-  },
-  {
-    "id": "ab-HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-04",
-    "kurum": "AB",
-    "baslik": "HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-04",
-    "program_adi": "Key Technologies for Loads Control Lidar for Ultra-efficient SMR aircraft",
-    "baslangic": "2026-03-31",
-    "bitis": "2026-05-19",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-clean-aviation-2026-04-fta-04"
-  },
-  {
-    "id": "ab-HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-06",
-    "kurum": "AB",
-    "baslik": "HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-06",
-    "program_adi": "Superconducting motor windings for a fully electric hydrogen fuel cell powered aircraft",
-    "baslangic": "2026-03-31",
-    "bitis": "2026-05-19",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-ju-clean-aviation-2026-04-fta-06"
-  },
-  {
-    "id": "ab-HORIZON-EIC-2026-PRIZE-ICAPITAL-01",
-    "kurum": "AB",
-    "baslik": "HORIZON-EIC-2026-PRIZE-ICAPITAL-01",
-    "program_adi": "The European Capital of Innovation Award iCapital Category HORIZON-EIC-2026-ICAPITAL",
-    "baslangic": "2026-05-05",
-    "bitis": "2026-08-04",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eic-2026-prize-icapital-01"
+    "baslik": "HORIZON-ER-JU-2025-FA7-01",
+    "program_adi": "Further Technological development of Maglev-derived Systems",
+    "baslangic": "2025-02-26",
+    "bitis": "2025-05-07",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-er-ju-2025-fa7-01"
   },
   {
     "id": "ab-HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-03",
@@ -3208,8 +3073,8 @@
     "baslik": "1002-A HIZLI DESTEK MODÜLÜ",
     "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-hizli-destek-modulu"
   },
   {
@@ -3218,8 +3083,8 @@
     "baslik": "1002-B ACİL DESTEK MODÜLÜ",
     "program_adi": "1002 - HIZLI DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1002-b-acil-destek-modulu"
   },
   {
@@ -3228,8 +3093,8 @@
     "baslik": "ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
     "program_adi": "1005 - ULUSAL YENİ FİKİRLER VE ÜRÜNLER ARAŞTIRMA DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1005-ulusal-yeni-fikirler-ve-urunler-arastirma-destek-programi"
   },
   {
@@ -3238,8 +3103,8 @@
     "baslik": "3005-A POLİTİKA GELİŞTİRME MODÜLÜ",
     "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://ardeb-pbs.tubitak.gov.tr/"
   },
   {
@@ -3248,8 +3113,8 @@
     "baslik": "3005-B TEKNOLOJİK İLERLEMELERİN TOPLUMSAL ETKİLERİ MODÜLÜ",
     "program_adi": "3005 - SOSYAL VE BEŞERİ BİLİMLERDE YENİLİKÇİ ÇÖZÜMLER ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://ardeb-pbs.tubitak.gov.tr/"
   },
   {
@@ -3258,8 +3123,8 @@
     "baslik": "KARİYER GELİŞTİRME PROGRAMI",
     "program_adi": "3501 - KARİYER GELİŞTİRME PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/3501-kariyer-gelistirme-programi"
   },
   {
@@ -3268,8 +3133,8 @@
     "baslik": "1004 Platformları İle İş Birliği Çağrısı",
     "program_adi": "BİLİMSEL VE TEKNOLOJİK ARAŞTIRMA PROJELERİ - ÖZEL ÇAĞRILAR",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/1004_platformlari_ile_isbirligi_cagrisi_bilgi_notu.pdf"
   },
   {
@@ -3278,8 +3143,8 @@
     "baslik": "4001 - A Ulusal Yarışma/Etkinlik Katılım Desteği (3. Dönem)",
     "program_adi": "4001 ULUSAL VE ULUSLARARASI YARIŞMA/ETKİNLİK KATILIM DESTEĞİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/4001"
   },
   {
@@ -3288,8 +3153,8 @@
     "baslik": "4001- B Uluslararası Yarışma/Etkinlik Katılım Desteği (3. Dönem)",
     "program_adi": "4001 ULUSAL VE ULUSLARARASI YARIŞMA/ETKİNLİK KATILIM DESTEĞİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/4001"
   },
   {
@@ -3298,8 +3163,8 @@
     "baslik": "4003-T Atölye Kurulum ve Faaliyet Dönemi Projesi Çağrısı",
     "program_adi": "4003-T MİLLİ TEKNOLOJİ ATÖLYELERİ DESTEK PROGRAMI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/bilim-toplum/ulusal-destek-programlari/milli-teknoloji-atolyeleri-proje-destegi"
   },
   {
@@ -3308,8 +3173,8 @@
     "baslik": "2515 - COST Aksiyon Üyeleri Ar-Ge Destek Programı",
     "program_adi": "COST DESTEKLERİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/cok-tarafli-programlar/cost/icerik-2515-cost-aksiyon-uyeleri-ar-ge-destek-programi"
   },
   {
@@ -3318,8 +3183,8 @@
     "baslik": "COST Aksiyonu Yönetim Komitesi (Management Committee-MC) Katılım Başvurusu - Destek Mektubu ile Başvuru",
     "program_adi": "COST DESTEKLERİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/coklu-birligi-programlari/cost-bilim-ve-teknolojide-avrupa-isbirligi"
   },
   {
@@ -3328,8 +3193,8 @@
     "baslik": "COST Aksiyonu Yönetim Komitesi (Management Committee-MC) Katılım Başvurusu - Devam Eden/Tamamlanmış Proje ile Başvuru",
     "program_adi": "COST DESTEKLERİ",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/coklu-birligi-programlari/cost-bilim-ve-teknolojide-avrupa-isbirligi"
   },
   {
@@ -3338,8 +3203,8 @@
     "baslik": "IRASME",
     "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/sites/default/files/2025-06/IRASME_Ulusal_Surecler_Dokumani.pdf"
   },
   {
@@ -3348,8 +3213,8 @@
     "baslik": "CORNET",
     "program_adi": "ÇOKLU İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/sites/default/files/2026-02/CORNET-Ulusal_Kurallar_Dokumani.pdf"
   },
   {
@@ -3358,8 +3223,8 @@
     "baslik": "2501 - Araştırma Projeleri - ABD Ulusal Bilim Vakfı (NSF) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "http://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/ikili-isbirligi-destekleri/2501/icerik-2501-abd-ulusal-bilim-vakfi-nsf-ile-ikili-isbirligi-programi"
   },
   {
@@ -3368,8 +3233,8 @@
     "baslik": "2502 - Araştırma Projeleri - Bulgaristan Bilimler Akademisi (BAS) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/tr/destekler/uluslararasi-birlikleri/ikili-birligi-programlari/2502-bulgaristan-bilimler-akademisi-bas-ile-ikili-isbirligi-programi"
   },
   {
@@ -3378,8 +3243,8 @@
     "baslik": "2507 - Araştırma Projeleri - Almanya Araştırmalar Konseyi (DFG) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "https://tubitak.gov.tr/sites/default/files/2024-08/2507_TUBITAK_DFG_CfP_standingopen.pdf"
   },
   {
@@ -3388,8 +3253,8 @@
     "baslik": "2501 - Ar-Ge ve Yenilik Projeleri - ABD Ulusal Bilim Vakfı (NSF) ile İkili İşbirliği Programı",
     "program_adi": "İKİLİ İŞBİRLİĞİ DESTEK PROGRAMLARI",
     "surekli_acik": true,
-    "baslangic": "2026-11-25",
-    "bitis": "2026-11-25",
+    "baslangic": "2026-11-26",
+    "bitis": "2026-11-26",
     "url": "http://www.tubitak.gov.tr/tr/kurumsal/uluslararasi/ikili-isbirligi-destekleri/2501/icerik-2501-abd-ulusal-bilim-vakfi-nsf-ile-ikili-isbirligi-programi"
   },
   {
